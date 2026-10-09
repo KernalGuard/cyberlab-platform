@@ -28,7 +28,7 @@ Deliver the shared platform skeleton and a complete Lab 0, so that (a) any stude
 3. Shell basics inside the workstation: `pwd`, `ls -la`, `cd`, `cat`, `less`, `file`, `grep`, pipes.
 4. Hashing: compute SHA-256, compare against a manifest, detect a deliberately altered decoy file.
 5. Read-only evidence: attempt to modify `/evidence` and interpret the error.
-6. Troubleshooting drill: diagnose three staged problems (wrong directory, port/name conflict, stopped container).
+6. Troubleshooting drill: diagnose three staged problems (wrong directory, container-name conflict, stopped container).
 7. Clean up: `docker compose down`, verify nothing remains.
 
 **Bloom levels:** Remember / Understand / Apply. **Deliverable:** a short `lab0-check.json` produced by `verify`, uploaded to the LMS as proof of a working environment.

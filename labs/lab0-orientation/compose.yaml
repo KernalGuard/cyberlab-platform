@@ -1,0 +1,47 @@
+# Lab 0 — Environment Orientation
+#
+#   docker compose run --rm verify        # check your environment (do this first)
+#   docker compose run --rm workstation   # open the analyst shell
+#   docker compose run --rm reset         # restore work/ from the template (backs up first)
+#   docker compose down --remove-orphans  # clean up
+#
+# Images: pulled from the registry below. Maintainers can build locally with
+# `docker compose build`. Set CYBERLAB_REGISTRY / CYBERLAB_VERSION to override.
+#
+# Status: `docker compose config` validated 2026-10-09 (Docker Compose v5.5.1, Linux).
+# Container runtime UNTESTED until CI / macOS walkthrough.
+
+name: cyberlab-lab0
+
+x-lab0: &lab0
+  extends:
+    file: ../../platform/compose/security-baseline.yaml
+    service: offline-analyst
+  image: ${CYBERLAB_REGISTRY:-ghcr.io/replace-with-github-owner}/cyberlab-base:${CYBERLAB_VERSION:-0.1.0}
+  build:
+    context: ../../platform
+    dockerfile: images/base/Dockerfile
+  # Linux hosts whose user is not UID 1000 can set CYBERLAB_UID/CYBERLAB_GID (see docs/student/install-linux.md).
+  user: "${CYBERLAB_UID:-1000}:${CYBERLAB_GID:-1000}"
+  environment:
+    CYBERLAB_LAB: lab0
+  mem_limit: 256m
+  volumes:
+    - ./evidence:/evidence:ro
+    - ./work:/work
+    - ./lab.yaml:/lab/lab.yaml:ro
+    - ./work.template:/lab/work.template:ro
+
+services:
+  workstation:
+    <<: *lab0
+    stdin_open: true
+    tty: true
+
+  verify:
+    <<: *lab0
+    command: ["cyberlab-verify", "--config", "/lab/lab.yaml"]
+
+  reset:
+    <<: *lab0
+    command: ["cyberlab-reset", "--template", "/lab/work.template", "--work", "/work"]

@@ -1,0 +1,107 @@
+# CyberLab continuous integration.
+# Status: UNTESTED on GitHub Actions until the repository is pushed. Every job's
+# commands were run locally on 2026-10-09 (Linux x86-64), except hadolint, Trivy
+# and the arm64 runner. Pin third-party actions to commit SHAs before v1.0.
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHON_VERSION: "3.13"
+  RUFF_VERSION: "0.16.8"
+  HADOLINT_IMAGE: "hadolint/hadolint:v2.12.0"
+  TRIVY_IMAGE: "aquasec/trivy:0.56.2"
+
+jobs:
+  lint:
+    name: Lint (ruff, hadolint)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - run: pip install "ruff==${RUFF_VERSION}"
+      - run: ruff check --config platform/lib/pyproject.toml platform/lib labs tests
+      - name: hadolint
+        run: |
+          for f in $(git ls-files 'platform/images/**/Dockerfile'); do
+            echo "::group::$f"; docker run --rm -i "$HADOLINT_IMAGE" hadolint --ignore DL3008 - < "$f"; echo "::endgroup::"
+          done
+
+  unit:
+    name: Unit, policy and leak tests
+    needs: lint
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - run: pip install pytest pytest-cov pyyaml
+      - name: Library tests with coverage
+        working-directory: platform/lib
+        run: |
+          python -m pytest --cov=cyberlab_common --cov-report=term-missing --cov-report=json:coverage.json
+          python - <<'PY'
+          import json, sys
+          files = json.load(open("coverage.json"))["files"]
+          low = {f: d["summary"]["percent_covered"] for f, d in files.items()
+                 if f.endswith(("manifest.py", "seeds.py")) and d["summary"]["percent_covered"] < 90}
+          print("coverage gate (manifest.py, seeds.py >= 90%):", "FAIL " + str(low) if low else "PASS")
+          sys.exit(1 if low else 0)
+          PY
+      - name: Lab evidence, Compose policy and leak tests
+        run: python -m pytest -q labs/*/tests tests
+
+  integration:
+    name: Build + integration (${{ matrix.arch }})
+    needs: unit
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: amd64
+            runner: ubuntu-24.04
+          - arch: arm64
+            runner: ubuntu-24.04-arm   # free native arm64 runner for public repos
+    runs-on: ${{ matrix.runner }}
+    env:
+      CYBERLAB_REGISTRY: local
+      CYBERLAB_VERSION: ci
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build base image (native ${{ matrix.arch }})
+        run: |
+          docker build -f platform/images/base/Dockerfile \
+            --build-arg CYBERLAB_VERSION=ci-${GITHUB_SHA::7} \
+            -t local/cyberlab-base:ci platform
+      - name: Evidence determinism on this architecture
+        run: |
+          pip install --break-system-packages pyyaml pytest >/dev/null 2>&1 || pip install pyyaml pytest
+          python3 -m pytest -q labs/lab0-orientation/tests
+      - name: Lab 0 integration test
+        run: labs/lab0-orientation/tests/integration.sh
+      - name: Image size
+        run: docker image ls local/cyberlab-base:ci --format '{{.Repository}}:{{.Tag}} {{.Size}}' | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Save image for scanning
+        if: matrix.arch == 'amd64'
+        run: docker save local/cyberlab-base:ci -o cyberlab-base.tar
+      - name: Vulnerability scan (report only)
+        if: matrix.arch == 'amd64'
+        run: |
+          docker run --rm -v "$PWD:/scan" "$TRIVY_IMAGE" image --input /scan/cyberlab-base.tar \
+            --severity HIGH,CRITICAL --ignore-unfixed --exit-code 0 --format table | tee trivy.txt
+          { echo '### Trivy (HIGH/CRITICAL, fixable)'; echo '```'; tail -40 trivy.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"

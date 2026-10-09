@@ -1,0 +1,40 @@
+# Lab 0 metadata and verify checks (read by cyberlab-verify inside the container).
+id: lab0-orientation
+title: "Lab 0 — Environment Orientation"
+version: 0.1.0
+pattern: A
+level: all
+estimated_minutes: 45
+evidence_dir: /evidence
+work_dir: /work
+report: /work/lab0-check.json
+
+checks:
+  tools: [bash, sha256sum, file, grep, less, jq, xxd, hexdump, unzip, python3]
+  manifest: MANIFEST.sha256
+  readonly: [/evidence]
+  writable: [/work]
+  network: none
+  hardening: true
+  min_memory_mb: {fail: 2048, warn: 3500}
+  min_free_disk_mb: {fail: 500, warn: 2000}
+
+objectives:
+  - id: L0-1
+    bloom: Remember
+    text: Identify the difference between a container image and a running container.
+  - id: L0-2
+    bloom: Apply
+    text: Start, inspect, stop and remove lab containers with docker compose.
+  - id: L0-3
+    bloom: Apply
+    text: Navigate a Linux file system and inspect files with pwd, ls, cd, cat, less, file and grep.
+  - id: L0-4
+    bloom: Apply
+    text: Compute SHA-256 hashes and verify evidence against a manifest.
+  - id: L0-5
+    bloom: Understand
+    text: Explain why evidence is mounted read-only and what a hash mismatch means for an investigation.
+  - id: L0-6
+    bloom: Apply
+    text: Diagnose three common Docker errors from their messages.

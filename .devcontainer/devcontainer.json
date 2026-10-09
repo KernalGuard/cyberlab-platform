@@ -1,0 +1,14 @@
+// Tier-2 fallback for students who cannot run Docker locally (browser-hosted, e.g. GitHub Codespaces).
+// Status: UNTESTED — scheduled for Week 4. Never make forwarded ports public.
+{
+  "name": "CyberLab (browser fallback)",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "hostRequirements": { "cpus": 2, "memory": "8gb", "storage": "32gb" },
+  "postCreateCommand": "docker --version && docker compose version",
+  "customizations": {
+    "codespaces": { "openFiles": ["docs/student/README.md"] }
+  }
+}

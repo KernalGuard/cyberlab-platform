@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use these laboratories in teaching or research, please cite them as below."
+title: "CyberLab: Containerized Cybersecurity and Digital Forensics Laboratories"
+version: 0.1.0
+date-released: 2026-10-09
+license: Apache-2.0
+type: software
+authors:
+  - family-names: Vadon
+    given-names: Sharif
+    affiliation: "John Jay College of Criminal Justice, City University of New York"
+keywords: [cybersecurity education, digital forensics, docker, reproducibility, laboratory]

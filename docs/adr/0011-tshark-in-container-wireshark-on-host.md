@@ -1,6 +1,6 @@
 # ADR-0011: TShark in container is required; Wireshark GUI on host is optional
 
-- **Status:** Proposed
+- **Status:** Accepted (2026-10-09, by developer; faculty review pending)
 - **Date:** 2026-10-09
 - **Related requirements:** NFR-01, NFR-02, FR-P-05, NFR-09
 

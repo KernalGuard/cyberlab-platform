@@ -1,6 +1,6 @@
 # ADR-0010: Purpose-built vulnerable web application
 
-- **Status:** Proposed
+- **Status:** Accepted (2026-10-09, by developer; faculty review pending)
 - **Date:** 2026-10-09
 - **Related requirements:** SEC-06, SEC-08, EDU-04, FR-E-02
 

@@ -3,3 +3,5 @@
 *.pcapng binary
 *.img binary
 *.E01 binary
+# Evidence is hashed byte-for-byte: never let Git convert line endings in it
+labs/*/evidence/** -text

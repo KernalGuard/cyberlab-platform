@@ -80,7 +80,7 @@ Versions below were checked against Debian 13 ("trixie") package listings on 202
 ```mermaid
 flowchart TB
   D[debian:trixie-slim<br/>pinned digest] --> B[cyberlab/base<br/>non-root 'analyst' uid 1000,<br/>python3, coreutils, jq, file, less, vim-tiny,<br/>cyberlab-common lib, verify framework]
-  B --> L0[cyberlab/lab0-orientation]
+  B --> L0[Lab 0 uses cyberlab/base directly]
   B --> NET[cyberlab/net-analysis<br/>tshark, scapy, zeek-cut?]
   B --> FS[cyberlab/fs-forensics<br/>sleuthkit, e2fsprogs, mtools,<br/>xxd, binwalk?]
   B --> WEB[cyberlab/web-workstation<br/>curl, httpie, sqlite3, jq]

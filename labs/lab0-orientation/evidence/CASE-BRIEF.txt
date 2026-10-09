@@ -1,0 +1,17 @@
+CASE BRIEF — PRACTICE EVIDENCE (Lab 0)
+=====================================
+Client:      Harbor Point Bakery (fictional)
+Contact:     M. Alvarez, owner
+Received:    2026-09-30 via USB copy, plus a hash list e-mailed by the client
+Request:     The client received password-reset e-mails she did not request and
+             wants to know whether anyone tried to access the shop computer.
+
+Items:
+  documents/meeting-notes.txt   Notes from a supplier meeting
+  documents/budget.csv          Q4 ingredient budget
+  documents/report.txt          Described by the client as "the monthly report"
+  images/storefront.png         Photo for the website
+  logs/auth.log                 Login log exported from the shop computer
+  transfer/sender_hashes.sha256 SHA-256 hashes the client computed BEFORE copying
+
+All content is synthetic and created for teaching.

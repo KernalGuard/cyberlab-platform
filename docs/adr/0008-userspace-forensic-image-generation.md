@@ -1,6 +1,6 @@
 # ADR-0008: Generate disk images in user space (no loop mounts)
 
-- **Status:** Proposed
+- **Status:** Accepted (2026-10-09, by developer; faculty review pending)
 - **Date:** 2026-10-09
 - **Related requirements:** SEC-01, SEC-02, FR-E-02, NFR-05
 

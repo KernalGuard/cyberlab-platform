@@ -1,6 +1,6 @@
 # ADR-0001: Record architecture decisions
 
-- **Status:** Proposed
+- **Status:** Accepted (2026-10-09, by developer; faculty review pending)
 - **Date:** 2026-10-09
 - **Deciders:** S. Vadon (developer); faculty sponsor (TBD)
 - **Related requirements:** RES-05, NFR-07

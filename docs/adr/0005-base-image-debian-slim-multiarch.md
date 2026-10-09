@@ -1,6 +1,6 @@
 # ADR-0005: Debian 13 slim multi-arch base image
 
-- **Status:** Proposed
+- **Status:** Accepted (2026-10-09, by developer; faculty review pending)
 - **Date:** 2026-10-09
 - **Related requirements:** FR-P-06, FR-P-08, NFR-01, SEC-10
 

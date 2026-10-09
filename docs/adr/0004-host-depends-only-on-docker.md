@@ -1,6 +1,6 @@
 # ADR-0004: Host depends only on Docker; all scripts run in containers
 
-- **Status:** Proposed
+- **Status:** Accepted (2026-10-09, by developer; faculty review pending)
 - **Date:** 2026-10-09
 - **Related requirements:** FR-P-05, NFR-01, NFR-04
 

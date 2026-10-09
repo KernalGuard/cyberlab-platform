@@ -1,6 +1,6 @@
 # ADR-0007: Synthetic deterministic evidence with HMAC-derived pseudonymous seeds
 
-- **Status:** Proposed
+- **Status:** Accepted (2026-10-09, by developer; faculty review pending)
 - **Date:** 2026-10-09
 - **Related requirements:** FR-E-01…FR-E-09, NFR-05, SEC-09
 

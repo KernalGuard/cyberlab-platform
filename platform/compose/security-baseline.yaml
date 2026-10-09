@@ -1,0 +1,45 @@
+# CyberLab security baseline (SEC-01 … SEC-07, ADR-0006).
+#
+# Labs inherit these settings with Compose `extends`, for example:
+#
+#   services:
+#     workstation:
+#       extends:
+#         file: ../../platform/compose/security-baseline.yaml
+#         service: offline-analyst
+#
+# `docker compose config` shows the fully resolved result. Policy tests in
+# tests/policy/ fail CI if any lab weakens these settings.
+
+services:
+  # Pattern A: analysis container with NO network at all (Labs 0–2).
+  offline-analyst:
+    user: "1000:1000"
+    network_mode: none
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    init: true
+    pids_limit: 128
+    mem_limit: 512m
+    cpus: 1.0
+    stop_grace_period: 5s
+
+  # Pattern B: service on an internal-only network (Labs 3–4). The lab defines
+  # its networks; this baseline deliberately sets no network_mode.
+  networked-service:
+    user: "1000:1000"
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    init: true
+    pids_limit: 256
+    mem_limit: 512m
+    cpus: 1.0
+    stop_grace_period: 5s

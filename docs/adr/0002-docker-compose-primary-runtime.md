@@ -1,6 +1,6 @@
 # ADR-0002: Docker Compose as primary runtime; Kubernetes deferred
 
-- **Status:** Proposed
+- **Status:** Accepted (2026-10-09, by developer; faculty review pending)
 - **Date:** 2026-10-09
 - **Related requirements:** FR-P-01, NFR-01, NFR-02, NFR-10
 

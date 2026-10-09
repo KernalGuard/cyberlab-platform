@@ -1,0 +1,6 @@
+**/__pycache__
+**/*.pyc
+lib/tests
+lib/.pytest_cache
+lib/.ruff_cache
+lib/coverage.json

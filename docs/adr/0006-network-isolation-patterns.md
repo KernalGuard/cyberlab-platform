@@ -1,6 +1,6 @@
 # ADR-0006: Network isolation patterns
 
-- **Status:** Proposed
+- **Status:** Accepted (2026-10-09, by developer; faculty review pending)
 - **Date:** 2026-10-09
 - **Related requirements:** SEC-04, SEC-05, SEC-06, NFR-10
 

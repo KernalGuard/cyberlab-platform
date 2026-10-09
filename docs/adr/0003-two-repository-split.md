@@ -1,6 +1,6 @@
 # ADR-0003: Public platform repository + private instructor repository
 
-- **Status:** Proposed
+- **Status:** Accepted (2026-10-09, by developer; faculty review pending)
 - **Date:** 2026-10-09
 - **Related requirements:** SEC-09, FR-E-06, FR-E-08, RES-04
 

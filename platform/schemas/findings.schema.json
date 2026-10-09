@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cyberlab.invalid/schemas/findings.schema.json",
+  "title": "CyberLab student findings",
+  "description": "Objective findings submitted alongside the PDF report. Validated by cyberlab_common.findings.",
+  "type": "object",
+  "required": ["schema", "lab", "variant", "items"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": { "const": "cyberlab-findings/1" },
+    "lab": { "type": "string", "minLength": 1 },
+    "variant": { "type": "string", "minLength": 1, "description": "Your evidence pseudonym (e.g. K7QX-2M4P) or 'demo'." },
+    "items": {
+      "type": "object",
+      "additionalProperties": {
+        "oneOf": [
+          { "type": "null" },
+          { "type": "string" },
+          { "type": "number" },
+          { "type": "array", "items": { "type": ["string", "number"] } }
+        ]
+      }
+    }
+  }
+}

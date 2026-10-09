@@ -1,6 +1,6 @@
 # ADR-0009: Deterministic PCAP generation with Scapy
 
-- **Status:** Proposed
+- **Status:** Accepted (2026-10-09, by developer; faculty review pending)
 - **Date:** 2026-10-09
 - **Related requirements:** FR-E-02, FR-E-06, NFR-05
 
