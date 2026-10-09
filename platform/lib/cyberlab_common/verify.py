@@ -127,29 +127,60 @@ def check_writable(path: Path) -> Check:
                  "On Linux hosts, make the work folder writable by UID 1000: sudo chown -R 1000:1000 work")
 
 
-def _interfaces(sys_class_net: Path) -> list[str]:
+_IFF_UP = 0x1
+
+
+def _active_interfaces(sys_class_net: Path) -> list[str]:
+    """Return non-loopback interfaces that are administratively UP.
+
+    Some kernels (for example Docker Desktop's LinuxKit VM) create fallback tunnel
+    devices such as gre0, sit0 and tunl0 in every network namespace, even with
+    network_mode: none. They are DOWN and cannot carry traffic, so they are ignored.
+    Non-directory entries such as ``bonding_masters`` are not interfaces.
+    """
+    active = []
     try:
-        return sorted(p.name for p in sys_class_net.iterdir())
+        entries = sorted(sys_class_net.iterdir())
     except OSError:
         return []
+    for entry in entries:
+        if entry.name == "lo" or not entry.is_dir():
+            continue
+        try:
+            flags = int((entry / "flags").read_text().strip(), 16)
+        except (OSError, ValueError):
+            flags = _IFF_UP  # unknown state: treat as active so we never hide a real interface
+        if flags & _IFF_UP:
+            active.append(entry.name)
+    return active
 
 
-def _has_default_route(proc_net_route: Path) -> bool:
+def _has_default_route(proc_net_route: Path, proc_net_ipv6_route: Path | None = None) -> bool:
     try:
         lines = proc_net_route.read_text().splitlines()[1:]
     except OSError:
+        lines = []
+    if any(len(cols) > 1 and cols[1] == "00000000" for cols in (line.split() for line in lines)):
+        return True
+    if proc_net_ipv6_route is None:
         return False
-    return any(len(cols) > 1 and cols[1] == "00000000" for cols in (line.split() for line in lines))
+    try:
+        v6 = proc_net_ipv6_route.read_text().splitlines()
+    except OSError:
+        return False
+    # columns: dest, dest_prefix_len, src, src_prefix_len, next_hop, metric, refcnt, use, flags, device
+    return any(len(cols) >= 10 and cols[0] == "0" * 32 and cols[1] == "00" and cols[9] != "lo"
+               for cols in (line.split() for line in v6))
 
 
 def check_network(mode: str, sys_class_net: Path = Path("/sys/class/net"),
-                  proc_net_route: Path = Path("/proc/net/route")) -> Check:
-    interfaces = _interfaces(sys_class_net)
-    default_route = _has_default_route(proc_net_route)
+                  proc_net_route: Path = Path("/proc/net/route"),
+                  proc_net_ipv6_route: Path | None = Path("/proc/net/ipv6_route")) -> Check:
+    active = _active_interfaces(sys_class_net)
+    default_route = _has_default_route(proc_net_route, proc_net_ipv6_route)
     if mode == "none":
-        extra = [i for i in interfaces if i != "lo"]
-        if extra or default_route:
-            return Check("network-isolation", FAIL, f"unexpected interfaces {extra or '[]'}; "
+        if active or default_route:
+            return Check("network-isolation", FAIL, f"active interfaces {active or '[]'}; "
                          f"default route={'yes' if default_route else 'no'}",
                          "This lab must run with network_mode: none. Use the lab's compose.yaml unmodified.")
         return Check("network-isolation", PASS, "no network: loopback only")
@@ -157,7 +188,7 @@ def check_network(mode: str, sys_class_net: Path = Path("/sys/class/net"),
         if default_route:
             return Check("network-isolation", WARN, "a default route exists",
                          "Expected an internal-only network. Confirm 'internal: true' in compose.yaml.")
-        return Check("network-isolation", PASS, f"internal network only ({', '.join(interfaces)})")
+        return Check("network-isolation", PASS, f"internal network only ({', '.join(active)})")
     return Check("network-isolation", PASS, f"network not restricted by design ({mode})")
 
 

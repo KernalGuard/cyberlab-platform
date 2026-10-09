@@ -8,8 +8,8 @@
 # Images: pulled from the registry below. Maintainers can build locally with
 # `docker compose build`. Set CYBERLAB_REGISTRY / CYBERLAB_VERSION to override.
 #
-# Status: `docker compose config` validated 2026-10-09 (Docker Compose v5.5.1, Linux).
-# Container runtime UNTESTED until CI / macOS walkthrough.
+# Status: runtime tested 2026-10-09 on Linux x86-64 (substitute base) and macOS Apple Silicon
+# (Docker Desktop 4.36, Debian 13 base) — see CHANGELOG.
 
 name: cyberlab-lab0
 
@@ -18,9 +18,6 @@ x-lab0: &lab0
     file: ../../platform/compose/security-baseline.yaml
     service: offline-analyst
   image: ${CYBERLAB_REGISTRY:-ghcr.io/replace-with-github-owner}/cyberlab-base:${CYBERLAB_VERSION:-0.1.0}
-  build:
-    context: ../../platform
-    dockerfile: images/base/Dockerfile
   # Linux hosts whose user is not UID 1000 can set CYBERLAB_UID/CYBERLAB_GID (see docs/student/install-linux.md).
   user: "${CYBERLAB_UID:-1000}:${CYBERLAB_GID:-1000}"
   environment:
@@ -35,6 +32,11 @@ x-lab0: &lab0
 services:
   workstation:
     <<: *lab0
+    # Only one service declares `build`: all three share one image, and building it
+    # three times in parallel fails with "image ... already exists" (found on macOS, 2026-10-09).
+    build:
+      context: ../../platform
+      dockerfile: images/base/Dockerfile
     stdin_open: true
     tty: true
 

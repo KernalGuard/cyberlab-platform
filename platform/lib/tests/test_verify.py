@@ -46,11 +46,13 @@ def test_writable_check(tmp_path):
     assert verify.check_writable(tmp_path / "nope").status == verify.FAIL
 
 
-def _fake_net(tmp_path, interfaces, default_route):
+def _fake_net(tmp_path, interfaces, default_route, flags=None):
+    """interfaces: names; flags: optional {name: hex flags}; default UP (0x1003)."""
     net = tmp_path / "net"
     net.mkdir()
     for name in interfaces:
         (net / name).mkdir()
+        (net / name / "flags").write_text((flags or {}).get(name, "0x1003") + "\n")
     route = tmp_path / "route"
     header = "Iface\tDestination\tGateway\tFlags\tRefCnt\tUse\tMetric\tMask\tMTU\tWindow\tIRTT\n"
     body = "eth0\t00000000\t010011AC\t0003\t0\t0\t0\t00000000\t0\t0\t0\n" if default_route else ""
@@ -60,20 +62,42 @@ def _fake_net(tmp_path, interfaces, default_route):
 
 def test_network_none_pass(tmp_path):
     net, route = _fake_net(tmp_path, ["lo"], default_route=False)
-    assert verify.check_network("none", net, route).status == verify.PASS
+    assert verify.check_network("none", net, route, None).status == verify.PASS
 
 
 def test_network_none_fail_with_eth0(tmp_path):
     net, route = _fake_net(tmp_path, ["lo", "eth0"], default_route=True)
-    assert verify.check_network("none", net, route).status == verify.FAIL
+    assert verify.check_network("none", net, route, None).status == verify.FAIL
+
+
+def test_network_none_fail_with_up_interface_even_without_route(tmp_path):
+    net, route = _fake_net(tmp_path, ["lo", "eth0"], default_route=False)
+    assert verify.check_network("none", net, route, None).status == verify.FAIL
+
+
+def test_network_none_ignores_docker_desktop_fallback_devices(tmp_path):
+    """Regression (macOS Docker Desktop, 2026-10-09): LinuxKit exposes DOWN tunnel stubs."""
+    stubs = ["erspan0", "gre0", "gretap0", "ip6_vti0", "ip6gre0", "ip6tnl0", "ip_vti0", "sit0", "tunl0"]
+    net, route = _fake_net(tmp_path, ["lo", *stubs], default_route=False, flags={s: "0x80" for s in stubs})
+    (net / "bonding_masters").write_text("\n")  # a file, not an interface
+    result = verify.check_network("none", net, route, None)
+    assert result.status == verify.PASS, result.detail
+
+
+def test_ipv6_default_route_detected(tmp_path):
+    net, route = _fake_net(tmp_path, ["lo"], default_route=False)
+    v6 = tmp_path / "ipv6_route"
+    v6.write_text("00000000000000000000000000000000 00 00000000000000000000000000000000 00 "
+                  "fe800000000000000000000000000001 00000400 00000001 00000000 00000003 eth0\n")
+    assert verify.check_network("none", net, route, v6).status == verify.FAIL
 
 
 def test_network_internal_warns_on_default_route(tmp_path):
     net, route = _fake_net(tmp_path, ["lo", "eth0"], default_route=True)
-    assert verify.check_network("internal", net, route).status == verify.WARN
+    assert verify.check_network("internal", net, route, None).status == verify.WARN
     (tmp_path / "b").mkdir()
     net2, route2 = _fake_net(tmp_path / "b", ["lo", "eth0"], default_route=False)
-    assert verify.check_network("internal", net2, route2).status == verify.PASS
+    assert verify.check_network("internal", net2, route2, None).status == verify.PASS
 
 
 def test_hardening_parses_proc_status(tmp_path):

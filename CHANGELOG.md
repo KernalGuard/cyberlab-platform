@@ -18,8 +18,12 @@ All notable changes are recorded here. Versions follow [Semantic Versioning](htt
 - Removed the `# syntax=docker/dockerfile:1` directive: it fetches a frontend image from Docker Hub at build time, which fails on restricted networks.
 - Lab 0 troubleshooting drill uses a container-name conflict instead of a port conflict (Lab 0 publishes no ports).
 
+### Fixed (first macOS run, 2026-10-09)
+- `verify` failed `network-isolation` on Docker Desktop: its LinuxKit kernel creates DOWN fallback tunnel devices (gre0, sit0, tunl0, …) in every network namespace. The check now counts only interfaces that are UP, plus IPv4/IPv6 default routes. Regression test added.
+- `docker compose build` failed with `image … already exists`: three services each declared `build` for the same image. Only `workstation` builds now.
+
 ### Testing status (2026-10-09)
-- Library: 66 unit tests pass as root and 67 as non-root (Python 3.13, Linux x86-64).
+- Library: 69 unit tests pass as root and 70 as non-root (Python 3.13, Linux x86-64).
 - Lab 0 container integration (13 checks) passes on Linux x86-64 as root and as a non-1000 user, using a **substitute Ubuntu 24.04 base** because Debian images could not be pulled in the development environment. **Debian 13 build, arm64, macOS and Windows: untested** until CI runs on GitHub and the macOS walkthrough is done.
 
 ## [0.0.1] — 2026-10-09

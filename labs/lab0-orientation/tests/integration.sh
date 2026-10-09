@@ -30,7 +30,7 @@ pass "verify passes"
 run 'cd /evidence && sha256sum -c MANIFEST.sha256' >/dev/null && pass "manifest verifies by hand" || fail "manifest by hand"
 [ "$(run 'cd /evidence && sha256sum -c transfer/sender_hashes.sha256 2>/dev/null | grep -c FAILED')" = "1" ] && pass "exactly one sender-hash mismatch" || fail "sender hash mismatch"
 run 'touch /evidence/x 2>&1; true' | grep -q "Read-only file system" && pass "evidence is read-only" || fail "evidence writable!"
-run 'ls /sys/class/net' | tr -d '\n' | grep -qx "lo" && pass "no network interfaces besides lo" || fail "network present"
+[ -z "$(run 'for d in /sys/class/net/*/; do n=$(basename "$d"); [ "$n" = lo ] && continue; [ $(( $(cat "$d/flags") & 1 )) -eq 1 ] && echo "$n"; done; true')" ] && pass "no active network interfaces besides lo" || fail "network present"
 [ "$(run 'id -u')" = "${CYBERLAB_UID:-1000}" ] && pass "runs as non-root UID ${CYBERLAB_UID:-1000}" || fail "uid"
 run 'touch /usr/local/bin/x 2>&1; true' | grep -q "Read-only file system\|Permission denied" && pass "root filesystem not writable" || fail "rootfs writable"
 
