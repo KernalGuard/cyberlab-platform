@@ -17,7 +17,7 @@ x-lab0: &lab0
   extends:
     file: ../../platform/compose/security-baseline.yaml
     service: offline-analyst
-  image: ${CYBERLAB_REGISTRY:-ghcr.io/replace-with-github-owner}/cyberlab-base:${CYBERLAB_VERSION:-0.1.0}
+  image: ${CYBERLAB_REGISTRY:-ghcr.io/kernalguard}/cyberlab-base:${CYBERLAB_VERSION:-0.1.0}
   # Linux hosts whose user is not UID 1000 can set CYBERLAB_UID/CYBERLAB_GID (see docs/student/install-linux.md).
   user: "${CYBERLAB_UID:-1000}:${CYBERLAB_GID:-1000}"
   environment:

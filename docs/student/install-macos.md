@@ -30,7 +30,7 @@ You should see version numbers for both Client and Server, and "Hello from Docke
 ## 5. Get the lab files
 ```bash
 cd ~
-git clone https://github.com/<course-org>/cyberlab-platform.git
+git clone https://github.com/KernalGuard/cyberlab-platform.git
 ```
 If `git` is not installed, macOS will offer to install the Command Line Tools. Accept. Or download the repository ZIP from GitHub instead.
 

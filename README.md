@@ -32,7 +32,7 @@ docs/       requirements, architecture, ADRs, student setup guides, spikes
 ```
 
 ## Maintainer note: image registry
-Compose files default to `ghcr.io/replace-with-github-owner/...` until the GitHub owner is confirmed. After the first tagged release, replace it with the real owner (lower-case) in `labs/*/compose.yaml`, or set `CYBERLAB_REGISTRY` in your environment.
+Images are published to `ghcr.io/kernalguard/` by the release workflow (GHCR requires a lower-case owner). Until the first tagged release, build locally with `docker compose build`. Override with `CYBERLAB_REGISTRY` if needed.
 
 ## License
 Code: [Apache-2.0](LICENSE). Documentation and instructional materials: [CC BY 4.0](LICENSE-docs). *Licensing is pending institutional confirmation.*

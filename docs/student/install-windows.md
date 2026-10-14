@@ -67,7 +67,7 @@ Clone the labs **inside your Ubuntu home folder**, not into `C:\Users\…`. This
 ```bash
 cd ~
 sudo apt-get update && sudo apt-get install -y git   # if git is missing
-git clone https://github.com/<course-org>/cyberlab-platform.git
+git clone https://github.com/KernalGuard/cyberlab-platform.git
 ```
 
 To see these files in Windows Explorer, type `\\wsl$` in the Explorer address bar, or run `explorer.exe .` from the Ubuntu terminal.

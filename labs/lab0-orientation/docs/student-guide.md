@@ -66,7 +66,7 @@ Your computer
 **Step 1 — Get the lab files.** Either:
 
 ```bash
-git clone https://github.com/<course-org>/cyberlab-platform.git
+git clone https://github.com/KernalGuard/cyberlab-platform.git
 ```
 
 or download the repository as a ZIP from GitHub and unzip it. *(Your instructor will give you the exact address.)*

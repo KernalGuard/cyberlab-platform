@@ -40,7 +40,7 @@ Docker can bypass host firewalls such as `ufw` for **published** ports. The Cybe
 ## 6. Get the lab files
 ```bash
 cd ~
-git clone https://github.com/<course-org>/cyberlab-platform.git
+git clone https://github.com/KernalGuard/cyberlab-platform.git
 ```
 
 Continue with [Lab 0](../../labs/lab0-orientation/docs/student-guide.md).
