@@ -1,6 +1,6 @@
 # Lab 1 — Architecture
 
-> **Status:** Draft v0.1.0 (2026-11-17). Image build and `verify` tested on macOS Apple Silicon (Docker Desktop, TShark 4.4.19). The integration test (`tests/integration.sh`) and the CI/release jobs for this lab are new and **UNTESTED** on GitHub Actions. Resource figures marked *(CI)* are filled in from the CI job summary after the first run.
+> **Status:** Draft v0.1.0 (2026-11-17). Image build and `verify` tested on macOS Apple Silicon (Docker Desktop, TShark 4.4.19). Integration test (`tests/integration.sh`) **passed in GitHub Actions on linux/amd64 and linux/arm64** (run 44135316977, 2026-11-17). The two-image release workflow is **UNTESTED** until the v0.2.0 tag. Windows: **UNTESTED**.
 
 Lab 1 uses **Pattern A** (offline analysis workstation) from the platform architecture ([`docs/phase-1/02-architecture.md` §5](../../../docs/phase-1/02-architecture.md)). This document records what is specific to Lab 1.
 
@@ -93,11 +93,11 @@ flowchart LR
 
 | Resource | Limit | Measured |
 |---|---|---|
-| Memory | 512 MB (`mem_limit`) | Peak during a full analysis pass: *(CI, AC-L1-09 requires < 512 MB)* |
+| Memory | 512 MB (`mem_limit`) | Peak during a full analysis pass: **92–93 MB** (CI, amd64 and arm64; AC-L1-09 requires < 512 MB) |
 | CPU | 1.0 | — |
 | PIDs | 128 | — |
-| Disk | Image *(CI; target ≤ 350 MB compressed, AC-P-02)* + evidence ≈ 17 MB + work files < 5 MB | macOS build 2026-11-17: built successfully |
-| Startup | — | `run true` < 10 s after build (AC-L1-08, asserted by the integration test) |
+| Disk | Image + evidence ≈ 17 MB + work files < 5 MB | `cyberlab-net-analysis`: **312–343 MB** uncompressed, **98–100 MB** compressed (AC-P-02 target ≤ 350 MB compressed: PASS); `cyberlab-base` 145–172 MB uncompressed (CI, per architecture) |
+| Startup | — | `run true` **< 1 s** after build (CI; AC-L1-08 requires < 10 s) |
 
 Each TShark command re-reads the whole capture. On a 1-CPU limit, statistics commands take a few seconds; this is noted in the student troubleshooting table.
 
@@ -142,9 +142,9 @@ The generator is byte-reproducible for a given seed, Python minor version and Sc
 | Criterion | Where checked | Status |
 |---|---|---|
 | AC-L1-01 reproducible, AC-L1-02 distinct variants, AC-L1-03 solvable, AC-L1-12 checker | Instructor repo `generators/lab1/tests/acceptance.py` | PASS (Linux, 10 seeds, 2026-11-13) |
-| AC-L1-04 parses cleanly | acceptance test; integration test | PASS (acceptance); integration *(CI)* |
-| AC-L1-05 integrity, AC-L1-06 immutability, AC-L1-07 no network | `verify`; integration test | `verify` PASS on macOS 2026-11-17 |
-| AC-L1-08 startup, AC-L1-09 memory, AC-L1-10 reset, AC-L1-11 teardown | integration test | *(CI)* |
+| AC-L1-04 parses cleanly | acceptance test; integration test | PASS (acceptance; CI amd64 + arm64) |
+| AC-L1-05 integrity, AC-L1-06 immutability, AC-L1-07 no network | `verify`; integration test | PASS (macOS `verify`; CI amd64 + arm64) |
+| AC-L1-08 startup, AC-L1-09 memory, AC-L1-10 reset, AC-L1-11 teardown | integration test | PASS (CI amd64 + arm64) |
 | AC-L1-13 guide sections | `tests/docs/` | PASS |
 | AC-L1-14 objectives traced, AC-L1-15 rubric | Student guide §5; instructor rubric traceability table | Drafted, awaiting review |
 | AC-L1-16 completion time, AC-L1-17 cross-platform walkthrough | Peer walkthrough | Not yet done |
