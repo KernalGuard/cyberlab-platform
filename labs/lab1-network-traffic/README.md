@@ -16,7 +16,7 @@ whether a host is compromised, what it talked to, and whether data left the netw
 `CASE-BRIEF.txt`, `MANIFEST.sha256`). For graded work your instructor gives you your own
 variant; point the lab at it with `CYBERLAB_EVIDENCE=/path/to/your/evidence`.
 
-**Student guide:** coming in Week 3 (`docs/student-guide.md`).
+**Student guide:** [`docs/student-guide.md`](docs/student-guide.md) (draft, 2026-11-17).
 
 **Quick reference**
 ```bash
