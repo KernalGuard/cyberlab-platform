@@ -1,13 +1,13 @@
 # Lab 2 — Linux File-System Forensics and Evidence Examination
 
-> **Status: IN DEVELOPMENT (Milestone 3).** Demo evidence (generator 1.0.0, 2026-11-17), Compose file, verify checks, work templates and the `fs-forensics` image (builds in CI on amd64 + arm64). Student guide drafted ([`docs/student-guide.md`](docs/student-guide.md)); integration test and instructor materials are not written yet. Tested on macOS Apple Silicon 2026-11-17: `verify` 10/10, E01 working-copy export with matching MD5s, deleted-file listing, journal listing and carving.
+> **Status: v0.3.0 pilot preview (2026-11-17).** Demo evidence (generator 1.0.0), [student guide](docs/student-guide.md), [architecture](docs/architecture.md), integration test (`tests/integration.sh`). Tested on macOS Apple Silicon (Docker Desktop): build, `verify` 10/10, E01 working copies with matching MD5s, deleted files, journal, carving, `mactime`. CI: amd64 + arm64. **Windows: UNTESTED. No student walkthrough yet.**
 
 | | |
 |---|---|
 | Level | Intermediate undergraduate (graduate extension: ext4 journal recovery) |
 | Time | 90–120 minutes (target) |
 | Pattern | A: offline workstation, no network, read-only evidence, nothing mounted |
-| Version | 0.3.0-dev |
+| Version | 0.3.0 |
 
 **Scenario.** Cedarwick Neighborhood Aid again (fictional). After the Lab 1 network investigation, the IT contractor imaged the compromised workstation's disk and a USB stick found plugged into it. Find out how the malware arrived, how it persisted, what it staged and deleted, and whether the disk agrees with the network evidence.
 

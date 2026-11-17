@@ -1,9 +1,9 @@
 # Publish multi-architecture images to GitHub Container Registry on a version tag.
-#   git tag v0.2.0 && git push origin v0.2.0
+#   git tag v0.3.0 && git push origin v0.3.0
 # Images are tagged with the version without the leading "v" and never overwritten.
 # Role images are built FROM the base image of the same version.
-# Status: base image release tested 2026-11-17 (v0.1.0). The two-image pipeline
-# (base -> net-analysis) is UNTESTED until the next tag.
+# Status: base -> net-analysis pipeline tested 2026-11-17 (v0.2.0, v0.2.1).
+# fs-forensics job added 2026-11-17: UNTESTED until v0.3.0.
 # New GHCR packages start PRIVATE: set each one to Public once (Package settings).
 
 name: Release images
@@ -29,5 +29,14 @@ jobs:
     with:
       image: cyberlab-net-analysis
       dockerfile: platform/images/net-analysis/Dockerfile
+      build-args: |
+        BASE_IMAGE=ghcr.io/{owner}/cyberlab-base:{version}
+
+  fs-forensics:
+    needs: base
+    uses: ./.github/workflows/_build-image.yml
+    with:
+      image: cyberlab-fs-forensics
+      dockerfile: platform/images/fs-forensics/Dockerfile
       build-args: |
         BASE_IMAGE=ghcr.io/{owner}/cyberlab-base:{version}

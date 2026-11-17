@@ -1,7 +1,7 @@
 # Lab 2 metadata and verify checks (read by cyberlab-verify inside the container).
 id: lab2-filesystem-forensics
 title: "Lab 2 — Linux File-System Forensics and Evidence Examination"
-version: 0.3.0-dev
+version: 0.3.0
 pattern: A
 level: "intermediate undergraduate (graduate extension: journal recovery)"
 estimated_minutes: 120

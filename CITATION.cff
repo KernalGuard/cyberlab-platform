@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use these laboratories in teaching or research, please cite them as below."
 title: "CyberLab: Containerized Cybersecurity and Digital Forensics Laboratories"
-version: 0.2.1
+version: 0.3.0
 date-released: 2026-11-17
 license: Apache-2.0
 type: software

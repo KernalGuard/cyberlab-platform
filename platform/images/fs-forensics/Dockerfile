@@ -13,8 +13,9 @@
 # into /work and runs TSK on those (ewfinfo/ewfverify/ewfexport themselves are fine).
 #
 # Status: builds in CI (amd64 + arm64); runs on macOS Apple Silicon, 2026-11-17.
+# Released from v0.3.0.
 
-ARG BASE_IMAGE=ghcr.io/kernalguard/cyberlab-base:0.2.1
+ARG BASE_IMAGE=ghcr.io/kernalguard/cyberlab-base:0.3.0
 # The tag lives in the ARG default above; hadolint cannot see through ARGs.
 # hadolint ignore=DL3006
 FROM ${BASE_IMAGE}

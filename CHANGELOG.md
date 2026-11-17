@@ -2,6 +2,23 @@
 
 All notable changes are recorded here. Versions follow [Semantic Versioning](https://semver.org/).
 
+## [0.3.0] — 2026-11-17 — Lab 2 (Milestone 3)
+
+### Added
+- **Lab 2 — Linux File-System Forensics and Evidence Examination** (`labs/lab2-filesystem-forensics/`): the Cedarwick follow-up. Students examine the compromised Lab 1 workstation's disk (`workstation.E01`, ext4) and a vendor USB stick (`usb.E01`, FAT32). Public `demo` evidence continues the Lab 1 demo incident (≈ 390 KB).
+- Lab 2 student guide (16 sections; E01 verification and MD5-checked working copies, user activity, USB/FAT, persistence and timestomping, kernel-realistic deleted files and carving, graduate journal recovery), architecture document and container integration test (CI on amd64 and arm64).
+- `cyberlab-fs-forensics` image: The Sleuth Kit 4.12, e2fsprogs, mtools, libewf tools, binutils, Perl (`mactime`). Added to the release workflow alongside `cyberlab-net-analysis`.
+- Feasibility spike `docs/spikes/ext4-kernel-deletion/`: a real kernel's ext4 deletion reproduced in user space (risk R-03 resolved).
+- `tests/meta/test_lab_metadata.py`: every `lab.yaml` parses and has the required keys (no Docker needed).
+
+### Known issues
+- With Debian 13's libewf 20140816, Sleuth Kit tools segfault on exit (status 139) when reading E01 files directly (seen on macOS Apple Silicon). Lab 2 therefore analyses raw working copies exported with `ewfexport`, which is also standard practice.
+
+### Testing status (2026-11-17)
+- macOS Apple Silicon (Docker Desktop): Lab 2 build, `verify` 10/10, the student workflow end to end.
+- CI on GitHub Actions: Lab 2 integration test on linux/amd64 and linux/arm64 (first run with this release's commit).
+- **Untested:** Windows; a student walkthrough of Lab 2.
+
 ## [0.2.1] — 2026-11-17 — Lab 1 continuity fix
 
 ### Changed

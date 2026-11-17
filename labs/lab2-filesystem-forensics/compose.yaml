@@ -9,7 +9,8 @@
 # Disk images are examined in place (E01 or raw); nothing is mounted (ADR-0008).
 # Your instructor gives you your own evidence folder; evidence/ holds the public `demo` variant.
 #
-# Status: UNTESTED with Docker (written 2026-11-17).
+# Status: tested 2026-11-17 on macOS Apple Silicon (Docker Desktop); CI amd64 + arm64
+# (tests/integration.sh). Windows: UNTESTED.
 
 name: cyberlab-lab2
 
