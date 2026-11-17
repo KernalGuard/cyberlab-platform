@@ -12,7 +12,7 @@
     "persistence_path": null,
     "implant_path": null,
     "timestomped_path": null,
-    "c2_domain": null,
+    "c2_domains": [],
     "bot_id": null,
     "staged_inode": null,
     "staged_deleted_utc": null,

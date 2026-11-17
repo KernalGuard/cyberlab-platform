@@ -1,0 +1,22 @@
+CASE BRIEF - Lab 2: Linux File-System Forensics
+Variant: demo
+
+Client:   Cedarwick Neighborhood Aid (fictional nonprofit)
+Context:  Your Lab 1 report identified a compromised staff workstation on the
+          10.20.30.0/24 segment on 2026-10-10. The workstation was shut down
+          that evening. On 2026-10-11 the IT contractor imaged its disk and a
+          USB stick that was still plugged into it, using a write blocker.
+Request:  Determine how the malware arrived and from where, how it starts, what it
+          is configured to do, what it staged and deleted, and whether the disk
+          agrees with your Lab 1 network findings. Report every time in UTC.
+
+Evidence: workstation.E01   internal disk (ext4), acquired 2026-10-11 10:22 EDT
+          usb.E01           USB flash drive (FAT32), acquired the same day
+          MANIFEST.sha256   SHA-256 of every evidence file
+          Each E01 also stores MD5 and SHA-256 of the original media (ewfinfo/ewfverify).
+
+Notes:    The workstation runs Ubuntu 24.04 with the America/New_York time zone.
+          System logs record local time with a UTC offset.
+
+This evidence is SYNTHETIC. Every name, address, record and "malware" file is
+fictional and inert. Domains use reserved names. Do not look any of them up.
