@@ -10,6 +10,8 @@
 # Status: UNTESTED as a container build (written 2026-11-13). Target size <= 350 MB (AC-P-02).
 
 ARG BASE_IMAGE=ghcr.io/kernalguard/cyberlab-base:0.1.0
+# The tag lives in the ARG default above; hadolint cannot see through ARGs.
+# hadolint ignore=DL3006
 FROM ${BASE_IMAGE}
 
 ARG CYBERLAB_VERSION=0.1.0-dev
@@ -19,13 +21,14 @@ LABEL org.opencontainers.image.title="cyberlab-net-analysis" \
       org.opencontainers.image.licenses="Apache-2.0"
 
 USER 0:0
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # tshark asks whether non-root users may capture; preseed "no" (we never capture live).
 RUN echo "wireshark-common wireshark-common/install-setuid boolean false" | debconf-set-selections \
  && apt-get update \
  && apt-get install -y --no-install-recommends tshark \
  && rm -rf /var/lib/apt/lists/* \
- && tshark --version | head -1 \
- && capinfos -h | head -1
+ && tshark --version > /dev/null \
+ && command -v capinfos editcap mergecap
 
 ENV CYBERLAB_IMAGE_VERSION=${CYBERLAB_VERSION}
 WORKDIR /work
