@@ -3,7 +3,7 @@ id: lab2-filesystem-forensics
 title: "Lab 2 — Linux File-System Forensics and Evidence Examination"
 version: 0.3.0-dev
 pattern: A
-level: intermediate undergraduate (graduate extension: journal recovery)
+level: "intermediate undergraduate (graduate extension: journal recovery)"
 estimated_minutes: 120
 evidence_dir: /evidence
 work_dir: /work
