@@ -1,6 +1,6 @@
 # Lab 1 — Network Traffic Analysis and Threat Identification
 
-> **Status:** Draft v0.1.0 (2026-11-17). Every TShark command in Parts A–E was run against the `demo` capture on Linux x86-64 with TShark 4.2.2. The Lab 1 container image (TShark 4.4) and the Compose setup are **UNTESTED**, and no student has walked through this guide yet.
+> **Status:** Draft v0.1.0 (2026-11-17). Every TShark command in Parts A–E was run against the `demo` capture on Linux x86-64 with TShark 4.2.2. The Lab 1 image was built and `verify` passed 10/10 on macOS Apple Silicon (Docker Desktop, TShark 4.4.19), where the Part D decode and the check-in count were confirmed. Windows is **UNTESTED**, and no student has walked through this guide yet.
 
 ## 1. Laboratory title
 
@@ -295,7 +295,7 @@ Every connection to a named site starts with a DNS lookup, so DNS is often the f
    wc -l /work/upload-decoded.txt
    ```
 
-   TShark prints the body as hexadecimal, and `xxd -r -p` turns the hex back into the original bytes. If `head` on `upload.b64` shows only hex digits (0–9, a–f), ask your instructor. Your TShark version may already print text, in which case skip the `xxd` step.
+   TShark prints the body as hexadecimal, and `xxd -r -p` turns the hex back into the original bytes. If `head` on `upload.b64` still shows only hex digits (0–9, a–f), check that you used the right frame number.
 
 4. **Assess the data.** What kind of records are they? How many **records** (rows, not counting a header line)? What fields would matter to the executive director's notification decision? Record a SHA-256 of `upload-decoded.txt` in your case notes (`sha256sum /work/upload-decoded.txt`), because it is now a derived exhibit.
 

@@ -6,7 +6,7 @@
 | Time | 90–120 minutes (target) |
 | Pattern | A: offline workstation, no network, read-only evidence |
 | Version | 0.1.0 (in development — Milestone 2) |
-| Tested on | Evidence generator and reference solution: Linux x86-64, 2026-11-13, TShark 4.2.2 (10/10 seeds pass). **Container image, Compose, macOS, Windows: UNTESTED** |
+| Tested on | Generator and reference solution: Linux x86-64, 2026-11-13, TShark 4.2.2 (10/10 seeds pass). Image build + `verify` 10/10 + guide Part D: macOS Apple Silicon, Docker Desktop, TShark 4.4.19, 2026-11-17. **Windows and CI integration: UNTESTED** |
 
 **Scenario.** Cedarwick Neighborhood Aid, a fictional nonprofit, received an endpoint alert
 on its staff workstation segment. You have one hour of traffic from a mirror port. Decide
