@@ -10,7 +10,7 @@ work_dir: /work
 report: /work/lab2-check.json
 
 checks:
-  tools: [bash, fls, istat, icat, ils, blkls, blkcat, mmls, fsstat, ffind, ifind, debugfs, mdir, ewfinfo, ewfverify, ewfexport, python3, jq, xxd, sha256sum, md5sum, file, strings]
+  tools: [bash, fls, istat, icat, ils, blkls, blkcat, mmls, fsstat, ffind, ifind, debugfs, mdir, ewfinfo, ewfverify, ewfexport, mactime, python3, jq, xxd, sha256sum, md5sum, file, strings]
   manifest: MANIFEST.sha256
   readonly: [/evidence]
   writable: [/work]

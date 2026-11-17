@@ -5,7 +5,7 @@
 #   (pulls the base image below; override with --build-arg BASE_IMAGE=...)
 #
 # Reads disk images only: The Sleuth Kit, debugfs (read-only use), mtools, libewf tools,
-# binutils (strings). No mounting (ADR-0008): no FUSE, no loop devices, no capabilities.
+# binutils (strings), perl (needed by TSK's mactime). No mounting (ADR-0008): no FUSE, no loop devices, no capabilities.
 #
 # KNOWN ISSUE (found 2026-11-17, macOS Apple Silicon): with Debian 13's libewf 20140816,
 # every TSK tool prints correct output from an E01 and then segfaults on exit (status 139).
@@ -34,11 +34,13 @@ RUN apt-get update \
       mtools \
       ewf-tools \
       binutils \
+      perl \
  && rm -rf /var/lib/apt/lists/* \
  && fls -V \
  && command -v debugfs ewfinfo ewfverify ewfexport mdir \
  && ldd "$(command -v fls)" | grep -q libewf \
- && command -v strings
+ && command -v strings \
+ && mactime -V
 
 ENV CYBERLAB_IMAGE_VERSION=${CYBERLAB_VERSION}
 WORKDIR /work

@@ -443,6 +443,8 @@ Your evidence continues your own Lab 1 variant; answers copied from someone else
 | Times differ by 4 hours from your notes | You mixed local log times with UTC | Logs: local with offset (`-04:00` → add 4 h). Sleuth Kit in this container: UTC. |
 | `[FAIL] evidence-integrity` | Wrong `CYBERLAB_EVIDENCE` path or a damaged download | Check the path; unzip again; record it in your chain of custody. |
 | `[FAIL] free-disk` | Less than 1 GB free | Free space; the working copies need about 200 MB. |
+| `Old package separator "'" deprecated at /usr/bin/mactime …` | Harmless Perl warnings from this version of `mactime` | Ignore them; the timeline is still correct. Add `2>/dev/null` to hide them. |
+| `no configuration file provided: not found` | `docker compose` was run outside the lab folder | `cd labs/lab2-filesystem-forensics` first. |
 
 ## 15. Cleanup instructions
 
