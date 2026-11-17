@@ -1,0 +1,26 @@
+CASE BRIEF - Lab 1: Network Traffic Analysis
+Variant: demo
+
+Client:   Cedarwick Neighborhood Aid (fictional nonprofit)
+Request:  On 2026-10-10 the endpoint protection console raised a low-confidence
+          alert for "suspicious outbound connection" on the staff workstation segment.
+          The alert did not record which workstation. The IT contractor exported one
+          hour of traffic from a mirror port on the segment switch, starting about
+          18:05 UTC, and asked you to determine whether any host is compromised,
+          what it communicated with, and whether data left the network.
+
+Evidence: cedarwick-ws-segment.pcapng  (pcapng, all timestamps UTC)
+          MANIFEST.sha256 lists the SHA-256 of every evidence file.
+
+Network:  10.20.30.0/24 (staff segment)
+  10.20.30.1     gw.cedarwick.test
+  10.20.30.10    dc01.cedarwick.test
+  10.20.30.12    prn01.cedarwick.test
+  10.20.30.20    intranet.cedarwick.test
+  10.20.30.25    files01.cedarwick.test
+  10.20.30.101-160  staff workstations (DHCP)
+Internal DNS domain: cedarwick.test
+
+This capture is SYNTHETIC. Every name, address and record is fictional; domains
+use reserved names (.example, .test, example.com/.net/.org) and addresses come
+from private and documentation ranges. Do not look any of them up on the internet.

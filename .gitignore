@@ -11,3 +11,6 @@ coverage.json
 **/answer-key*
 **/roster/
 **/seed-map*
+
+# macOS
+.DS_Store

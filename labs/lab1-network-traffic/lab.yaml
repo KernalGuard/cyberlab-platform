@@ -1,0 +1,44 @@
+# Lab 1 metadata and verify checks (read by cyberlab-verify inside the container).
+id: lab1-network-traffic
+title: "Lab 1 — Network Traffic Analysis and Threat Identification"
+version: 0.1.0
+pattern: A
+level: introductory undergraduate (graduate extension)
+estimated_minutes: 120
+evidence_dir: /evidence
+work_dir: /work
+report: /work/lab1-check.json
+
+checks:
+  tools: [bash, tshark, capinfos, editcap, mergecap, python3, jq, grep, sha256sum, base64]
+  manifest: MANIFEST.sha256
+  readonly: [/evidence]
+  writable: [/work]
+  network: none
+  hardening: true
+  min_memory_mb: {fail: 2048, warn: 3500}
+  min_free_disk_mb: {fail: 500, warn: 2000}
+
+# DRAFT objectives (Bloom-tagged); tracing to tasks and rubric rows is Week 3 work (AC-L1-14).
+objectives:
+  - id: L1-1
+    bloom: Apply
+    text: Verify the integrity of a packet capture and summarise it with capinfos and TShark statistics.
+  - id: L1-2
+    bloom: Apply
+    text: Write TShark display filters to isolate DNS, HTTP and TLS traffic by host, protocol and field.
+  - id: L1-3
+    bloom: Analyze
+    text: Distinguish algorithmically generated domains and NXDOMAIN bursts from normal DNS activity.
+  - id: L1-4
+    bloom: Analyze
+    text: Identify periodic command-and-control check-ins and estimate their interval from timestamps.
+  - id: L1-5
+    bloom: Analyze
+    text: Reconstruct an HTTP upload and decode its payload to assess what data left the network.
+  - id: L1-6
+    bloom: Evaluate
+    text: Separate malicious indicators from benign look-alikes and justify each conclusion with evidence.
+  - id: L1-7
+    bloom: Create
+    text: Produce a findings file and a timeline-based incident report with reproducible filter commands.

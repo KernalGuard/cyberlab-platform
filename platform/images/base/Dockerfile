@@ -8,6 +8,8 @@
 
 # Pin by digest at release time (ADR-0005), e.g. debian:trixie-slim@sha256:<digest>
 ARG DEBIAN_IMAGE=debian:trixie-slim
+# The tag lives in the ARG default above; hadolint cannot see through ARGs.
+# hadolint ignore=DL3006
 FROM ${DEBIAN_IMAGE}
 
 ARG CYBERLAB_VERSION=0.1.0-dev
