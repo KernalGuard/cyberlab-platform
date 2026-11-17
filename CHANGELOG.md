@@ -2,6 +2,16 @@
 
 All notable changes are recorded here. Versions follow [Semantic Versioning](https://semver.org/).
 
+## [0.2.1] — 2026-11-17 — Lab 1 continuity fix
+
+### Changed
+- Lab 1 demo evidence regenerated with generator 1.1.0: the compromised workstation's own browser now reports **Ubuntu Linux**, while its implant keeps sending a fake Windows User-Agent. This makes Lab 1 consistent with Lab 2, which examines the same workstation's (Linux) disk, and adds a lesson: a User-Agent is chosen by the sender and can lie. **All answer values are unchanged** (same seed, same indicators); only the capture bytes differ.
+- Student guide Part C and guided question 5 ask students to compare the suspect host's User-Agents with each other.
+- Lab 1 images and Compose default to `0.2.1`.
+
+### Testing status (2026-11-17)
+- Generator 1.1.0: 10/10 seeds byte-reproducible, 0 malformed, reference solution 40/40 (TShark 4.2.2, Python 3.13, Scapy 2.8.0).
+
 ## [0.2.0] — 2026-11-17 — Lab 1 (Milestone 2)
 
 ### Added

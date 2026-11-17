@@ -10,7 +10,7 @@
 # Status: built and tested 2026-11-17 on macOS Apple Silicon and in CI (amd64 + arm64);
 # ~100 MB compressed (AC-P-02 target <= 350 MB).
 
-ARG BASE_IMAGE=ghcr.io/kernalguard/cyberlab-base:0.2.0
+ARG BASE_IMAGE=ghcr.io/kernalguard/cyberlab-base:0.2.1
 # The tag lives in the ARG default above; hadolint cannot see through ARGs.
 # hadolint ignore=DL3006
 FROM ${BASE_IMAGE}

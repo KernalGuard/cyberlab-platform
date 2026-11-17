@@ -1,6 +1,6 @@
 # Lab 1 — Network Traffic Analysis and Threat Identification
 
-> **Status:** v0.2.0 pilot preview (2026-11-17). Every TShark command in Parts A–E was run against the `demo` capture on Linux x86-64 with TShark 4.2.2. The Lab 1 image was built and `verify` passed 10/10 on macOS Apple Silicon (Docker Desktop, TShark 4.4.19), where the Part D decode and the check-in count were confirmed. Windows is **UNTESTED**, and no student has walked through this guide yet.
+> **Status:** v0.2.1 pilot preview (2026-11-17). Every TShark command in Parts A–E was run against the `demo` capture on Linux x86-64 with TShark 4.2.2. The Lab 1 image was built and `verify` passed 10/10 on macOS Apple Silicon (Docker Desktop, TShark 4.4.19), where the Part D decode and the check-in count were confirmed. Windows is **UNTESTED**, and no student has walked through this guide yet.
 
 ## 1. Laboratory title
 
@@ -243,7 +243,7 @@ Every connection to a named site starts with a DNS lookup, so DNS is often the f
    ts -Y 'http.request' -T fields -e ip.src -e http.user_agent | sort | uniq -c | sort -rn
    ```
 
-   Which User-Agent is used by only one host? Does it match the browsers the other workstations use, or look out of date? Ask yourself why an office PC would send that.
+   Which User-Agent is used by only one host? Does it match the browsers the other workstations use, or look out of date? Now compare it with the **other** User-Agents that same host sends: does its own browser report the same operating system? A User-Agent is just text the program chooses to send, so it can lie.
 
 3. **Isolate the suspect's requests to the address you found in Part B:**
 
@@ -356,7 +356,7 @@ Answer these in your report (section 12). Cite a frame number or command for eac
 2. Which protocols make up most of the traffic? Is that what you would expect from an office?
 3. Which host produced the suspicious DNS failures? Describe the pattern: how many names, how often, and what made them look generated.
 4. Which generated name resolved, and to what address? Why would malware use many names instead of one?
-5. Which User-Agent was unusual, and what about it stood out?
+5. Which User-Agent was unusual, and what about it stood out? What does the same host's ordinary browser traffic say about its operating system, and what does that tell you about the unusual one?
 6. When did check-ins start, how often did they happen, and how many were there? Show how you measured the interval.
 7. What was uploaded, when, to where, and how large was it? How many records, and what kinds of personal data fields did they contain?
 8. What MAC address belongs to the compromised host, and why record it in addition to the IP?

@@ -1,0 +1,47 @@
+# Lab 2 — Linux File-System Forensics and Evidence Examination
+#
+#   docker compose run --rm verify        # check environment + evidence integrity (do this first)
+#   docker compose run --rm workstation   # analyst shell with The Sleuth Kit, debugfs, mtools, ewf tools
+#   docker compose run --rm reset         # restore work/ from the template (backs up first)
+#   docker compose down --remove-orphans  # clean up
+#
+# Pattern A (ADR-0006): no network, read-only evidence, non-root, all capabilities dropped.
+# Disk images are examined in place (E01 or raw); nothing is mounted (ADR-0008).
+# Your instructor gives you your own evidence folder; evidence/ holds the public `demo` variant.
+#
+# Status: UNTESTED with Docker (written 2026-11-17).
+
+name: cyberlab-lab2
+
+x-lab2: &lab2
+  extends:
+    file: ../../platform/compose/security-baseline.yaml
+    service: offline-analyst
+  image: ${CYBERLAB_REGISTRY:-ghcr.io/kernalguard}/cyberlab-fs-forensics:${CYBERLAB_VERSION:-0.3.0}
+  user: "${CYBERLAB_UID:-1000}:${CYBERLAB_GID:-1000}"
+  environment:
+    CYBERLAB_LAB: lab2
+  mem_limit: 768m
+  volumes:
+    - ${CYBERLAB_EVIDENCE:-./evidence}:/evidence:ro
+    - ./work:/work
+    - ./lab.yaml:/lab/lab.yaml:ro
+    - ./work.template:/lab/work.template:ro
+
+services:
+  workstation:
+    <<: *lab2
+    # Only one service builds (parallel builds of a shared image collide; found on macOS 2026-10-09).
+    build:
+      context: ../../platform
+      dockerfile: images/fs-forensics/Dockerfile
+    stdin_open: true
+    tty: true
+
+  verify:
+    <<: *lab2
+    command: ["cyberlab-verify", "--config", "/lab/lab.yaml"]
+
+  reset:
+    <<: *lab2
+    command: ["cyberlab-reset", "--template", "/lab/work.template", "--work", "/work"]

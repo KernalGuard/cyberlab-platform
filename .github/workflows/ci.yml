@@ -101,6 +101,13 @@ jobs:
             -t local/cyberlab-net-analysis:ci platform
       - name: Lab 1 integration test
         run: labs/lab1-network-traffic/tests/integration.sh
+      - name: Build fs-forensics image (Lab 2, in development; checks TSK links libewf)
+        run: |
+          docker build -f platform/images/fs-forensics/Dockerfile \
+            --build-arg BASE_IMAGE=local/cyberlab-base:ci \
+            --build-arg CYBERLAB_VERSION=ci-${GITHUB_SHA::7} \
+            -t local/cyberlab-fs-forensics:ci platform
+          docker run --rm --network none local/cyberlab-fs-forensics:ci bash -c 'fls -V; ewfinfo -V | head -1; debugfs -V 2>&1 | head -1'
       - name: Image sizes (AC-P-02 target for net-analysis <= 350 MB compressed)
         run: |
           { echo '### Image sizes (uncompressed)'; echo '```';

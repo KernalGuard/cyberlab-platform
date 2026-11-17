@@ -1,0 +1,44 @@
+# Lab 2 metadata and verify checks (read by cyberlab-verify inside the container).
+id: lab2-filesystem-forensics
+title: "Lab 2 — Linux File-System Forensics and Evidence Examination"
+version: 0.3.0-dev
+pattern: A
+level: intermediate undergraduate (graduate extension: journal recovery)
+estimated_minutes: 120
+evidence_dir: /evidence
+work_dir: /work
+report: /work/lab2-check.json
+
+checks:
+  tools: [bash, fls, istat, icat, ils, blkls, blkcat, mmls, fsstat, ffind, ifind, debugfs, mdir, ewfinfo, ewfverify, python3, jq, xxd, sha256sum, file, strings]
+  manifest: MANIFEST.sha256
+  readonly: [/evidence]
+  writable: [/work]
+  network: none
+  hardening: true
+  min_memory_mb: {fail: 2048, warn: 3500}
+  min_free_disk_mb: {fail: 1000, warn: 3000}
+
+# DRAFT objectives (Bloom-tagged); finalised with the student guide.
+objectives:
+  - id: L2-1
+    bloom: Apply
+    text: Verify forensic images (E01 and manifest hashes) and record acquisition metadata in a chain of custody.
+  - id: L2-2
+    bloom: Apply
+    text: Examine ext4 and FAT32 file systems in place with The Sleuth Kit (fsstat, fls, istat, icat) without mounting them.
+  - id: L2-3
+    bloom: Analyze
+    text: Reconstruct user activity from shell history, desktop recent-files lists, logs and file timestamps.
+  - id: L2-4
+    bloom: Analyze
+    text: Recover deleted data by carving unallocated space and explain why a modern Linux kernel leaves no name or block map.
+  - id: L2-5
+    bloom: Analyze
+    text: Identify persistence, hidden files and timestamp manipulation, and justify each finding with metadata.
+  - id: L2-6
+    bloom: Evaluate
+    text: Correlate disk findings with the Lab 1 network evidence and assess where they agree or conflict.
+  - id: L2-7
+    bloom: Create
+    text: Produce a findings file, a timeline and an examination report another examiner could reproduce.

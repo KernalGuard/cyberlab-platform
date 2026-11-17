@@ -1,7 +1,7 @@
 # Lab 1 metadata and verify checks (read by cyberlab-verify inside the container).
 id: lab1-network-traffic
 title: "Lab 1 — Network Traffic Analysis and Threat Identification"
-version: 0.2.0
+version: 0.2.1
 pattern: A
 level: introductory undergraduate (graduate extension)
 estimated_minutes: 120

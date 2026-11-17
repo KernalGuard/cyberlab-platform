@@ -2,14 +2,14 @@
 
 A reusable, security-hardened platform of hands-on laboratories for undergraduate and early-graduate cybersecurity and digital forensics courses. It is built on Docker and Docker Compose, with seeded synthetic evidence and reproducible grading.
 
-> **Project status: v0.2.0, pilot preview. Labs 0 and 1 are released.**
+> **Project status: v0.2.1, pilot preview. Labs 0 and 1 are released.**
 > Both labs pass their container integration tests in CI on linux/amd64 and linux/arm64 and run on macOS Apple Silicon (Docker Desktop). Windows has not been tested yet. Nothing has been classroom-tested.
 
 | Lab | Topic | Audience | Status |
 |---|---|---|---|
 | [0](labs/lab0-orientation/) | Environment orientation (Docker, Linux shell, hashing) | All | **Released** (v0.1.0) |
-| [1](labs/lab1-network-traffic/) | Network Traffic Analysis & Threat Identification | Intro UG (graduate extension) | **Released** (v0.2.0), awaiting first student walkthrough |
-| 2 | Linux File-System Forensics & Evidence Examination | Intermediate UG | Planned |
+| [1](labs/lab1-network-traffic/) | Network Traffic Analysis & Threat Identification | Intro UG (graduate extension) | **Released** (v0.2.1), awaiting first student walkthrough |
+| [2](labs/lab2-filesystem-forensics/) | Linux File-System Forensics & Evidence Examination | Intermediate UG | **In development** (Cedarwick follow-up) |
 | 3 | Web Application Security Assessment | Upper UG | Planned |
 | 4 | Incident Response & Multi-Source Digital Forensics | Early graduate | Planned |
 

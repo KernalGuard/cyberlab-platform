@@ -5,8 +5,8 @@
 | Level | Introductory undergraduate (graduate extension: scan analysis, report depth) |
 | Time | 90–120 minutes (target) |
 | Pattern | A: offline workstation, no network, read-only evidence |
-| Version | 0.2.0 (pilot preview, 2026-11-17) |
-| Tested on | CI integration test (≈ 25 checks) on linux/amd64 and linux/arm64, 2026-11-17. macOS Apple Silicon (Docker Desktop, TShark 4.4.19): build, `verify` 10/10, guide Part D, 2026-11-17. Generator: 10/10 seeds, 2026-11-13. **Windows: UNTESTED. No student walkthrough yet.** |
+| Version | 0.2.1 (pilot preview, 2026-11-17; demo evidence from generator 1.1.0) |
+| Tested on | CI integration test (≈ 25 checks) on linux/amd64 and linux/arm64, 2026-11-17. macOS Apple Silicon (Docker Desktop, TShark 4.4.19): build, `verify` 10/10, guide Part D, 2026-11-17. Generator 1.1.0: 10/10 seeds, 2026-11-17. **Windows: UNTESTED. No student walkthrough yet.** |
 
 **Scenario.** Cedarwick Neighborhood Aid, a fictional nonprofit, received an endpoint alert
 on its staff workstation segment. You have one hour of traffic from a mirror port. Decide
