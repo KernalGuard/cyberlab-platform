@@ -94,14 +94,31 @@ jobs:
           python3 -m pytest -q labs/lab0-orientation/tests
       - name: Lab 0 integration test
         run: labs/lab0-orientation/tests/integration.sh
-      - name: Image size
-        run: docker image ls local/cyberlab-base:ci --format '{{.Repository}}:{{.Tag}} {{.Size}}' | tee -a "$GITHUB_STEP_SUMMARY"
-      - name: Save image for scanning
+      - name: Build net-analysis image on the CI base (native ${{ matrix.arch }})
+        run: |
+          docker build -f platform/images/net-analysis/Dockerfile \
+            --build-arg BASE_IMAGE=local/cyberlab-base:ci \
+            --build-arg CYBERLAB_VERSION=ci-${GITHUB_SHA::7} \
+            -t local/cyberlab-net-analysis:ci platform
+      - name: Lab 1 integration test
+        run: labs/lab1-network-traffic/tests/integration.sh
+      - name: Image sizes (AC-P-02 target for net-analysis <= 350 MB compressed)
+        run: |
+          { echo '### Image sizes (uncompressed)'; echo '```';
+            docker image ls 'local/cyberlab-*' --format '{{.Repository}}:{{.Tag}} {{.Size}}';
+            echo -n 'net-analysis compressed (gzip of docker save): ';
+            docker save local/cyberlab-net-analysis:ci | gzip -1 | wc -c | awk '{printf "%.0f MB\n", $1/1048576}';
+            echo '```'; } | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Save images for scanning
         if: matrix.arch == 'amd64'
-        run: docker save local/cyberlab-base:ci -o cyberlab-base.tar
+        run: |
+          docker save local/cyberlab-base:ci -o cyberlab-base.tar
+          docker save local/cyberlab-net-analysis:ci -o cyberlab-net-analysis.tar
       - name: Vulnerability scan (report only)
         if: matrix.arch == 'amd64'
         run: |
-          docker run --rm -v "$PWD:/scan" "$TRIVY_IMAGE" image --input /scan/cyberlab-base.tar \
-            --severity HIGH,CRITICAL --ignore-unfixed --exit-code 0 --format table | tee trivy.txt
-          { echo '### Trivy (HIGH/CRITICAL, fixable)'; echo '```'; tail -40 trivy.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          for img in cyberlab-base cyberlab-net-analysis; do
+            docker run --rm -v "$PWD:/scan" "$TRIVY_IMAGE" image --input "/scan/$img.tar" \
+              --severity HIGH,CRITICAL --ignore-unfixed --exit-code 0 --format table | tee "trivy-$img.txt"
+            { echo "### Trivy $img (HIGH/CRITICAL, fixable)"; echo '```'; tail -40 "trivy-$img.txt"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          done

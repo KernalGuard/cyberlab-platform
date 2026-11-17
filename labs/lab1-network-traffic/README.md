@@ -17,6 +17,7 @@ whether a host is compromised, what it talked to, and whether data left the netw
 variant; point the lab at it with `CYBERLAB_EVIDENCE=/path/to/your/evidence`.
 
 **Student guide:** [`docs/student-guide.md`](docs/student-guide.md) (draft, 2026-11-17).
+**Architecture:** [`docs/architecture.md`](docs/architecture.md). **Maintainer test:** `tests/integration.sh` (needs the image built).
 
 **Quick reference**
 ```bash
