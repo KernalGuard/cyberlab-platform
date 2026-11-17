@@ -10,14 +10,14 @@ work_dir: /work
 report: /work/lab2-check.json
 
 checks:
-  tools: [bash, fls, istat, icat, ils, blkls, blkcat, mmls, fsstat, ffind, ifind, debugfs, mdir, ewfinfo, ewfverify, python3, jq, xxd, sha256sum, file, strings]
+  tools: [bash, fls, istat, icat, ils, blkls, blkcat, mmls, fsstat, ffind, ifind, debugfs, mdir, ewfinfo, ewfverify, ewfexport, python3, jq, xxd, sha256sum, md5sum, file, strings]
   manifest: MANIFEST.sha256
   readonly: [/evidence]
   writable: [/work]
   network: none
   hardening: true
   min_memory_mb: {fail: 2048, warn: 3500}
-  min_free_disk_mb: {fail: 1000, warn: 3000}
+  min_free_disk_mb: {fail: 1000, warn: 3000}   # raw working copies (~200 MB) go to /work
 
 # DRAFT objectives (Bloom-tagged); finalised with the student guide.
 objectives:
