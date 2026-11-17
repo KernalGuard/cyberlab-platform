@@ -9,8 +9,8 @@
 # Your instructor gives you your own evidence folder; the copy in evidence/ is the public
 # `demo` variant for practice.
 #
-# Status: UNTESTED with Docker (written 2026-11-13). Generator and reference solution
-# tested outside containers; see the instructor repo.
+# Status: tested 2026-11-17 on macOS Apple Silicon (Docker Desktop) and in CI on
+# linux/amd64 and linux/arm64 (tests/integration.sh). Windows: UNTESTED.
 
 name: cyberlab-lab1
 

@@ -2,7 +2,29 @@
 
 All notable changes are recorded here. Versions follow [Semantic Versioning](https://semver.org/).
 
-## [Unreleased] — Milestone 1 (Week 1)
+## [0.2.0] — 2026-11-17 — Lab 1 (Milestone 2)
+
+### Added
+- **Lab 1 — Network Traffic Analysis and Threat Identification** (`labs/lab1-network-traffic/`): the Cedarwick Neighborhood Aid scenario, public `demo` evidence (≈ 17 MB pcapng, case brief, manifest), Compose file (Pattern A), `lab.yaml` verify checks, work templates (`findings.json`, case notes, chain of custody).
+- Lab 1 student guide (all 16 sections; DNS/DGA, HTTP check-ins, upload decoding, findings format) and architecture document.
+- `cyberlab-net-analysis` image (TShark 4.4, capinfos, editcap, mergecap) built on `cyberlab-base`.
+- Lab 1 container integration test (`tests/integration.sh`, ≈ 25 checks; asserts no case answers) and its CI job on amd64 and arm64, with image-size reporting and a Trivy report for both images.
+- Reusable release workflow (`.github/workflows/_build-image.yml`): the release now publishes `cyberlab-base` and then `cyberlab-net-analysis` built on the same-version base.
+
+### Changed
+- Lab 1 images and Compose default to version `0.2.0`; Lab 0 stays on `0.1.0` (published images are never overwritten).
+
+### Fixed
+- hadolint DL3006 (ARG-based `FROM`) and DL4006 (pipefail) in both Dockerfiles; CI is green for the first time.
+
+### Testing status (2026-11-17)
+- CI on GitHub Actions: lint, unit, policy, leak, Lab 0 and Lab 1 integration on linux/amd64 and linux/arm64 all pass. Lab 1 peak memory 92–93 MB (limit 512 MB); `cyberlab-net-analysis` ≈ 100 MB compressed.
+- macOS Apple Silicon (Docker Desktop): Lab 1 build, `verify` 10/10, guide Part D decode.
+- **Untested:** Windows; a student walkthrough of Lab 1; the two-image release workflow until this tag runs.
+
+## [0.1.0] — 2026-11-17 — Milestone 1 (platform foundation + Lab 0)
+
+First tagged release: `ghcr.io/kernalguard/cyberlab-base:0.1.0` (amd64 + arm64).
 
 ### Added
 - `cyberlab_common` shared library: SHA-256 manifests, HMAC seed derivation, `verify` framework, findings validation and scoring, reset with backup.

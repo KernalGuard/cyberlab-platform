@@ -1,15 +1,16 @@
 # cyberlab-net-analysis — Lab 1 analysis workstation (TShark + capture utilities).
 # Build context: platform/
 #
-#   docker build -f platform/images/base/Dockerfile -t ghcr.io/kernalguard/cyberlab-base:0.1.0 platform
-#   docker build -f platform/images/net-analysis/Dockerfile -t ghcr.io/kernalguard/cyberlab-net-analysis:0.1.0 platform
+#   docker build -f platform/images/net-analysis/Dockerfile -t ghcr.io/kernalguard/cyberlab-net-analysis:dev platform
+#   (pulls the base image below; override with --build-arg BASE_IMAGE=...)
 #
 # Reads capture files only: no capabilities, no network, no live capture (ADR-0011).
 # Wireshark GUI is used on the host against the shared work/ and evidence/ folders.
 #
-# Status: UNTESTED as a container build (written 2026-11-13). Target size <= 350 MB (AC-P-02).
+# Status: built and tested 2026-11-17 on macOS Apple Silicon and in CI (amd64 + arm64);
+# ~100 MB compressed (AC-P-02 target <= 350 MB).
 
-ARG BASE_IMAGE=ghcr.io/kernalguard/cyberlab-base:0.1.0
+ARG BASE_IMAGE=ghcr.io/kernalguard/cyberlab-base:0.2.0
 # The tag lives in the ARG default above; hadolint cannot see through ARGs.
 # hadolint ignore=DL3006
 FROM ${BASE_IMAGE}

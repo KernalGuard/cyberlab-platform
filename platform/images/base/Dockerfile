@@ -3,8 +3,8 @@
 #
 #   docker build -f platform/images/base/Dockerfile -t cyberlab-base:dev platform
 #
-# Status: UNTESTED as a container build (the development workspace cannot pull
-# base images). CI builds it natively for linux/amd64 and linux/arm64.
+# Status: built in CI natively for linux/amd64 and linux/arm64, released as v0.1.0
+# (2026-11-17), and tested on macOS Apple Silicon (Docker Desktop).
 
 # Pin by digest at release time (ADR-0005), e.g. debian:trixie-slim@sha256:<digest>
 ARG DEBIAN_IMAGE=debian:trixie-slim

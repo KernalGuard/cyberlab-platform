@@ -1,7 +1,6 @@
 # CyberLab continuous integration.
-# Status: UNTESTED on GitHub Actions until the repository is pushed. Every job's
-# commands were run locally on 2026-10-09 (Linux x86-64), except hadolint, Trivy
-# and the arm64 runner. Pin third-party actions to commit SHAs before v1.0.
+# Status: all jobs green on GitHub Actions since 2026-11-17 (amd64 + arm64).
+# Pin third-party actions to commit SHAs before v1.0.
 
 name: CI
 

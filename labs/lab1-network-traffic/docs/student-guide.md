@@ -1,6 +1,6 @@
 # Lab 1 — Network Traffic Analysis and Threat Identification
 
-> **Status:** Draft v0.1.0 (2026-11-17). Every TShark command in Parts A–E was run against the `demo` capture on Linux x86-64 with TShark 4.2.2. The Lab 1 image was built and `verify` passed 10/10 on macOS Apple Silicon (Docker Desktop, TShark 4.4.19), where the Part D decode and the check-in count were confirmed. Windows is **UNTESTED**, and no student has walked through this guide yet.
+> **Status:** v0.2.0 pilot preview (2026-11-17). Every TShark command in Parts A–E was run against the `demo` capture on Linux x86-64 with TShark 4.2.2. The Lab 1 image was built and `verify` passed 10/10 on macOS Apple Silicon (Docker Desktop, TShark 4.4.19), where the Part D decode and the check-in count were confirmed. Windows is **UNTESTED**, and no student has walked through this guide yet.
 
 ## 1. Laboratory title
 
