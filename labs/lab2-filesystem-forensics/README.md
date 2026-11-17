@@ -1,6 +1,6 @@
 # Lab 2 — Linux File-System Forensics and Evidence Examination
 
-> **Status: IN DEVELOPMENT (Milestone 3).** Demo evidence (generator 1.0.0, 2026-11-17), Compose file, verify checks, work templates and the `fs-forensics` image (builds in CI on amd64 + arm64). Student guide, integration test and instructor materials are not written yet. The Lab 2 container has **not** yet been run with this evidence.
+> **Status: IN DEVELOPMENT (Milestone 3).** Demo evidence (generator 1.0.0, 2026-11-17), Compose file, verify checks, work templates and the `fs-forensics` image (builds in CI on amd64 + arm64). Student guide drafted ([`docs/student-guide.md`](docs/student-guide.md)); integration test and instructor materials are not written yet. Tested on macOS Apple Silicon 2026-11-17: `verify` 10/10, E01 working-copy export with matching MD5s, deleted-file listing, journal listing and carving.
 
 | | |
 |---|---|
