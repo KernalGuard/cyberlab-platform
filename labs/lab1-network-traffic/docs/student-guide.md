@@ -343,10 +343,10 @@ Every connection to a named site starts with a DNS lookup, so DNS is often the f
 Check that the file is valid JSON before you submit:
 
 ```bash
-jq . /work/findings.json
+cyberlab-findings validate /work/findings.json
 ```
 
-If `jq` prints your file back, it is valid. If it prints `parse error`, fix the line it names (usually a missing comma or quote).
+`PASS` means the file is well-formed. If you see `FAIL`, the message names the problem. For JSON syntax errors, `jq . /work/findings.json` points to the line (usually a missing comma or quote).
 
 ## 10. Guided questions
 
@@ -400,7 +400,7 @@ Answer these in your report (section 12). Cite a frame number or command for eac
 
 ## 13. Submission instructions
 
-1. In the workstation shell, run `jq . /work/findings.json` one last time to confirm it is valid.
+1. In the workstation shell, run `cyberlab-findings validate /work/findings.json` one last time.
 2. Leave the container (`exit`) and run `docker compose run --rm verify`, so `lab1-check.json` is current and shows the evidence was **unchanged at the end** of your analysis. Add that result to your chain of custody.
 3. Export your report to PDF.
 4. Upload to the Lab 1 assignment in the course LMS: the report PDF, `findings.json`, `case-notes.md`, `chain-of-custody.md`, `lab1-check.json`.

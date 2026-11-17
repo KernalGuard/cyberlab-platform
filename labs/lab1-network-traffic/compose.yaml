@@ -18,7 +18,7 @@ x-lab1: &lab1
   extends:
     file: ../../platform/compose/security-baseline.yaml
     service: offline-analyst
-  image: ${CYBERLAB_REGISTRY:-ghcr.io/kernalguard}/cyberlab-net-analysis:${CYBERLAB_VERSION:-0.1.0}
+  image: ${CYBERLAB_REGISTRY:-ghcr.io/kernalguard}/cyberlab-net-analysis:${CYBERLAB_VERSION:-0.2.0}
   user: "${CYBERLAB_UID:-1000}:${CYBERLAB_GID:-1000}"
   environment:
     CYBERLAB_LAB: lab1
