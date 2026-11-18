@@ -1,6 +1,6 @@
 # Lab 3 — Web Application Security Assessment
 
-> **Status: IN DEVELOPMENT (Milestone 4).** The donation site (`app/`, `db/schema.sql`), four container images, Compose file (Pattern B), verify checks and work templates are written. Evidence (per-variant seed), student guide and tests are not written yet. **UNTESTED with Docker.**
+> **Status: IN DEVELOPMENT (Milestone 4).** The donation site (`app/`, `db/schema.sql`), four container images, Compose file (Pattern B), verify checks and work templates are written. Demo evidence (generator 1.0.0) and the [student guide](docs/student-guide.md) (draft) are written; the integration test, CI job and instructor materials are not yet. Tested on macOS Apple Silicon 2026-11-18: all services healthy, `verify` 14/14, every weakness validated end to end.
 
 | | |
 |---|---|
