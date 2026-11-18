@@ -2,6 +2,24 @@
 
 All notable changes are recorded here. Versions follow [Semantic Versioning](https://semver.org/).
 
+## [0.4.0] — 2026-11-18 — Lab 3 (Milestone 4)
+
+### Added
+- **Lab 3 — Web Application Security Assessment** (`labs/lab3-webapp-assessment/`): the Cedarwick story continues. Students run an authorised assessment of the charity's (fictional) donation website before it relaunches: weak password policy, forgeable unsigned session cookies, receipt IDOR, verbose error pages and SQL injection in the staff donor search. They then patch the query and prove the fix. Public `demo` evidence (≈ 80 KB) carries over the Lab 1 incident for the same pseudonym.
+- First **Pattern B** lab: `gateway` (nginx) bound to `127.0.0.1:8080` only; `app` (Flask, gunicorn) and `db` (PostgreSQL) on internal networks with no route out; a `workstation` that can reach only the gateway. JSON gateway and app logs and full PostgreSQL statement logging for the log-analysis part.
+- Four images built on `cyberlab-base`: `cyberlab-webapp`, `cyberlab-postgres`, `cyberlab-gateway`, `cyberlab-web-workstation`; all added to the release workflow, CI build, size report and Trivy scan.
+- `verify` checks `http`, `no_egress` and `authorization` (a signed `work/authorized-use.md` is required before the lab is marked ready), with unit tests.
+- Lab 3 student guide (Parts A–H), architecture document and container integration test (36 checks: isolation, loopback binding, hardening, each weakness, logs, memory, restart, reset, teardown), run in CI on amd64 and arm64.
+
+### Changed
+- `cyberlab-base`: library files are world-readable and the image build checks that UID 1000 can import `cyberlab_common`.
+- Ruff security rules are not applied to Lab 3's intentionally vulnerable `app/` folder (all other code is still checked).
+
+### Testing status (2026-11-18)
+- macOS Apple Silicon (Docker Desktop): all Lab 3 services healthy, `verify` 14/14, integration test 36/36 (stack memory 122 MB), HTTP reference solution 40/40 against the containers.
+- CI on GitHub Actions: Lab 3 integration test on linux/amd64 and linux/arm64.
+- **Untested:** Windows; a student walkthrough of Lab 3.
+
 ## [0.3.0] — 2026-11-17 — Lab 2 (Milestone 3)
 
 ### Added

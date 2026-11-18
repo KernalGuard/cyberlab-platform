@@ -1,6 +1,6 @@
 # Lab 3 — Web Application Security Assessment
 
-> **Status:** Draft v0.4.0-dev (2026-11-18). The lab stack (gateway, app, database, workstation) was built and tested on macOS Apple Silicon (Docker Desktop): `verify` 14/14 and every weakness validated end to end. The commands in this guide were checked against the `demo` site on Linux x86-64 with the same application code. Windows is **UNTESTED**, and no student has walked through this guide yet.
+> **Status:** v0.4.0 pilot preview (2026-11-18). The lab stack (gateway, app, database, workstation) was built and tested on macOS Apple Silicon (Docker Desktop) and in CI: `verify` 14/14, the integration test, and every weakness validated end to end. The commands in this guide were checked against the `demo` site on Linux x86-64 with the same application code. Windows is **UNTESTED**, and no student has walked through this guide yet.
 
 ## 1. Laboratory title
 

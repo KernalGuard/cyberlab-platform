@@ -1,7 +1,7 @@
 # Lab 3 metadata and verify checks (read by cyberlab-verify in the workstation container).
 id: lab3-webapp-assessment
 title: "Lab 3 — Web Application Security Assessment"
-version: 0.4.0-dev
+version: 0.4.0
 pattern: B
 level: "upper undergraduate (graduate extension: log analysis and remediation design)"
 estimated_minutes: 150

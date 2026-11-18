@@ -12,7 +12,7 @@
 # own computer (127.0.0.1). The app and database sit on an internal network with no route
 # to the internet. The site is INTENTIONALLY VULNERABLE: never expose it beyond 127.0.0.1.
 #
-# Status: UNTESTED with Docker (written 2026-11-17).
+# Status: v0.4.0. Tested on macOS Apple Silicon (Docker Desktop) and in CI (amd64, arm64).
 
 name: cyberlab-lab3
 
