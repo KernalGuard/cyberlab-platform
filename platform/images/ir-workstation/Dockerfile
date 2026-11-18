@@ -9,9 +9,9 @@
 # browser databases, mactime for timelines. No capabilities, no network, no live capture.
 # As in Lab 2, TSK runs on raw working copies exported with ewfexport (Debian libewf crash on exit).
 #
-# Status: UNTESTED with Docker (written 2026-11-18).
+# Status: built and tested 2026-11-18 on macOS Apple Silicon; CI amd64 + arm64. Released from v0.5.0.
 
-ARG BASE_IMAGE=ghcr.io/kernalguard/cyberlab-base:0.4.0
+ARG BASE_IMAGE=ghcr.io/kernalguard/cyberlab-base:0.5.0
 # The tag lives in the ARG default above; hadolint cannot see through ARGs.
 # hadolint ignore=DL3006
 FROM ${BASE_IMAGE}

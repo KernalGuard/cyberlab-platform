@@ -1,6 +1,6 @@
 # Lab 4 — Architecture
 
-> **Status:** Draft v0.5.0-dev (2026-11-18). The image was built and checked on macOS Apple Silicon (Docker Desktop): `verify` 10/10 and the instructor reference solution scoring 40/40 inside the container on the demo evidence. The integration test (`tests/integration.sh`) and its CI job are new in this version and not yet run. Figures marked *(CI)* come from the CI job summary once it runs. Windows: **UNTESTED**.
+> **Status:** v0.5.0 (2026-11-18). Built and tested on macOS Apple Silicon (Docker Desktop): `verify` 10/10, the integration test (`tests/integration.sh`) 38/38 with peak memory 102 MB, and the instructor reference solution scoring 40/40 inside the container on the demo evidence. CI runs the integration test on linux/amd64 and linux/arm64. Figures marked *(CI)* come from the CI job summary once it runs. Windows: **UNTESTED**.
 
 Lab 4 is a **Pattern A** lab ([`docs/phase-1/02-architecture.md` §5](../../../docs/phase-1/02-architecture.md), ADR-0006): one offline analysis container, read-only evidence, no network. The Phase 1 plan allowed a replayed Lab 3 stack (Pattern B + A); the evidence-only design was chosen on 2026-11-18 because the investigation needs the site's *records*, not the running site, and it halves the memory and moving parts.
 
@@ -132,7 +132,7 @@ Correlation is the point of the lab, so the generator guarantees that independen
 
 | Resource | Limit | Measured |
 |---|---|---|
-| Memory | 1 GB | peak during an analysis pass *(CI)* |
+| Memory | 1 GB | 102 MB peak during an analysis pass (macOS, 2026-11-18) |
 | Image | — | *(CI)* |
 | Evidence | — | ≈ 15 MB per variant; working files ≈ 130 MB in `/work` |
 
@@ -142,9 +142,9 @@ Correlation is the point of the lab, so the generator guarantees that independen
 |---|---|---|
 | AC-L4-01 reproducible, AC-L4-02 distinct variants, AC-L4-03 solvable (100%, blank 0, wrong variant flagged), AC-L4-04 cross-source timeline, AC-L4-05 continuity | `generators/lab4/tests/acceptance.py` (private) | PASS, 10 seeds (cloud) |
 | Reference solution inside the real container | manual, macOS | PASS 40/40 (2026-11-18) |
-| Tools, integrity, isolation, hardening, memory, reset, teardown | `tests/integration.sh` | New; CI amd64 + arm64 *(CI)* |
+| Tools, integrity, isolation, hardening, memory, reset, teardown | `tests/integration.sh` | PASS 38/38 macOS 2026-11-18; CI amd64 + arm64 |
 | Guide sections, objectives | `tests/docs/` | PASS |
-| Rubric, instructor guide | instructor `labs/lab4/` | Not yet written |
+| Rubric, instructor guide, answer key | instructor `labs/lab4/` | Drafted |
 | Completion time, cross-platform walkthrough | peer walkthrough | Not yet done |
 
 ## 11. Synthetic vs real

@@ -1,13 +1,13 @@
 # Lab 4 — Incident Response and Multi-Source Digital Forensics
 
-> **Status: IN DEVELOPMENT (Milestone 5).** Generator 1.0.0 and the public `demo` evidence, the `cyberlab-ir-workstation` image, Compose file (Pattern A), verify checks, work templates, the [student guide](docs/student-guide.md) (draft), the [architecture](docs/architecture.md) document and the integration test (`tests/integration.sh`, also in CI) are written. Tested on macOS Apple Silicon 2026-11-18: image builds, `verify` 10/10, the instructor reference solution solves the demo evidence in the container. Integration test not yet run. Windows: UNTESTED.
+> **Status: v0.5.0 pilot preview (2026-11-18).** Demo evidence (generator 1.0.0), [student guide](docs/student-guide.md), [architecture](docs/architecture.md), integration test (`tests/integration.sh`). Tested on macOS Apple Silicon (Docker Desktop): `verify` 10/10, integration test 38/38 (peak memory 102 MB), reference solution 40/40 in the container. CI: amd64 + arm64. **Windows: UNTESTED. No student walkthrough yet.**
 
 | | |
 |---|---|
 | Level | Early graduate (upper undergraduate with support) |
 | Time | 180 minutes (target) plus the written report |
 | Pattern | A: one offline workstation, no network, read-only evidence |
-| Version | 0.5.0-dev |
+| Version | 0.5.0 |
 
 **Scenario.** Cedarwick Neighborhood Aid (fictional) closes its story. The board relaunched the donation website you assessed in Lab 3 with only one of your fixes. Ten days later a donor reports a phishing e-mail that quotes their receipt number and gift amount. You lead the investigation: how the attacker got in, what they took, whether they are still in, and what Cedarwick must do now.
 

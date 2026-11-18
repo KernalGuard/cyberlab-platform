@@ -2,6 +2,18 @@
 
 All notable changes are recorded here. Versions follow [Semantic Versioning](https://semver.org/).
 
+## [0.5.0] — 2026-11-18 — Lab 4 (Milestone 5)
+
+### Added
+- **Lab 4 — Incident Response and Multi-Source Digital Forensics** (`labs/lab4-incident-response/`): the Cedarwick story closes. After the relaunch of the donation site (with only the Lab 3 SQL-injection fix), a phished staff laptop leaks a non-expiring staff session cookie; the attacker replays it, harvests donors and walks receipts by number. Students correlate seven sources (gateway, app and PostgreSQL logs, an office capture, a laptop E01 with Firefox databases, the web server's auth.log and a database snapshot), rule out an authorised re-test, a legitimate export and SSH noise, scope the exposure, and write a report with confidence levels and alternative explanations, a containment and recovery plan, a donor notification and (graduate) a tested detection rule. Public `demo` evidence (≈ 15 MB) continues the Lab 1 and Lab 3 demos.
+- `cyberlab-ir-workstation` image: TShark, The Sleuth Kit, libewf tools, sqlite3, jq and mactime on the CyberLab base (Pattern A, no network). Added to the release workflow, CI build and size report.
+- Lab 4 student guide (Parts A–I), architecture document, work templates (including `incident-report.md`) and container integration test (38 checks), run in CI on amd64 and arm64.
+
+### Testing status (2026-11-18)
+- macOS Apple Silicon (Docker Desktop): image build, `verify` 10/10, integration test 38/38 (peak memory 102 MB), instructor reference solution 40/40 on the demo evidence inside the container.
+- CI on GitHub Actions: Lab 4 integration test on linux/amd64 and linux/arm64.
+- **Untested:** Windows; a student walkthrough of Lab 4.
+
 ## [0.4.0] — 2026-11-18 — Lab 3 (Milestone 4)
 
 ### Added

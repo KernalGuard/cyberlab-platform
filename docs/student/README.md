@@ -8,7 +8,7 @@ Do these **before your first lab session**: installing Docker can take 20–40 m
    - [Windows 10/11 (WSL 2)](install-windows.md)
    - [Linux](install-linux.md)
 3. Complete [Lab 0](../../labs/lab0-orientation/docs/student-guide.md).
-4. Then continue with the lab your instructor assigns, for example [Lab 1](../../labs/lab1-network-traffic/docs/student-guide.md) [Lab 2](../../labs/lab2-filesystem-forensics/docs/student-guide.md) or [Lab 3](../../labs/lab3-webapp-assessment/docs/student-guide.md).
+4. Then continue with the lab your instructor assigns, for example [Lab 1](../../labs/lab1-network-traffic/docs/student-guide.md) [Lab 2](../../labs/lab2-filesystem-forensics/docs/student-guide.md), [Lab 3](../../labs/lab3-webapp-assessment/docs/student-guide.md) or [Lab 4](../../labs/lab4-incident-response/docs/student-guide.md).
 
 **Can't install Docker?** (Chromebook, locked-down computer, not enough memory.) Tell your instructor in the first week. A browser-based option is being prepared.
 

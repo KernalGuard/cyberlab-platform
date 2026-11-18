@@ -1,6 +1,6 @@
 # Lab 4 — Incident Response and Multi-Source Digital Forensics
 
-> **Status:** Draft v0.5.0-dev (2026-11-18). Every command in Parts A–H was run against the `demo` evidence on Linux x86-64 with the same tool versions as the lab image's key tools (The Sleuth Kit 4.12, TShark, jq, sqlite3). The image itself was built and checked on macOS Apple Silicon (Docker Desktop): `verify` passes, and the instructor's reference solution solves the demo evidence inside it. Windows is **UNTESTED**, and no student has walked through this guide yet.
+> **Status:** v0.5.0 pilot preview (2026-11-18). Every command in Parts A–H was run against the `demo` evidence on Linux x86-64 with the same tool versions as the lab image's key tools (The Sleuth Kit 4.12, TShark, jq, sqlite3). The image was built and tested on macOS Apple Silicon (Docker Desktop) and in CI: `verify` passes, the integration test exercises these tools, and the instructor's reference solution solves the demo evidence inside it. Windows is **UNTESTED**, and no student has walked through this guide yet.
 
 ## 1. Laboratory title
 

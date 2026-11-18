@@ -1,7 +1,7 @@
 # Lab 4 metadata and verify checks (read by cyberlab-verify inside the container).
 id: lab4-incident-response
 title: "Lab 4 — Incident Response and Multi-Source Digital Forensics"
-version: 0.5.0-dev
+version: 0.5.0
 pattern: A
 level: "early graduate (upper undergraduate with support)"
 estimated_minutes: 180

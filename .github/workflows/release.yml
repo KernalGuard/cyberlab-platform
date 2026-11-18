@@ -4,8 +4,7 @@
 # Role images are built FROM the base image of the same version.
 # Status: base -> net-analysis pipeline tested 2026-11-17 (v0.2.0, v0.2.1).
 # fs-forensics released in v0.3.0. Lab 3 images (webapp, postgres, gateway,
-# web-workstation) released in v0.4.0. ir-workstation (Lab 4) added 2026-11-18:
-# UNTESTED until v0.5.0.
+# web-workstation) released in v0.4.0. ir-workstation (Lab 4) released in v0.5.0.
 # New GHCR packages start PRIVATE: set each one to Public once (Package settings).
 
 name: Release images

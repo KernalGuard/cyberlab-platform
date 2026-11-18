@@ -10,7 +10,7 @@
 # the office capture, a laptop image, the server's auth log and a database snapshot.
 # Your instructor gives you your own evidence folder; evidence/ holds the public `demo` variant.
 #
-# Status: UNTESTED with Docker (written 2026-11-18).
+# Status: v0.5.0. Tested on macOS Apple Silicon (Docker Desktop) and in CI (amd64, arm64).
 
 name: cyberlab-lab4
 
