@@ -71,9 +71,9 @@ echo "$mech" | grep -q "forged=1" && pass "forgeable session present" || fail "s
 echo "$mech" | grep -q "sqli=500" && pass "injectable search present" || fail "sqli: $mech"
 
 # logs (Lab 3 Part F, Lab 4 evidence)
-logs="$(ws 'ls /logs; grep -c "\"session\":\"ey" /logs/gateway.jsonl; grep -c "donor_search" /logs/app.jsonl; grep -c "ILIKE" /logs/postgres.log')"
+logs="$(ws 'ls /logs; grep -c "\"session\":\"ey" /logs/gateway.jsonl; grep -c "\"owner_match\":false" /logs/app.jsonl; grep -c "ILIKE" /logs/postgres.log')"
 for f in gateway.jsonl app.jsonl postgres.log; do echo "$logs" | grep -q "^$f$" && pass "log written: $f" || fail "missing log $f"; done
-[ "$(echo "$logs" | tail -3 | awk '$1 > 0' | wc -l | tr -d ' ')" = "3" ] && pass "logs record sessions, searches and SQL" || fail "log content: $logs"
+[ "$(echo "$logs" | tail -3 | awk '$1 > 0' | wc -l | tr -d ' ')" = "3" ] && pass "logs record sessions, IDOR receipt views and SQL" || fail "log content: $logs"
 
 # resources
 mem="$(docker stats --no-stream --format '{{.MemUsage}}' $(docker compose ps -q) | awk '{v=$1; u=v; gsub(/[0-9.]/,"",u); gsub(/[A-Za-z]/,"",v); if(u=="GiB")v*=1024; if(u=="KiB")v/=1024; s+=v} END{printf "%d", s}')"
