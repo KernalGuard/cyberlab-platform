@@ -1,9 +1,10 @@
 # Publish multi-architecture images to GitHub Container Registry on a version tag.
-#   git tag v0.3.0 && git push origin v0.3.0
+#   git tag v0.4.0 && git push origin v0.4.0
 # Images are tagged with the version without the leading "v" and never overwritten.
 # Role images are built FROM the base image of the same version.
 # Status: base -> net-analysis pipeline tested 2026-11-17 (v0.2.0, v0.2.1).
-# fs-forensics job added 2026-11-17: UNTESTED until v0.3.0.
+# fs-forensics released in v0.3.0. Lab 3 images (webapp, postgres, gateway,
+# web-workstation) added 2026-11-18: UNTESTED until v0.4.0.
 # New GHCR packages start PRIVATE: set each one to Public once (Package settings).
 
 name: Release images
@@ -38,5 +39,41 @@ jobs:
     with:
       image: cyberlab-fs-forensics
       dockerfile: platform/images/fs-forensics/Dockerfile
+      build-args: |
+        BASE_IMAGE=ghcr.io/{owner}/cyberlab-base:{version}
+
+  webapp:
+    needs: base
+    uses: ./.github/workflows/_build-image.yml
+    with:
+      image: cyberlab-webapp
+      dockerfile: platform/images/webapp/Dockerfile
+      build-args: |
+        BASE_IMAGE=ghcr.io/{owner}/cyberlab-base:{version}
+
+  postgres:
+    needs: base
+    uses: ./.github/workflows/_build-image.yml
+    with:
+      image: cyberlab-postgres
+      dockerfile: platform/images/postgres/Dockerfile
+      build-args: |
+        BASE_IMAGE=ghcr.io/{owner}/cyberlab-base:{version}
+
+  gateway:
+    needs: base
+    uses: ./.github/workflows/_build-image.yml
+    with:
+      image: cyberlab-gateway
+      dockerfile: platform/images/gateway/Dockerfile
+      build-args: |
+        BASE_IMAGE=ghcr.io/{owner}/cyberlab-base:{version}
+
+  web-workstation:
+    needs: base
+    uses: ./.github/workflows/_build-image.yml
+    with:
+      image: cyberlab-web-workstation
+      dockerfile: platform/images/web-workstation/Dockerfile
       build-args: |
         BASE_IMAGE=ghcr.io/{owner}/cyberlab-base:{version}
