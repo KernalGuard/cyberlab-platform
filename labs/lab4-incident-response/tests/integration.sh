@@ -55,7 +55,12 @@ res="$(run "for f in places cookies; do icat $L \$(fls -r -p $L | awk -v f=\$f.s
 
 # Part C: the capture
 P=/evidence/network/office-edge.pcapng
-[ "$(run "tshark -r $P 2>&1 >/dev/null | wc -l" | tr -d ' ')" = "0" ] && pass "tshark reads the capture without warnings" || fail "tshark warnings"
+# exit status, not stderr: on CI runners (no passwd entry for the UID, no HOME) tshark prints
+# harmless profile-directory notices on stderr; frame-level problems are checked just below.
+res="$(run "tshark -r $P >/dev/null 2>/work/tshark.err; echo \$?")"
+[ "$res" = "0" ] && pass "tshark reads the capture (exit 0)" || { cat work/tshark.err; fail "tshark exit $res"; }
+[ -s work/tshark.err ] && warn "tshark stderr: $(head -1 work/tshark.err)"
+rm -f work/tshark.err
 [ "$(run "tshark -r $P -Y '_ws.malformed || _ws.expert.severity >= warning' 2>/dev/null | wc -l" | tr -d ' ')" = "0" ] && pass "no malformed or warning-level frames" || fail "malformed frames"
 [ "$(run "tshark -r $P -Y http.request -T fields -e frame.time_utc 2>/dev/null | head -1 | grep -c UTC")" = "1" ] && pass "frame.time_utc available" || fail "frame.time_utc"
 res="$(run "tshark -r $P -Y 'http.request.method==\"POST\" && !(http.host contains \"intranet\")' -T fields -e http.file_data 2>/dev/null | head -1 | xxd -r -p | base64 -d | head -1")"
