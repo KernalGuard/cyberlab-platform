@@ -1,0 +1,24 @@
+CASE BRIEF - Lab 3: Web Application Security Assessment
+Variant: demo
+
+Client:   Cedarwick Neighborhood Aid (fictional nonprofit)
+Context:  After the incident you investigated in Labs 1 and 2, Cedarwick's board wants its
+          donation website (give.cedarwick.test) assessed before it relaunches.
+
+AUTHORISATION (scope letter, signed by the Executive Director)
+  In scope:   the lab copy of the site only: http://127.0.0.1:8080 from your computer,
+              http://gateway:8080 from the lab workstation.
+  Out of scope: everything else. No other hosts, sites or networks.
+  Rules:      No denial of service. Password guessing ONLY with wordlist.txt, one attempt
+              per word per account. Do not modify or delete other users' data. Quote no
+              more than three donor records in your report.
+  Goal:       Identify and validate weaknesses, rate their risk, recommend fixes, and fix
+              one (the remediation exercise) with proof that it works.
+
+Evidence: seed.sql      the site's starting data (loaded automatically; do NOT read it to
+                        find answers: findings must come from testing the site)
+          wordlist.txt  the only passwords you may try against staff logins
+          MANIFEST.sha256
+
+This site and its data are SYNTHETIC and intentionally vulnerable. Run it only on your
+own computer, bound to 127.0.0.1. Do not use these techniques on any other system.
