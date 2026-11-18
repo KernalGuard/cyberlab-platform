@@ -1,6 +1,6 @@
 # Lab 4 — Incident Response and Multi-Source Digital Forensics
 
-> **Status: IN DEVELOPMENT (Milestone 5).** Generator 1.0.0 and the public `demo` evidence, the `cyberlab-ir-workstation` image, Compose file (Pattern A), verify checks and work templates are written. Student guide, architecture document, integration test and CI job are not yet. **UNTESTED with Docker.**
+> **Status: IN DEVELOPMENT (Milestone 5).** Generator 1.0.0 and the public `demo` evidence, the `cyberlab-ir-workstation` image, Compose file (Pattern A), verify checks, work templates and the [student guide](docs/student-guide.md) (draft) are written. Tested on macOS Apple Silicon 2026-11-18: image builds, `verify` 10/10, the instructor reference solution solves the demo evidence in the container. Architecture document, integration test and CI job are not yet written.
 
 | | |
 |---|---|

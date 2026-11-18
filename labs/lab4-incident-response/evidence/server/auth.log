@@ -1,685 +1,775 @@
-2026-12-06T08:19:28.000000+00:00 give-web01 sshd[20581]: Invalid user test from 203.0.113.33 port 55822
-2026-12-06T08:19:30.007919+00:00 give-web01 sshd[20581]: Failed password for invalid user test from 203.0.113.33 port 55822 ssh2
-2026-12-06T08:19:31.015838+00:00 give-web01 sshd[20581]: Connection closed by invalid user test 203.0.113.33 port 55822 [preauth]
-2026-12-06T08:20:01.023757+00:00 give-web01 sshd[20585]: Invalid user git from 203.0.113.33 port 36949
-2026-12-06T08:20:03.031676+00:00 give-web01 sshd[20585]: Failed password for invalid user git from 203.0.113.33 port 36949 ssh2
-2026-12-06T08:20:04.039595+00:00 give-web01 sshd[20585]: Connection closed by invalid user git 203.0.113.33 port 36949 [preauth]
-2026-12-06T08:20:20.047514+00:00 give-web01 sshd[20592]: Invalid user ubuntu from 203.0.113.33 port 50099
-2026-12-06T08:20:22.055433+00:00 give-web01 sshd[20592]: Failed password for invalid user ubuntu from 203.0.113.33 port 50099 ssh2
-2026-12-06T08:20:23.063352+00:00 give-web01 sshd[20592]: Connection closed by invalid user ubuntu 203.0.113.33 port 50099 [preauth]
-2026-12-06T08:20:24.071271+00:00 give-web01 sshd[20593]: Failed password for root from 203.0.113.33 port 41551 ssh2
-2026-12-06T08:20:27.079190+00:00 give-web01 sshd[20593]: Connection closed by authenticating user root 203.0.113.33 port 41551 [preauth]
-2026-12-06T08:20:49.087109+00:00 give-web01 sshd[20596]: Invalid user git from 203.0.113.33 port 50201
-2026-12-06T08:20:51.095028+00:00 give-web01 sshd[20596]: Failed password for invalid user git from 203.0.113.33 port 50201 ssh2
-2026-12-06T08:20:52.102947+00:00 give-web01 sshd[20596]: Connection closed by invalid user git 203.0.113.33 port 50201 [preauth]
-2026-12-06T08:21:06.110866+00:00 give-web01 sshd[20597]: Invalid user cedarwick from 203.0.113.33 port 46248
-2026-12-06T08:21:08.118785+00:00 give-web01 sshd[20597]: Failed password for invalid user cedarwick from 203.0.113.33 port 46248 ssh2
-2026-12-06T08:21:09.126704+00:00 give-web01 sshd[20597]: Connection closed by invalid user cedarwick 203.0.113.33 port 46248 [preauth]
-2026-12-06T08:21:19.134623+00:00 give-web01 sshd[20600]: Invalid user git from 203.0.113.33 port 35028
-2026-12-06T08:21:21.142542+00:00 give-web01 sshd[20600]: Failed password for invalid user git from 203.0.113.33 port 35028 ssh2
-2026-12-06T08:21:22.150461+00:00 give-web01 sshd[20600]: Connection closed by invalid user git 203.0.113.33 port 35028 [preauth]
-2026-12-06T08:21:46.158380+00:00 give-web01 sshd[20608]: Invalid user cedarwick from 203.0.113.33 port 41740
-2026-12-06T08:21:48.166299+00:00 give-web01 sshd[20608]: Failed password for invalid user cedarwick from 203.0.113.33 port 41740 ssh2
-2026-12-06T08:21:49.174218+00:00 give-web01 sshd[20608]: Connection closed by invalid user cedarwick 203.0.113.33 port 41740 [preauth]
-2026-12-06T08:21:51.182137+00:00 give-web01 sshd[20612]: Invalid user git from 203.0.113.33 port 46336
-2026-12-06T08:21:53.190056+00:00 give-web01 sshd[20612]: Failed password for invalid user git from 203.0.113.33 port 46336 ssh2
-2026-12-06T08:21:54.197975+00:00 give-web01 sshd[20612]: Connection closed by invalid user git 203.0.113.33 port 46336 [preauth]
-2026-12-06T08:22:26.205894+00:00 give-web01 sshd[20617]: Invalid user oracle from 203.0.113.33 port 41731
-2026-12-06T08:22:28.213813+00:00 give-web01 sshd[20617]: Failed password for invalid user oracle from 203.0.113.33 port 41731 ssh2
-2026-12-06T08:22:29.221732+00:00 give-web01 sshd[20617]: Connection closed by invalid user oracle 203.0.113.33 port 41731 [preauth]
-2026-12-06T08:23:03.229651+00:00 give-web01 sshd[20624]: Invalid user oracle from 203.0.113.33 port 30994
-2026-12-06T08:23:05.237570+00:00 give-web01 sshd[20624]: Failed password for invalid user oracle from 203.0.113.33 port 30994 ssh2
-2026-12-06T08:23:06.245489+00:00 give-web01 sshd[20624]: Connection closed by invalid user oracle 203.0.113.33 port 30994 [preauth]
-2026-12-06T08:23:23.253408+00:00 give-web01 sshd[20632]: Invalid user oracle from 203.0.113.33 port 35891
-2026-12-06T08:23:25.261327+00:00 give-web01 sshd[20632]: Failed password for invalid user oracle from 203.0.113.33 port 35891 ssh2
-2026-12-06T08:23:26.269246+00:00 give-web01 sshd[20632]: Connection closed by invalid user oracle 203.0.113.33 port 35891 [preauth]
-2026-12-06T08:23:41.277165+00:00 give-web01 sshd[20635]: Invalid user oracle from 203.0.113.33 port 33585
-2026-12-06T08:23:43.285084+00:00 give-web01 sshd[20635]: Failed password for invalid user oracle from 203.0.113.33 port 33585 ssh2
-2026-12-06T08:23:44.293003+00:00 give-web01 sshd[20635]: Connection closed by invalid user oracle 203.0.113.33 port 33585 [preauth]
-2026-12-06T08:24:13.300922+00:00 give-web01 sshd[20642]: Invalid user cedarwick from 203.0.113.33 port 63694
-2026-12-06T08:24:15.308841+00:00 give-web01 sshd[20642]: Failed password for invalid user cedarwick from 203.0.113.33 port 63694 ssh2
-2026-12-06T08:24:16.316760+00:00 give-web01 sshd[20642]: Connection closed by invalid user cedarwick 203.0.113.33 port 63694 [preauth]
-2026-12-06T08:24:19.324679+00:00 give-web01 sshd[20645]: Invalid user cedarwick from 203.0.113.33 port 58595
-2026-12-06T08:24:21.332598+00:00 give-web01 sshd[20645]: Failed password for invalid user cedarwick from 203.0.113.33 port 58595 ssh2
-2026-12-06T08:24:22.340517+00:00 give-web01 sshd[20645]: Connection closed by invalid user cedarwick 203.0.113.33 port 58595 [preauth]
-2026-12-06T08:24:33.348436+00:00 give-web01 sshd[20647]: Invalid user postgres from 203.0.113.33 port 42595
-2026-12-06T08:24:35.356355+00:00 give-web01 sshd[20647]: Failed password for invalid user postgres from 203.0.113.33 port 42595 ssh2
-2026-12-06T08:24:36.364274+00:00 give-web01 sshd[20647]: Connection closed by invalid user postgres 203.0.113.33 port 42595 [preauth]
-2026-12-06T08:24:57.372193+00:00 give-web01 sshd[20648]: Invalid user admin from 203.0.113.33 port 48140
-2026-12-06T08:24:59.380112+00:00 give-web01 sshd[20648]: Failed password for invalid user admin from 203.0.113.33 port 48140 ssh2
-2026-12-06T08:25:00.388031+00:00 give-web01 sshd[20648]: Connection closed by invalid user admin 203.0.113.33 port 48140 [preauth]
-2026-12-06T08:25:26.395950+00:00 give-web01 sshd[20653]: Invalid user oracle from 203.0.113.33 port 46030
-2026-12-06T08:25:28.403869+00:00 give-web01 sshd[20653]: Failed password for invalid user oracle from 203.0.113.33 port 46030 ssh2
-2026-12-06T08:25:29.411788+00:00 give-web01 sshd[20653]: Connection closed by invalid user oracle 203.0.113.33 port 46030 [preauth]
-2026-12-06T08:25:49.419707+00:00 give-web01 sshd[20657]: Invalid user ubuntu from 203.0.113.33 port 34501
-2026-12-06T08:25:51.427626+00:00 give-web01 sshd[20657]: Failed password for invalid user ubuntu from 203.0.113.33 port 34501 ssh2
-2026-12-06T08:25:52.435545+00:00 give-web01 sshd[20657]: Connection closed by invalid user ubuntu 203.0.113.33 port 34501 [preauth]
-2026-12-06T08:26:28.443464+00:00 give-web01 sshd[20663]: Invalid user user from 203.0.113.33 port 63261
-2026-12-06T08:26:30.451383+00:00 give-web01 sshd[20663]: Failed password for invalid user user from 203.0.113.33 port 63261 ssh2
-2026-12-06T08:26:31.459302+00:00 give-web01 sshd[20663]: Connection closed by invalid user user 203.0.113.33 port 63261 [preauth]
-2026-12-06T08:27:03.467221+00:00 give-web01 sshd[20671]: Invalid user admin from 203.0.113.33 port 49273
-2026-12-06T08:27:05.475140+00:00 give-web01 sshd[20671]: Failed password for invalid user admin from 203.0.113.33 port 49273 ssh2
-2026-12-06T08:27:06.483059+00:00 give-web01 sshd[20671]: Connection closed by invalid user admin 203.0.113.33 port 49273 [preauth]
-2026-12-06T08:27:08.490978+00:00 give-web01 sshd[20679]: Invalid user user from 203.0.113.33 port 45152
-2026-12-06T08:27:10.498897+00:00 give-web01 sshd[20679]: Failed password for invalid user user from 203.0.113.33 port 45152 ssh2
-2026-12-06T08:27:11.506816+00:00 give-web01 sshd[20679]: Connection closed by invalid user user 203.0.113.33 port 45152 [preauth]
-2026-12-06T08:27:40.514735+00:00 give-web01 sshd[20680]: Invalid user user from 203.0.113.33 port 48752
-2026-12-06T08:27:42.522654+00:00 give-web01 sshd[20680]: Failed password for invalid user user from 203.0.113.33 port 48752 ssh2
-2026-12-06T08:27:43.530573+00:00 give-web01 sshd[20680]: Connection closed by invalid user user 203.0.113.33 port 48752 [preauth]
-2026-12-06T08:28:03.538492+00:00 give-web01 sshd[20686]: Invalid user git from 203.0.113.33 port 44341
-2026-12-06T08:28:05.546411+00:00 give-web01 sshd[20686]: Failed password for invalid user git from 203.0.113.33 port 44341 ssh2
-2026-12-06T08:28:06.554330+00:00 give-web01 sshd[20686]: Connection closed by invalid user git 203.0.113.33 port 44341 [preauth]
-2026-12-06T08:28:10.562249+00:00 give-web01 sshd[20692]: Invalid user postgres from 203.0.113.33 port 50041
-2026-12-06T08:28:12.570168+00:00 give-web01 sshd[20692]: Failed password for invalid user postgres from 203.0.113.33 port 50041 ssh2
-2026-12-06T08:28:13.578087+00:00 give-web01 sshd[20692]: Connection closed by invalid user postgres 203.0.113.33 port 50041 [preauth]
-2026-12-06T08:28:17.586006+00:00 give-web01 sshd[20699]: Invalid user user from 203.0.113.33 port 52478
-2026-12-06T08:28:19.593925+00:00 give-web01 sshd[20699]: Failed password for invalid user user from 203.0.113.33 port 52478 ssh2
-2026-12-06T08:28:20.601844+00:00 give-web01 sshd[20699]: Connection closed by invalid user user 203.0.113.33 port 52478 [preauth]
-2026-12-06T08:28:49.609763+00:00 give-web01 sshd[20706]: Invalid user postgres from 203.0.113.33 port 31181
-2026-12-06T08:28:51.617682+00:00 give-web01 sshd[20706]: Failed password for invalid user postgres from 203.0.113.33 port 31181 ssh2
-2026-12-06T08:28:52.625601+00:00 give-web01 sshd[20706]: Connection closed by invalid user postgres 203.0.113.33 port 31181 [preauth]
-2026-12-06T08:29:07.633520+00:00 give-web01 sshd[20712]: Invalid user admin from 203.0.113.33 port 48412
-2026-12-06T08:29:09.641439+00:00 give-web01 sshd[20712]: Failed password for invalid user admin from 203.0.113.33 port 48412 ssh2
-2026-12-06T08:29:10.649358+00:00 give-web01 sshd[20712]: Connection closed by invalid user admin 203.0.113.33 port 48412 [preauth]
-2026-12-06T08:29:16.657277+00:00 give-web01 sshd[20715]: Invalid user user from 203.0.113.33 port 50195
-2026-12-06T08:29:18.665196+00:00 give-web01 sshd[20715]: Failed password for invalid user user from 203.0.113.33 port 50195 ssh2
-2026-12-06T08:29:19.673115+00:00 give-web01 sshd[20715]: Connection closed by invalid user user 203.0.113.33 port 50195 [preauth]
-2026-12-06T08:29:42.681034+00:00 give-web01 sshd[20719]: Invalid user ubuntu from 203.0.113.33 port 43894
-2026-12-06T08:29:44.688953+00:00 give-web01 sshd[20719]: Failed password for invalid user ubuntu from 203.0.113.33 port 43894 ssh2
-2026-12-06T08:29:45.696872+00:00 give-web01 sshd[20719]: Connection closed by invalid user ubuntu 203.0.113.33 port 43894 [preauth]
-2026-12-06T08:29:57.704791+00:00 give-web01 sshd[20722]: Invalid user oracle from 203.0.113.33 port 51059
-2026-12-06T08:29:59.712710+00:00 give-web01 sshd[20722]: Failed password for invalid user oracle from 203.0.113.33 port 51059 ssh2
-2026-12-06T08:30:00.720629+00:00 give-web01 sshd[20722]: Connection closed by invalid user oracle 203.0.113.33 port 51059 [preauth]
-2026-12-06T08:30:02.728548+00:00 give-web01 sshd[20728]: Invalid user user from 203.0.113.33 port 53001
-2026-12-06T08:30:04.736467+00:00 give-web01 sshd[20728]: Failed password for invalid user user from 203.0.113.33 port 53001 ssh2
-2026-12-06T08:30:05.744386+00:00 give-web01 sshd[20728]: Connection closed by invalid user user 203.0.113.33 port 53001 [preauth]
-2026-12-06T08:30:40.752305+00:00 give-web01 sshd[20730]: Invalid user cedarwick from 203.0.113.33 port 41770
-2026-12-06T08:30:42.760224+00:00 give-web01 sshd[20730]: Failed password for invalid user cedarwick from 203.0.113.33 port 41770 ssh2
-2026-12-06T08:30:43.768143+00:00 give-web01 sshd[20730]: Connection closed by invalid user cedarwick 203.0.113.33 port 41770 [preauth]
-2026-12-06T08:30:52.776062+00:00 give-web01 sshd[20734]: Invalid user user from 203.0.113.33 port 49438
-2026-12-06T08:30:54.783981+00:00 give-web01 sshd[20734]: Failed password for invalid user user from 203.0.113.33 port 49438 ssh2
-2026-12-06T08:30:55.791900+00:00 give-web01 sshd[20734]: Connection closed by invalid user user 203.0.113.33 port 49438 [preauth]
-2026-12-06T08:31:25.799819+00:00 give-web01 sshd[20742]: Invalid user oracle from 203.0.113.33 port 30333
-2026-12-06T08:31:27.807738+00:00 give-web01 sshd[20742]: Failed password for invalid user oracle from 203.0.113.33 port 30333 ssh2
-2026-12-06T08:31:28.815657+00:00 give-web01 sshd[20742]: Connection closed by invalid user oracle 203.0.113.33 port 30333 [preauth]
-2026-12-06T08:31:56.823576+00:00 give-web01 sshd[20748]: Invalid user test from 203.0.113.33 port 55975
-2026-12-06T08:31:58.831495+00:00 give-web01 sshd[20748]: Failed password for invalid user test from 203.0.113.33 port 55975 ssh2
-2026-12-06T08:31:59.839414+00:00 give-web01 sshd[20748]: Connection closed by invalid user test 203.0.113.33 port 55975 [preauth]
-2026-12-06T08:32:31.847333+00:00 give-web01 sshd[20755]: Invalid user cedarwick from 203.0.113.33 port 47094
-2026-12-06T08:32:33.855252+00:00 give-web01 sshd[20755]: Failed password for invalid user cedarwick from 203.0.113.33 port 47094 ssh2
-2026-12-06T08:32:34.863171+00:00 give-web01 sshd[20755]: Connection closed by invalid user cedarwick 203.0.113.33 port 47094 [preauth]
-2026-12-06T16:49:00.871090+00:00 give-web01 sshd[21233]: Accepted publickey for cwadmin from 203.0.113.179 port 49740 ssh2: ED25519 SHA256:rWeQ5Xx6KQ549jpt/Fea5QW2fTmYveaVQsg9bTYdcq8
-2026-12-06T16:49:00.879009+00:00 give-web01 sshd[21233]: pam_unix(sshd:session): session opened for user cwadmin(uid=1000) by cwadmin(uid=0)
-2026-12-06T16:49:00.886928+00:00 give-web01 systemd-logind[612]: New session 41 of user cwadmin.
-2026-12-06T16:49:40.894847+00:00 give-web01 sudo: cwadmin : TTY=pts/0 ; PWD=/home/cwadmin ; USER=root ; COMMAND=/usr/bin/docker compose ps
-2026-12-06T16:49:40.902766+00:00 give-web01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by cwadmin(uid=1000)
-2026-12-06T16:49:52.910685+00:00 give-web01 sudo: pam_unix(sudo:session): session closed for user root
-2026-12-06T16:55:40.918604+00:00 give-web01 sshd[21233]: pam_unix(sshd:session): session closed for user cwadmin
-2026-12-06T16:55:40.926523+00:00 give-web01 systemd-logind[612]: Session 41 logged out. Waiting for processes to exit.
-2026-12-06T17:22:53.934442+00:00 give-web01 sshd[20227]: Invalid user test from 203.0.113.133 port 61043
-2026-12-06T17:22:55.942361+00:00 give-web01 sshd[20227]: Failed password for invalid user test from 203.0.113.133 port 61043 ssh2
-2026-12-06T17:22:56.950280+00:00 give-web01 sshd[20227]: Connection closed by invalid user test 203.0.113.133 port 61043 [preauth]
-2026-12-06T17:23:21.958199+00:00 give-web01 sshd[20233]: Invalid user git from 203.0.113.133 port 59098
-2026-12-06T17:23:23.966118+00:00 give-web01 sshd[20233]: Failed password for invalid user git from 203.0.113.133 port 59098 ssh2
-2026-12-06T17:23:24.974037+00:00 give-web01 sshd[20233]: Connection closed by invalid user git 203.0.113.133 port 59098 [preauth]
-2026-12-06T17:23:30.981956+00:00 give-web01 sshd[20239]: Invalid user user from 203.0.113.133 port 62055
-2026-12-06T17:23:32.989875+00:00 give-web01 sshd[20239]: Failed password for invalid user user from 203.0.113.133 port 62055 ssh2
-2026-12-06T17:23:33.997794+00:00 give-web01 sshd[20239]: Connection closed by invalid user user 203.0.113.133 port 62055 [preauth]
-2026-12-06T17:23:40.005713+00:00 give-web01 sshd[20241]: Invalid user cedarwick from 203.0.113.133 port 50172
-2026-12-06T17:23:42.013632+00:00 give-web01 sshd[20241]: Failed password for invalid user cedarwick from 203.0.113.133 port 50172 ssh2
-2026-12-06T17:23:43.021551+00:00 give-web01 sshd[20241]: Connection closed by invalid user cedarwick 203.0.113.133 port 50172 [preauth]
-2026-12-06T17:24:07.029470+00:00 give-web01 sshd[20244]: Invalid user postgres from 203.0.113.133 port 55533
-2026-12-06T17:24:09.037389+00:00 give-web01 sshd[20244]: Failed password for invalid user postgres from 203.0.113.133 port 55533 ssh2
-2026-12-06T17:24:10.045308+00:00 give-web01 sshd[20244]: Connection closed by invalid user postgres 203.0.113.133 port 55533 [preauth]
-2026-12-06T17:24:22.053227+00:00 give-web01 sshd[20251]: Invalid user user from 203.0.113.133 port 54005
-2026-12-06T17:24:24.061146+00:00 give-web01 sshd[20251]: Failed password for invalid user user from 203.0.113.133 port 54005 ssh2
-2026-12-06T17:24:25.069065+00:00 give-web01 sshd[20251]: Connection closed by invalid user user 203.0.113.133 port 54005 [preauth]
-2026-12-06T17:24:33.076984+00:00 give-web01 sshd[20252]: Invalid user git from 203.0.113.133 port 60736
-2026-12-06T17:24:35.084903+00:00 give-web01 sshd[20252]: Failed password for invalid user git from 203.0.113.133 port 60736 ssh2
-2026-12-06T17:24:36.092822+00:00 give-web01 sshd[20252]: Connection closed by invalid user git 203.0.113.133 port 60736 [preauth]
-2026-12-06T17:24:38.100741+00:00 give-web01 sshd[20254]: Invalid user ubuntu from 203.0.113.133 port 40503
-2026-12-06T17:24:40.108660+00:00 give-web01 sshd[20254]: Failed password for invalid user ubuntu from 203.0.113.133 port 40503 ssh2
-2026-12-06T17:24:41.116579+00:00 give-web01 sshd[20254]: Connection closed by invalid user ubuntu 203.0.113.133 port 40503 [preauth]
-2026-12-06T17:25:15.124498+00:00 give-web01 sshd[20262]: Invalid user user from 203.0.113.133 port 58353
-2026-12-06T17:25:17.132417+00:00 give-web01 sshd[20262]: Failed password for invalid user user from 203.0.113.133 port 58353 ssh2
-2026-12-06T17:25:18.140336+00:00 give-web01 sshd[20262]: Connection closed by invalid user user 203.0.113.133 port 58353 [preauth]
-2026-12-06T17:25:38.148255+00:00 give-web01 sshd[20266]: Invalid user postgres from 203.0.113.133 port 33061
-2026-12-06T17:25:40.156174+00:00 give-web01 sshd[20266]: Failed password for invalid user postgres from 203.0.113.133 port 33061 ssh2
-2026-12-06T17:25:41.164093+00:00 give-web01 sshd[20266]: Connection closed by invalid user postgres 203.0.113.133 port 33061 [preauth]
-2026-12-06T17:26:01.172012+00:00 give-web01 sshd[20273]: Invalid user user from 203.0.113.133 port 40722
-2026-12-06T17:26:03.179931+00:00 give-web01 sshd[20273]: Failed password for invalid user user from 203.0.113.133 port 40722 ssh2
-2026-12-06T17:26:04.187850+00:00 give-web01 sshd[20273]: Connection closed by invalid user user 203.0.113.133 port 40722 [preauth]
-2026-12-06T17:26:38.195769+00:00 give-web01 sshd[20278]: Invalid user test from 203.0.113.133 port 31128
-2026-12-06T17:26:40.203688+00:00 give-web01 sshd[20278]: Failed password for invalid user test from 203.0.113.133 port 31128 ssh2
-2026-12-06T17:26:41.211607+00:00 give-web01 sshd[20278]: Connection closed by invalid user test 203.0.113.133 port 31128 [preauth]
-2026-12-06T17:27:02.219526+00:00 give-web01 sshd[20279]: Invalid user git from 203.0.113.133 port 40897
-2026-12-06T17:27:04.227445+00:00 give-web01 sshd[20279]: Failed password for invalid user git from 203.0.113.133 port 40897 ssh2
-2026-12-06T17:27:05.235364+00:00 give-web01 sshd[20279]: Connection closed by invalid user git 203.0.113.133 port 40897 [preauth]
-2026-12-06T17:27:40.243283+00:00 give-web01 sshd[20282]: Invalid user postgres from 203.0.113.133 port 37101
-2026-12-06T17:27:42.251202+00:00 give-web01 sshd[20282]: Failed password for invalid user postgres from 203.0.113.133 port 37101 ssh2
-2026-12-06T17:27:43.259121+00:00 give-web01 sshd[20282]: Connection closed by invalid user postgres 203.0.113.133 port 37101 [preauth]
-2026-12-06T17:27:59.267040+00:00 give-web01 sshd[20285]: Invalid user test from 203.0.113.133 port 55609
-2026-12-06T17:28:01.274959+00:00 give-web01 sshd[20285]: Failed password for invalid user test from 203.0.113.133 port 55609 ssh2
-2026-12-06T17:28:02.282878+00:00 give-web01 sshd[20285]: Connection closed by invalid user test 203.0.113.133 port 55609 [preauth]
-2026-12-06T17:28:37.290797+00:00 give-web01 sshd[20293]: Invalid user git from 203.0.113.133 port 45334
-2026-12-06T17:28:39.298716+00:00 give-web01 sshd[20293]: Failed password for invalid user git from 203.0.113.133 port 45334 ssh2
-2026-12-06T17:28:40.306635+00:00 give-web01 sshd[20293]: Connection closed by invalid user git 203.0.113.133 port 45334 [preauth]
-2026-12-06T17:29:07.314554+00:00 give-web01 sshd[20294]: Invalid user postgres from 203.0.113.133 port 55524
-2026-12-06T17:29:09.322473+00:00 give-web01 sshd[20294]: Failed password for invalid user postgres from 203.0.113.133 port 55524 ssh2
-2026-12-06T17:29:10.330392+00:00 give-web01 sshd[20294]: Connection closed by invalid user postgres 203.0.113.133 port 55524 [preauth]
-2026-12-06T17:29:19.338311+00:00 give-web01 sshd[20296]: Invalid user admin from 203.0.113.133 port 41452
-2026-12-06T17:29:21.346230+00:00 give-web01 sshd[20296]: Failed password for invalid user admin from 203.0.113.133 port 41452 ssh2
-2026-12-06T17:29:22.354149+00:00 give-web01 sshd[20296]: Connection closed by invalid user admin 203.0.113.133 port 41452 [preauth]
-2026-12-06T17:29:42.362068+00:00 give-web01 sshd[20304]: Invalid user postgres from 203.0.113.133 port 60051
-2026-12-06T17:29:44.369987+00:00 give-web01 sshd[20304]: Failed password for invalid user postgres from 203.0.113.133 port 60051 ssh2
-2026-12-06T17:29:45.377906+00:00 give-web01 sshd[20304]: Connection closed by invalid user postgres 203.0.113.133 port 60051 [preauth]
-2026-12-06T17:29:58.385825+00:00 give-web01 sshd[20305]: Invalid user admin from 203.0.113.133 port 42662
-2026-12-06T17:30:00.393744+00:00 give-web01 sshd[20305]: Failed password for invalid user admin from 203.0.113.133 port 42662 ssh2
-2026-12-06T17:30:01.401663+00:00 give-web01 sshd[20305]: Connection closed by invalid user admin 203.0.113.133 port 42662 [preauth]
-2026-12-06T17:30:20.409582+00:00 give-web01 sshd[20307]: Invalid user postgres from 203.0.113.133 port 42777
-2026-12-06T17:30:22.417501+00:00 give-web01 sshd[20307]: Failed password for invalid user postgres from 203.0.113.133 port 42777 ssh2
-2026-12-06T17:30:23.425420+00:00 give-web01 sshd[20307]: Connection closed by invalid user postgres 203.0.113.133 port 42777 [preauth]
-2026-12-06T17:30:44.433339+00:00 give-web01 sshd[20310]: Invalid user admin from 203.0.113.133 port 30744
-2026-12-06T17:30:46.441258+00:00 give-web01 sshd[20310]: Failed password for invalid user admin from 203.0.113.133 port 30744 ssh2
-2026-12-06T17:30:47.449177+00:00 give-web01 sshd[20310]: Connection closed by invalid user admin 203.0.113.133 port 30744 [preauth]
-2026-12-06T17:30:53.457096+00:00 give-web01 sshd[20318]: Invalid user git from 203.0.113.133 port 54945
-2026-12-06T17:30:55.465015+00:00 give-web01 sshd[20318]: Failed password for invalid user git from 203.0.113.133 port 54945 ssh2
-2026-12-06T17:30:56.472934+00:00 give-web01 sshd[20318]: Connection closed by invalid user git 203.0.113.133 port 54945 [preauth]
-2026-12-06T17:30:58.480853+00:00 give-web01 sshd[20319]: Failed password for root from 203.0.113.133 port 54546 ssh2
-2026-12-06T17:31:01.488772+00:00 give-web01 sshd[20319]: Connection closed by authenticating user root 203.0.113.133 port 54546 [preauth]
-2026-12-06T17:31:03.496691+00:00 give-web01 sshd[20321]: Invalid user user from 203.0.113.133 port 37663
-2026-12-06T17:31:05.504610+00:00 give-web01 sshd[20321]: Failed password for invalid user user from 203.0.113.133 port 37663 ssh2
-2026-12-06T17:31:06.512529+00:00 give-web01 sshd[20321]: Connection closed by invalid user user 203.0.113.133 port 37663 [preauth]
-2026-12-06T17:31:23.520448+00:00 give-web01 sshd[20326]: Invalid user user from 203.0.113.133 port 56938
-2026-12-06T17:31:25.528367+00:00 give-web01 sshd[20326]: Failed password for invalid user user from 203.0.113.133 port 56938 ssh2
-2026-12-06T17:31:26.536286+00:00 give-web01 sshd[20326]: Connection closed by invalid user user 203.0.113.133 port 56938 [preauth]
-2026-12-06T17:31:40.544205+00:00 give-web01 sshd[20327]: Invalid user oracle from 203.0.113.133 port 47074
-2026-12-06T17:31:42.552124+00:00 give-web01 sshd[20327]: Failed password for invalid user oracle from 203.0.113.133 port 47074 ssh2
-2026-12-06T17:31:43.560043+00:00 give-web01 sshd[20327]: Connection closed by invalid user oracle 203.0.113.133 port 47074 [preauth]
-2026-12-06T17:31:44.567962+00:00 give-web01 sshd[20328]: Invalid user ubuntu from 203.0.113.133 port 42339
-2026-12-06T17:31:46.575881+00:00 give-web01 sshd[20328]: Failed password for invalid user ubuntu from 203.0.113.133 port 42339 ssh2
-2026-12-06T17:31:47.583800+00:00 give-web01 sshd[20328]: Connection closed by invalid user ubuntu 203.0.113.133 port 42339 [preauth]
-2026-12-06T17:31:51.591719+00:00 give-web01 sshd[20330]: Invalid user admin from 203.0.113.133 port 51985
-2026-12-06T17:31:53.599638+00:00 give-web01 sshd[20330]: Failed password for invalid user admin from 203.0.113.133 port 51985 ssh2
-2026-12-06T17:31:54.607557+00:00 give-web01 sshd[20330]: Connection closed by invalid user admin 203.0.113.133 port 51985 [preauth]
-2026-12-06T17:32:12.615476+00:00 give-web01 sshd[20336]: Invalid user postgres from 203.0.113.133 port 49066
-2026-12-06T17:32:14.623395+00:00 give-web01 sshd[20336]: Failed password for invalid user postgres from 203.0.113.133 port 49066 ssh2
-2026-12-06T17:32:15.631314+00:00 give-web01 sshd[20336]: Connection closed by invalid user postgres 203.0.113.133 port 49066 [preauth]
-2026-12-06T17:32:22.639233+00:00 give-web01 sshd[20337]: Invalid user ubuntu from 203.0.113.133 port 55925
-2026-12-06T17:32:24.647152+00:00 give-web01 sshd[20337]: Failed password for invalid user ubuntu from 203.0.113.133 port 55925 ssh2
-2026-12-06T17:32:25.655071+00:00 give-web01 sshd[20337]: Connection closed by invalid user ubuntu 203.0.113.133 port 55925 [preauth]
-2026-12-06T17:32:59.662990+00:00 give-web01 sshd[20339]: Invalid user test from 203.0.113.133 port 36097
-2026-12-06T17:33:01.670909+00:00 give-web01 sshd[20339]: Failed password for invalid user test from 203.0.113.133 port 36097 ssh2
-2026-12-06T17:33:02.678828+00:00 give-web01 sshd[20339]: Connection closed by invalid user test 203.0.113.133 port 36097 [preauth]
-2026-12-06T17:33:02.686747+00:00 give-web01 sshd[20341]: Invalid user admin from 203.0.113.133 port 49762
-2026-12-06T17:33:04.694666+00:00 give-web01 sshd[20341]: Failed password for invalid user admin from 203.0.113.133 port 49762 ssh2
-2026-12-06T17:33:05.702585+00:00 give-web01 sshd[20341]: Connection closed by invalid user admin 203.0.113.133 port 49762 [preauth]
-2026-12-06T17:33:41.710504+00:00 give-web01 sshd[20349]: Invalid user user from 203.0.113.133 port 54102
-2026-12-06T17:33:43.718423+00:00 give-web01 sshd[20349]: Failed password for invalid user user from 203.0.113.133 port 54102 ssh2
-2026-12-06T17:33:44.726342+00:00 give-web01 sshd[20349]: Connection closed by invalid user user 203.0.113.133 port 54102 [preauth]
-2026-12-06T17:34:06.734261+00:00 give-web01 sshd[20357]: Invalid user admin from 203.0.113.133 port 41921
-2026-12-06T17:34:08.742180+00:00 give-web01 sshd[20357]: Failed password for invalid user admin from 203.0.113.133 port 41921 ssh2
-2026-12-06T17:34:09.750099+00:00 give-web01 sshd[20357]: Connection closed by invalid user admin 203.0.113.133 port 41921 [preauth]
-2026-12-06T17:34:15.758018+00:00 give-web01 sshd[20365]: Invalid user oracle from 203.0.113.133 port 54651
-2026-12-06T17:34:17.765937+00:00 give-web01 sshd[20365]: Failed password for invalid user oracle from 203.0.113.133 port 54651 ssh2
-2026-12-06T17:34:18.773856+00:00 give-web01 sshd[20365]: Connection closed by invalid user oracle 203.0.113.133 port 54651 [preauth]
-2026-12-06T17:34:42.781775+00:00 give-web01 sshd[20371]: Invalid user ubuntu from 203.0.113.133 port 49591
-2026-12-06T17:34:44.789694+00:00 give-web01 sshd[20371]: Failed password for invalid user ubuntu from 203.0.113.133 port 49591 ssh2
-2026-12-06T17:34:45.797613+00:00 give-web01 sshd[20371]: Connection closed by invalid user ubuntu 203.0.113.133 port 49591 [preauth]
-2026-12-06T17:35:20.805532+00:00 give-web01 sshd[20375]: Invalid user ubuntu from 203.0.113.133 port 37395
-2026-12-06T17:35:22.813451+00:00 give-web01 sshd[20375]: Failed password for invalid user ubuntu from 203.0.113.133 port 37395 ssh2
-2026-12-06T17:35:23.821370+00:00 give-web01 sshd[20375]: Connection closed by invalid user ubuntu 203.0.113.133 port 37395 [preauth]
-2026-12-06T17:35:49.829289+00:00 give-web01 sshd[20379]: Invalid user postgres from 203.0.113.133 port 32684
-2026-12-06T17:35:51.837208+00:00 give-web01 sshd[20379]: Failed password for invalid user postgres from 203.0.113.133 port 32684 ssh2
-2026-12-06T17:35:52.845127+00:00 give-web01 sshd[20379]: Connection closed by invalid user postgres 203.0.113.133 port 32684 [preauth]
-2026-12-06T17:36:18.853046+00:00 give-web01 sshd[20382]: Invalid user ubuntu from 203.0.113.133 port 46939
-2026-12-06T17:36:20.860965+00:00 give-web01 sshd[20382]: Failed password for invalid user ubuntu from 203.0.113.133 port 46939 ssh2
-2026-12-06T17:36:21.868884+00:00 give-web01 sshd[20382]: Connection closed by invalid user ubuntu 203.0.113.133 port 46939 [preauth]
-2026-12-06T17:36:31.876803+00:00 give-web01 sshd[20387]: Failed password for root from 203.0.113.133 port 40478 ssh2
-2026-12-06T17:36:34.884722+00:00 give-web01 sshd[20387]: Connection closed by authenticating user root 203.0.113.133 port 40478 [preauth]
-2026-12-06T17:36:42.892641+00:00 give-web01 sshd[20389]: Invalid user user from 203.0.113.133 port 40474
-2026-12-06T17:36:44.900560+00:00 give-web01 sshd[20389]: Failed password for invalid user user from 203.0.113.133 port 40474 ssh2
-2026-12-06T17:36:45.908479+00:00 give-web01 sshd[20389]: Connection closed by invalid user user 203.0.113.133 port 40474 [preauth]
-2026-12-06T17:37:06.916398+00:00 give-web01 sshd[20390]: Invalid user postgres from 203.0.113.133 port 64744
-2026-12-06T17:37:08.924317+00:00 give-web01 sshd[20390]: Failed password for invalid user postgres from 203.0.113.133 port 64744 ssh2
-2026-12-06T17:37:09.932236+00:00 give-web01 sshd[20390]: Connection closed by invalid user postgres 203.0.113.133 port 64744 [preauth]
-2026-12-06T17:37:34.940155+00:00 give-web01 sshd[20391]: Invalid user postgres from 203.0.113.133 port 32632
-2026-12-06T17:37:36.948074+00:00 give-web01 sshd[20391]: Failed password for invalid user postgres from 203.0.113.133 port 32632 ssh2
-2026-12-06T17:37:37.955993+00:00 give-web01 sshd[20391]: Connection closed by invalid user postgres 203.0.113.133 port 32632 [preauth]
-2026-12-06T17:38:06.963912+00:00 give-web01 sshd[20394]: Invalid user git from 203.0.113.133 port 32301
-2026-12-06T17:38:08.971831+00:00 give-web01 sshd[20394]: Failed password for invalid user git from 203.0.113.133 port 32301 ssh2
-2026-12-06T17:38:09.979750+00:00 give-web01 sshd[20394]: Connection closed by invalid user git 203.0.113.133 port 32301 [preauth]
-2026-12-07T17:08:46.987669+00:00 give-web01 sshd[20400]: Invalid user git from 192.0.2.28 port 36587
-2026-12-07T17:08:48.995588+00:00 give-web01 sshd[20400]: Failed password for invalid user git from 192.0.2.28 port 36587 ssh2
-2026-12-07T17:08:49.003507+00:00 give-web01 sshd[20400]: Connection closed by invalid user git 192.0.2.28 port 36587 [preauth]
-2026-12-07T17:08:57.011426+00:00 give-web01 sshd[20404]: Invalid user git from 192.0.2.28 port 59640
-2026-12-07T17:08:59.019345+00:00 give-web01 sshd[20404]: Failed password for invalid user git from 192.0.2.28 port 59640 ssh2
-2026-12-07T17:09:00.027264+00:00 give-web01 sshd[20404]: Connection closed by invalid user git 192.0.2.28 port 59640 [preauth]
-2026-12-07T17:09:22.035183+00:00 give-web01 sshd[20409]: Invalid user user from 192.0.2.28 port 50764
-2026-12-07T17:09:24.043102+00:00 give-web01 sshd[20409]: Failed password for invalid user user from 192.0.2.28 port 50764 ssh2
-2026-12-07T17:09:25.051021+00:00 give-web01 sshd[20409]: Connection closed by invalid user user 192.0.2.28 port 50764 [preauth]
-2026-12-07T17:09:32.058940+00:00 give-web01 sshd[20415]: Invalid user oracle from 192.0.2.28 port 34926
-2026-12-07T17:09:34.066859+00:00 give-web01 sshd[20415]: Failed password for invalid user oracle from 192.0.2.28 port 34926 ssh2
-2026-12-07T17:09:35.074778+00:00 give-web01 sshd[20415]: Connection closed by invalid user oracle 192.0.2.28 port 34926 [preauth]
-2026-12-07T17:10:00.082697+00:00 give-web01 sshd[20418]: Invalid user user from 192.0.2.28 port 62019
-2026-12-07T17:10:02.090616+00:00 give-web01 sshd[20418]: Failed password for invalid user user from 192.0.2.28 port 62019 ssh2
-2026-12-07T17:10:03.098535+00:00 give-web01 sshd[20418]: Connection closed by invalid user user 192.0.2.28 port 62019 [preauth]
-2026-12-07T17:10:28.106454+00:00 give-web01 sshd[20421]: Invalid user ubuntu from 192.0.2.28 port 60924
-2026-12-07T17:10:30.114373+00:00 give-web01 sshd[20421]: Failed password for invalid user ubuntu from 192.0.2.28 port 60924 ssh2
-2026-12-07T17:10:31.122292+00:00 give-web01 sshd[20421]: Connection closed by invalid user ubuntu 192.0.2.28 port 60924 [preauth]
-2026-12-07T17:11:00.130211+00:00 give-web01 sshd[20422]: Failed password for root from 192.0.2.28 port 37070 ssh2
-2026-12-07T17:11:03.138130+00:00 give-web01 sshd[20422]: Connection closed by authenticating user root 192.0.2.28 port 37070 [preauth]
-2026-12-07T17:11:32.146049+00:00 give-web01 sshd[20423]: Invalid user git from 192.0.2.28 port 37964
-2026-12-07T17:11:34.153968+00:00 give-web01 sshd[20423]: Failed password for invalid user git from 192.0.2.28 port 37964 ssh2
-2026-12-07T17:11:35.161887+00:00 give-web01 sshd[20423]: Connection closed by invalid user git 192.0.2.28 port 37964 [preauth]
-2026-12-07T17:11:45.169806+00:00 give-web01 sshd[20428]: Invalid user git from 192.0.2.28 port 36983
-2026-12-07T17:11:47.177725+00:00 give-web01 sshd[20428]: Failed password for invalid user git from 192.0.2.28 port 36983 ssh2
-2026-12-07T17:11:48.185644+00:00 give-web01 sshd[20428]: Connection closed by invalid user git 192.0.2.28 port 36983 [preauth]
-2026-12-07T17:11:51.193563+00:00 give-web01 sshd[20432]: Invalid user ubuntu from 192.0.2.28 port 37076
-2026-12-07T17:11:53.201482+00:00 give-web01 sshd[20432]: Failed password for invalid user ubuntu from 192.0.2.28 port 37076 ssh2
-2026-12-07T17:11:54.209401+00:00 give-web01 sshd[20432]: Connection closed by invalid user ubuntu 192.0.2.28 port 37076 [preauth]
-2026-12-07T17:12:10.217320+00:00 give-web01 sshd[20439]: Invalid user postgres from 192.0.2.28 port 36275
-2026-12-07T17:12:12.225239+00:00 give-web01 sshd[20439]: Failed password for invalid user postgres from 192.0.2.28 port 36275 ssh2
-2026-12-07T17:12:13.233158+00:00 give-web01 sshd[20439]: Connection closed by invalid user postgres 192.0.2.28 port 36275 [preauth]
-2026-12-07T17:12:13.241077+00:00 give-web01 sshd[20440]: Invalid user test from 192.0.2.28 port 42868
-2026-12-07T17:12:15.248996+00:00 give-web01 sshd[20440]: Failed password for invalid user test from 192.0.2.28 port 42868 ssh2
-2026-12-07T17:12:16.256915+00:00 give-web01 sshd[20440]: Connection closed by invalid user test 192.0.2.28 port 42868 [preauth]
-2026-12-07T17:12:38.264834+00:00 give-web01 sshd[20443]: Invalid user admin from 192.0.2.28 port 40303
-2026-12-07T17:12:40.272753+00:00 give-web01 sshd[20443]: Failed password for invalid user admin from 192.0.2.28 port 40303 ssh2
-2026-12-07T17:12:41.280672+00:00 give-web01 sshd[20443]: Connection closed by invalid user admin 192.0.2.28 port 40303 [preauth]
-2026-12-07T17:13:15.288591+00:00 give-web01 sshd[20445]: Invalid user oracle from 192.0.2.28 port 45040
-2026-12-07T17:13:17.296510+00:00 give-web01 sshd[20445]: Failed password for invalid user oracle from 192.0.2.28 port 45040 ssh2
-2026-12-07T17:13:18.304429+00:00 give-web01 sshd[20445]: Connection closed by invalid user oracle 192.0.2.28 port 45040 [preauth]
-2026-12-07T17:13:38.312348+00:00 give-web01 sshd[20451]: Invalid user ubuntu from 192.0.2.28 port 52807
-2026-12-07T17:13:40.320267+00:00 give-web01 sshd[20451]: Failed password for invalid user ubuntu from 192.0.2.28 port 52807 ssh2
-2026-12-07T17:13:41.328186+00:00 give-web01 sshd[20451]: Connection closed by invalid user ubuntu 192.0.2.28 port 52807 [preauth]
-2026-12-07T17:13:46.336105+00:00 give-web01 sshd[20459]: Invalid user admin from 192.0.2.28 port 46004
-2026-12-07T17:13:48.344024+00:00 give-web01 sshd[20459]: Failed password for invalid user admin from 192.0.2.28 port 46004 ssh2
-2026-12-07T17:13:49.351943+00:00 give-web01 sshd[20459]: Connection closed by invalid user admin 192.0.2.28 port 46004 [preauth]
-2026-12-07T17:14:19.359862+00:00 give-web01 sshd[20466]: Invalid user git from 192.0.2.28 port 46506
-2026-12-07T17:14:21.367781+00:00 give-web01 sshd[20466]: Failed password for invalid user git from 192.0.2.28 port 46506 ssh2
-2026-12-07T17:14:22.375700+00:00 give-web01 sshd[20466]: Connection closed by invalid user git 192.0.2.28 port 46506 [preauth]
-2026-12-07T17:14:52.383619+00:00 give-web01 sshd[20472]: Invalid user oracle from 192.0.2.28 port 51039
-2026-12-07T17:14:54.391538+00:00 give-web01 sshd[20472]: Failed password for invalid user oracle from 192.0.2.28 port 51039 ssh2
-2026-12-07T17:14:55.399457+00:00 give-web01 sshd[20472]: Connection closed by invalid user oracle 192.0.2.28 port 51039 [preauth]
-2026-12-07T17:15:26.407376+00:00 give-web01 sshd[20474]: Invalid user test from 192.0.2.28 port 32229
-2026-12-07T17:15:28.415295+00:00 give-web01 sshd[20474]: Failed password for invalid user test from 192.0.2.28 port 32229 ssh2
-2026-12-07T17:15:29.423214+00:00 give-web01 sshd[20474]: Connection closed by invalid user test 192.0.2.28 port 32229 [preauth]
-2026-12-07T17:15:44.431133+00:00 give-web01 sshd[20475]: Invalid user oracle from 192.0.2.28 port 52753
-2026-12-07T17:15:46.439052+00:00 give-web01 sshd[20475]: Failed password for invalid user oracle from 192.0.2.28 port 52753 ssh2
-2026-12-07T17:15:47.446971+00:00 give-web01 sshd[20475]: Connection closed by invalid user oracle 192.0.2.28 port 52753 [preauth]
-2026-12-07T17:16:04.454890+00:00 give-web01 sshd[20477]: Invalid user ubuntu from 192.0.2.28 port 58220
-2026-12-07T17:16:06.462809+00:00 give-web01 sshd[20477]: Failed password for invalid user ubuntu from 192.0.2.28 port 58220 ssh2
-2026-12-07T17:16:07.470728+00:00 give-web01 sshd[20477]: Connection closed by invalid user ubuntu 192.0.2.28 port 58220 [preauth]
-2026-12-07T17:16:26.478647+00:00 give-web01 sshd[20481]: Invalid user user from 192.0.2.28 port 45116
-2026-12-07T17:16:28.486566+00:00 give-web01 sshd[20481]: Failed password for invalid user user from 192.0.2.28 port 45116 ssh2
-2026-12-07T17:16:29.494485+00:00 give-web01 sshd[20481]: Connection closed by invalid user user 192.0.2.28 port 45116 [preauth]
-2026-12-07T17:16:59.502404+00:00 give-web01 sshd[20487]: Invalid user user from 192.0.2.28 port 49857
-2026-12-07T17:17:01.510323+00:00 give-web01 sshd[20487]: Failed password for invalid user user from 192.0.2.28 port 49857 ssh2
-2026-12-07T17:17:02.518242+00:00 give-web01 sshd[20487]: Connection closed by invalid user user 192.0.2.28 port 49857 [preauth]
-2026-12-07T17:17:30.526161+00:00 give-web01 sshd[20495]: Invalid user user from 192.0.2.28 port 30401
-2026-12-07T17:17:32.534080+00:00 give-web01 sshd[20495]: Failed password for invalid user user from 192.0.2.28 port 30401 ssh2
-2026-12-07T17:17:33.541999+00:00 give-web01 sshd[20495]: Connection closed by invalid user user 192.0.2.28 port 30401 [preauth]
-2026-12-07T17:17:58.549918+00:00 give-web01 sshd[20499]: Invalid user admin from 192.0.2.28 port 59093
-2026-12-07T17:18:00.557837+00:00 give-web01 sshd[20499]: Failed password for invalid user admin from 192.0.2.28 port 59093 ssh2
-2026-12-07T17:18:01.565756+00:00 give-web01 sshd[20499]: Connection closed by invalid user admin 192.0.2.28 port 59093 [preauth]
-2026-12-07T17:18:34.573675+00:00 give-web01 sshd[20500]: Failed password for root from 192.0.2.28 port 37130 ssh2
-2026-12-07T17:18:37.581594+00:00 give-web01 sshd[20500]: Connection closed by authenticating user root 192.0.2.28 port 37130 [preauth]
-2026-12-07T17:19:12.589513+00:00 give-web01 sshd[20505]: Invalid user cedarwick from 192.0.2.28 port 31550
-2026-12-07T17:19:14.597432+00:00 give-web01 sshd[20505]: Failed password for invalid user cedarwick from 192.0.2.28 port 31550 ssh2
-2026-12-07T17:19:15.605351+00:00 give-web01 sshd[20505]: Connection closed by invalid user cedarwick 192.0.2.28 port 31550 [preauth]
-2026-12-07T17:19:38.613270+00:00 give-web01 sshd[20506]: Invalid user git from 192.0.2.28 port 36926
-2026-12-07T17:19:40.621189+00:00 give-web01 sshd[20506]: Failed password for invalid user git from 192.0.2.28 port 36926 ssh2
-2026-12-07T17:19:41.629108+00:00 give-web01 sshd[20506]: Connection closed by invalid user git 192.0.2.28 port 36926 [preauth]
-2026-12-07T17:19:41.637027+00:00 give-web01 sshd[20507]: Invalid user admin from 192.0.2.28 port 49797
-2026-12-07T17:19:43.644946+00:00 give-web01 sshd[20507]: Failed password for invalid user admin from 192.0.2.28 port 49797 ssh2
-2026-12-07T17:19:44.652865+00:00 give-web01 sshd[20507]: Connection closed by invalid user admin 192.0.2.28 port 49797 [preauth]
-2026-12-07T17:20:20.660784+00:00 give-web01 sshd[20510]: Invalid user oracle from 192.0.2.28 port 49359
-2026-12-07T17:20:22.668703+00:00 give-web01 sshd[20510]: Failed password for invalid user oracle from 192.0.2.28 port 49359 ssh2
-2026-12-07T17:20:23.676622+00:00 give-web01 sshd[20510]: Connection closed by invalid user oracle 192.0.2.28 port 49359 [preauth]
-2026-12-07T17:20:52.684541+00:00 give-web01 sshd[20516]: Invalid user ubuntu from 192.0.2.28 port 46887
-2026-12-07T17:20:54.692460+00:00 give-web01 sshd[20516]: Failed password for invalid user ubuntu from 192.0.2.28 port 46887 ssh2
-2026-12-07T17:20:55.700379+00:00 give-web01 sshd[20516]: Connection closed by invalid user ubuntu 192.0.2.28 port 46887 [preauth]
-2026-12-07T17:21:27.708298+00:00 give-web01 sshd[20522]: Invalid user user from 192.0.2.28 port 31967
-2026-12-07T17:21:29.716217+00:00 give-web01 sshd[20522]: Failed password for invalid user user from 192.0.2.28 port 31967 ssh2
-2026-12-07T17:21:30.724136+00:00 give-web01 sshd[20522]: Connection closed by invalid user user 192.0.2.28 port 31967 [preauth]
-2026-12-07T17:21:48.732055+00:00 give-web01 sshd[20526]: Invalid user test from 192.0.2.28 port 30426
-2026-12-07T17:21:50.739974+00:00 give-web01 sshd[20526]: Failed password for invalid user test from 192.0.2.28 port 30426 ssh2
-2026-12-07T17:21:51.747893+00:00 give-web01 sshd[20526]: Connection closed by invalid user test 192.0.2.28 port 30426 [preauth]
-2026-12-07T17:22:09.755812+00:00 give-web01 sshd[20529]: Invalid user postgres from 192.0.2.28 port 55680
-2026-12-07T17:22:11.763731+00:00 give-web01 sshd[20529]: Failed password for invalid user postgres from 192.0.2.28 port 55680 ssh2
-2026-12-07T17:22:12.771650+00:00 give-web01 sshd[20529]: Connection closed by invalid user postgres 192.0.2.28 port 55680 [preauth]
-2026-12-07T17:22:34.779569+00:00 give-web01 sshd[20534]: Invalid user user from 192.0.2.28 port 49667
-2026-12-07T17:22:36.787488+00:00 give-web01 sshd[20534]: Failed password for invalid user user from 192.0.2.28 port 49667 ssh2
-2026-12-07T17:22:37.795407+00:00 give-web01 sshd[20534]: Connection closed by invalid user user 192.0.2.28 port 49667 [preauth]
-2026-12-07T17:22:42.803326+00:00 give-web01 sshd[20536]: Invalid user user from 192.0.2.28 port 62705
-2026-12-07T17:22:44.811245+00:00 give-web01 sshd[20536]: Failed password for invalid user user from 192.0.2.28 port 62705 ssh2
-2026-12-07T17:22:45.819164+00:00 give-web01 sshd[20536]: Connection closed by invalid user user 192.0.2.28 port 62705 [preauth]
-2026-12-07T17:22:48.827083+00:00 give-web01 sshd[20542]: Invalid user test from 192.0.2.28 port 51525
-2026-12-07T17:22:50.835002+00:00 give-web01 sshd[20542]: Failed password for invalid user test from 192.0.2.28 port 51525 ssh2
-2026-12-07T17:22:51.842921+00:00 give-web01 sshd[20542]: Connection closed by invalid user test 192.0.2.28 port 51525 [preauth]
-2026-12-07T17:23:07.850840+00:00 give-web01 sshd[20544]: Invalid user test from 192.0.2.28 port 41164
-2026-12-07T17:23:09.858759+00:00 give-web01 sshd[20544]: Failed password for invalid user test from 192.0.2.28 port 41164 ssh2
-2026-12-07T17:23:10.866678+00:00 give-web01 sshd[20544]: Connection closed by invalid user test 192.0.2.28 port 41164 [preauth]
-2026-12-07T17:23:46.874597+00:00 give-web01 sshd[20552]: Invalid user git from 192.0.2.28 port 52722
-2026-12-07T17:23:48.882516+00:00 give-web01 sshd[20552]: Failed password for invalid user git from 192.0.2.28 port 52722 ssh2
-2026-12-07T17:23:49.890435+00:00 give-web01 sshd[20552]: Connection closed by invalid user git 192.0.2.28 port 52722 [preauth]
-2026-12-07T17:24:22.898354+00:00 give-web01 sshd[20554]: Failed password for root from 192.0.2.28 port 44593 ssh2
-2026-12-07T17:24:25.906273+00:00 give-web01 sshd[20554]: Connection closed by authenticating user root 192.0.2.28 port 44593 [preauth]
-2026-12-07T17:24:48.914192+00:00 give-web01 sshd[20558]: Invalid user git from 192.0.2.28 port 60463
-2026-12-07T17:24:50.922111+00:00 give-web01 sshd[20558]: Failed password for invalid user git from 192.0.2.28 port 60463 ssh2
-2026-12-07T17:24:51.930030+00:00 give-web01 sshd[20558]: Connection closed by invalid user git 192.0.2.28 port 60463 [preauth]
-2026-12-07T17:25:25.937949+00:00 give-web01 sshd[20561]: Invalid user test from 192.0.2.28 port 58024
-2026-12-07T17:25:27.945868+00:00 give-web01 sshd[20561]: Failed password for invalid user test from 192.0.2.28 port 58024 ssh2
-2026-12-07T17:25:28.953787+00:00 give-web01 sshd[20561]: Connection closed by invalid user test 192.0.2.28 port 58024 [preauth]
-2026-12-07T17:25:36.961706+00:00 give-web01 sshd[20567]: Invalid user test from 192.0.2.28 port 50735
-2026-12-07T17:25:38.969625+00:00 give-web01 sshd[20567]: Failed password for invalid user test from 192.0.2.28 port 50735 ssh2
-2026-12-07T17:25:39.977544+00:00 give-web01 sshd[20567]: Connection closed by invalid user test 192.0.2.28 port 50735 [preauth]
-2026-12-07T17:26:10.985463+00:00 give-web01 sshd[20572]: Invalid user git from 192.0.2.28 port 60672
-2026-12-07T17:26:12.993382+00:00 give-web01 sshd[20572]: Failed password for invalid user git from 192.0.2.28 port 60672 ssh2
-2026-12-07T17:26:13.001301+00:00 give-web01 sshd[20572]: Connection closed by invalid user git 192.0.2.28 port 60672 [preauth]
-2026-12-07T17:26:19.009220+00:00 give-web01 sshd[20580]: Invalid user test from 192.0.2.28 port 62477
-2026-12-07T17:26:21.017139+00:00 give-web01 sshd[20580]: Failed password for invalid user test from 192.0.2.28 port 62477 ssh2
-2026-12-07T17:26:22.025058+00:00 give-web01 sshd[20580]: Connection closed by invalid user test 192.0.2.28 port 62477 [preauth]
-2026-12-08T05:57:53.032977+00:00 give-web01 sshd[20945]: Invalid user oracle from 192.0.2.203 port 46549
-2026-12-08T05:57:55.040896+00:00 give-web01 sshd[20945]: Failed password for invalid user oracle from 192.0.2.203 port 46549 ssh2
-2026-12-08T05:57:56.048815+00:00 give-web01 sshd[20945]: Connection closed by invalid user oracle 192.0.2.203 port 46549 [preauth]
-2026-12-08T05:58:01.056734+00:00 give-web01 sshd[20949]: Invalid user user from 192.0.2.203 port 62148
-2026-12-08T05:58:03.064653+00:00 give-web01 sshd[20949]: Failed password for invalid user user from 192.0.2.203 port 62148 ssh2
-2026-12-08T05:58:04.072572+00:00 give-web01 sshd[20949]: Connection closed by invalid user user 192.0.2.203 port 62148 [preauth]
-2026-12-08T05:58:21.080491+00:00 give-web01 sshd[20954]: Invalid user test from 192.0.2.203 port 44913
-2026-12-08T05:58:23.088410+00:00 give-web01 sshd[20954]: Failed password for invalid user test from 192.0.2.203 port 44913 ssh2
-2026-12-08T05:58:24.096329+00:00 give-web01 sshd[20954]: Connection closed by invalid user test 192.0.2.203 port 44913 [preauth]
-2026-12-08T05:58:38.104248+00:00 give-web01 sshd[20958]: Invalid user oracle from 192.0.2.203 port 46997
-2026-12-08T05:58:40.112167+00:00 give-web01 sshd[20958]: Failed password for invalid user oracle from 192.0.2.203 port 46997 ssh2
-2026-12-08T05:58:41.120086+00:00 give-web01 sshd[20958]: Connection closed by invalid user oracle 192.0.2.203 port 46997 [preauth]
-2026-12-08T05:59:14.128005+00:00 give-web01 sshd[20965]: Invalid user oracle from 192.0.2.203 port 49198
-2026-12-08T05:59:16.135924+00:00 give-web01 sshd[20965]: Failed password for invalid user oracle from 192.0.2.203 port 49198 ssh2
-2026-12-08T05:59:17.143843+00:00 give-web01 sshd[20965]: Connection closed by invalid user oracle 192.0.2.203 port 49198 [preauth]
-2026-12-08T05:59:37.151762+00:00 give-web01 sshd[20967]: Invalid user oracle from 192.0.2.203 port 63265
-2026-12-08T05:59:39.159681+00:00 give-web01 sshd[20967]: Failed password for invalid user oracle from 192.0.2.203 port 63265 ssh2
-2026-12-08T05:59:40.167600+00:00 give-web01 sshd[20967]: Connection closed by invalid user oracle 192.0.2.203 port 63265 [preauth]
-2026-12-08T06:00:02.175519+00:00 give-web01 sshd[20970]: Invalid user ubuntu from 192.0.2.203 port 30208
-2026-12-08T06:00:04.183438+00:00 give-web01 sshd[20970]: Failed password for invalid user ubuntu from 192.0.2.203 port 30208 ssh2
-2026-12-08T06:00:05.191357+00:00 give-web01 sshd[20970]: Connection closed by invalid user ubuntu 192.0.2.203 port 30208 [preauth]
-2026-12-08T06:00:38.199276+00:00 give-web01 sshd[20973]: Invalid user ubuntu from 192.0.2.203 port 39754
-2026-12-08T06:00:40.207195+00:00 give-web01 sshd[20973]: Failed password for invalid user ubuntu from 192.0.2.203 port 39754 ssh2
-2026-12-08T06:00:41.215114+00:00 give-web01 sshd[20973]: Connection closed by invalid user ubuntu 192.0.2.203 port 39754 [preauth]
-2026-12-08T06:00:44.223033+00:00 give-web01 sshd[20974]: Invalid user ubuntu from 192.0.2.203 port 45981
-2026-12-08T06:00:46.230952+00:00 give-web01 sshd[20974]: Failed password for invalid user ubuntu from 192.0.2.203 port 45981 ssh2
-2026-12-08T06:00:47.238871+00:00 give-web01 sshd[20974]: Connection closed by invalid user ubuntu 192.0.2.203 port 45981 [preauth]
-2026-12-08T06:00:47.246790+00:00 give-web01 sshd[20975]: Invalid user cedarwick from 192.0.2.203 port 35582
-2026-12-08T06:00:49.254709+00:00 give-web01 sshd[20975]: Failed password for invalid user cedarwick from 192.0.2.203 port 35582 ssh2
-2026-12-08T06:00:50.262628+00:00 give-web01 sshd[20975]: Connection closed by invalid user cedarwick 192.0.2.203 port 35582 [preauth]
-2026-12-08T06:01:14.270547+00:00 give-web01 sshd[20978]: Invalid user test from 192.0.2.203 port 41993
-2026-12-08T06:01:16.278466+00:00 give-web01 sshd[20978]: Failed password for invalid user test from 192.0.2.203 port 41993 ssh2
-2026-12-08T06:01:17.286385+00:00 give-web01 sshd[20978]: Connection closed by invalid user test 192.0.2.203 port 41993 [preauth]
-2026-12-08T06:01:52.294304+00:00 give-web01 sshd[20981]: Invalid user cedarwick from 192.0.2.203 port 64332
-2026-12-08T06:01:54.302223+00:00 give-web01 sshd[20981]: Failed password for invalid user cedarwick from 192.0.2.203 port 64332 ssh2
-2026-12-08T06:01:55.310142+00:00 give-web01 sshd[20981]: Connection closed by invalid user cedarwick 192.0.2.203 port 64332 [preauth]
-2026-12-08T06:01:58.318061+00:00 give-web01 sshd[20987]: Invalid user admin from 192.0.2.203 port 35905
-2026-12-08T06:02:00.325980+00:00 give-web01 sshd[20987]: Failed password for invalid user admin from 192.0.2.203 port 35905 ssh2
-2026-12-08T06:02:01.333899+00:00 give-web01 sshd[20987]: Connection closed by invalid user admin 192.0.2.203 port 35905 [preauth]
-2026-12-08T06:02:03.341818+00:00 give-web01 sshd[20990]: Invalid user git from 192.0.2.203 port 36153
-2026-12-08T06:02:05.349737+00:00 give-web01 sshd[20990]: Failed password for invalid user git from 192.0.2.203 port 36153 ssh2
-2026-12-08T06:02:06.357656+00:00 give-web01 sshd[20990]: Connection closed by invalid user git 192.0.2.203 port 36153 [preauth]
-2026-12-08T06:02:27.365575+00:00 give-web01 sshd[20993]: Invalid user git from 192.0.2.203 port 44863
-2026-12-08T06:02:29.373494+00:00 give-web01 sshd[20993]: Failed password for invalid user git from 192.0.2.203 port 44863 ssh2
-2026-12-08T06:02:30.381413+00:00 give-web01 sshd[20993]: Connection closed by invalid user git 192.0.2.203 port 44863 [preauth]
-2026-12-08T06:02:57.389332+00:00 give-web01 sshd[20994]: Invalid user cedarwick from 192.0.2.203 port 41794
-2026-12-08T06:02:59.397251+00:00 give-web01 sshd[20994]: Failed password for invalid user cedarwick from 192.0.2.203 port 41794 ssh2
-2026-12-08T06:03:00.405170+00:00 give-web01 sshd[20994]: Connection closed by invalid user cedarwick 192.0.2.203 port 41794 [preauth]
-2026-12-08T06:03:20.413089+00:00 give-web01 sshd[20998]: Failed password for root from 192.0.2.203 port 61637 ssh2
-2026-12-08T06:03:23.421008+00:00 give-web01 sshd[20998]: Connection closed by authenticating user root 192.0.2.203 port 61637 [preauth]
-2026-12-08T06:03:34.428927+00:00 give-web01 sshd[21004]: Invalid user admin from 192.0.2.203 port 62904
-2026-12-08T06:03:36.436846+00:00 give-web01 sshd[21004]: Failed password for invalid user admin from 192.0.2.203 port 62904 ssh2
-2026-12-08T06:03:37.444765+00:00 give-web01 sshd[21004]: Connection closed by invalid user admin 192.0.2.203 port 62904 [preauth]
-2026-12-08T06:03:48.452684+00:00 give-web01 sshd[21010]: Invalid user admin from 192.0.2.203 port 59777
-2026-12-08T06:03:50.460603+00:00 give-web01 sshd[21010]: Failed password for invalid user admin from 192.0.2.203 port 59777 ssh2
-2026-12-08T06:03:51.468522+00:00 give-web01 sshd[21010]: Connection closed by invalid user admin 192.0.2.203 port 59777 [preauth]
-2026-12-08T06:04:25.476441+00:00 give-web01 sshd[21011]: Failed password for root from 192.0.2.203 port 37755 ssh2
-2026-12-08T06:04:28.484360+00:00 give-web01 sshd[21011]: Connection closed by authenticating user root 192.0.2.203 port 37755 [preauth]
-2026-12-08T06:04:43.492279+00:00 give-web01 sshd[21014]: Invalid user ubuntu from 192.0.2.203 port 44940
-2026-12-08T06:04:45.500198+00:00 give-web01 sshd[21014]: Failed password for invalid user ubuntu from 192.0.2.203 port 44940 ssh2
-2026-12-08T06:04:46.508117+00:00 give-web01 sshd[21014]: Connection closed by invalid user ubuntu 192.0.2.203 port 44940 [preauth]
-2026-12-08T06:05:20.516036+00:00 give-web01 sshd[21022]: Failed password for root from 192.0.2.203 port 40313 ssh2
-2026-12-08T06:05:23.523955+00:00 give-web01 sshd[21022]: Connection closed by authenticating user root 192.0.2.203 port 40313 [preauth]
-2026-12-08T06:05:53.531874+00:00 give-web01 sshd[21030]: Invalid user postgres from 192.0.2.203 port 63059
-2026-12-08T06:05:55.539793+00:00 give-web01 sshd[21030]: Failed password for invalid user postgres from 192.0.2.203 port 63059 ssh2
-2026-12-08T06:05:56.547712+00:00 give-web01 sshd[21030]: Connection closed by invalid user postgres 192.0.2.203 port 63059 [preauth]
-2026-12-08T06:06:07.555631+00:00 give-web01 sshd[21034]: Invalid user git from 192.0.2.203 port 63010
-2026-12-08T06:06:09.563550+00:00 give-web01 sshd[21034]: Failed password for invalid user git from 192.0.2.203 port 63010 ssh2
-2026-12-08T06:06:10.571469+00:00 give-web01 sshd[21034]: Connection closed by invalid user git 192.0.2.203 port 63010 [preauth]
-2026-12-08T06:06:32.579388+00:00 give-web01 sshd[21035]: Invalid user test from 192.0.2.203 port 62286
-2026-12-08T06:06:34.587307+00:00 give-web01 sshd[21035]: Failed password for invalid user test from 192.0.2.203 port 62286 ssh2
-2026-12-08T06:06:35.595226+00:00 give-web01 sshd[21035]: Connection closed by invalid user test 192.0.2.203 port 62286 [preauth]
-2026-12-08T06:06:47.603145+00:00 give-web01 sshd[21041]: Invalid user user from 192.0.2.203 port 33439
-2026-12-08T06:06:49.611064+00:00 give-web01 sshd[21041]: Failed password for invalid user user from 192.0.2.203 port 33439 ssh2
-2026-12-08T06:06:50.618983+00:00 give-web01 sshd[21041]: Connection closed by invalid user user 192.0.2.203 port 33439 [preauth]
-2026-12-08T06:06:55.626902+00:00 give-web01 sshd[21044]: Invalid user ubuntu from 192.0.2.203 port 56162
-2026-12-08T06:06:57.634821+00:00 give-web01 sshd[21044]: Failed password for invalid user ubuntu from 192.0.2.203 port 56162 ssh2
-2026-12-08T06:06:58.642740+00:00 give-web01 sshd[21044]: Connection closed by invalid user ubuntu 192.0.2.203 port 56162 [preauth]
-2026-12-08T18:58:40.650659+00:00 give-web01 sshd[21519]: Failed password for cwadmin from 203.0.113.179 port 30159 ssh2
-2026-12-08T18:59:00.658578+00:00 give-web01 sshd[21519]: Accepted publickey for cwadmin from 203.0.113.179 port 30159 ssh2: ED25519 SHA256:lrbDQHGB6VWQ29MrJ/13rHPI9nejWe4GAo8R5aydA/8
-2026-12-08T18:59:00.666497+00:00 give-web01 sshd[21519]: pam_unix(sshd:session): session opened for user cwadmin(uid=1000) by cwadmin(uid=0)
-2026-12-08T18:59:00.674416+00:00 give-web01 systemd-logind[612]: New session 42 of user cwadmin.
-2026-12-08T18:59:40.682335+00:00 give-web01 sudo: cwadmin : TTY=pts/0 ; PWD=/home/cwadmin ; USER=root ; COMMAND=/usr/bin/docker compose logs --tail 100 app
-2026-12-08T18:59:40.690254+00:00 give-web01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by cwadmin(uid=1000)
-2026-12-08T18:59:52.698173+00:00 give-web01 sudo: pam_unix(sudo:session): session closed for user root
-2026-12-08T19:05:40.706092+00:00 give-web01 sshd[21519]: pam_unix(sshd:session): session closed for user cwadmin
-2026-12-08T19:05:40.714011+00:00 give-web01 systemd-logind[612]: Session 42 logged out. Waiting for processes to exit.
-2026-12-09T01:18:28.721930+00:00 give-web01 sshd[20756]: Invalid user user from 198.51.100.220 port 33453
-2026-12-09T01:18:30.729849+00:00 give-web01 sshd[20756]: Failed password for invalid user user from 198.51.100.220 port 33453 ssh2
-2026-12-09T01:18:31.737768+00:00 give-web01 sshd[20756]: Connection closed by invalid user user 198.51.100.220 port 33453 [preauth]
-2026-12-09T01:18:47.745687+00:00 give-web01 sshd[20759]: Invalid user admin from 198.51.100.220 port 58278
-2026-12-09T01:18:49.753606+00:00 give-web01 sshd[20759]: Failed password for invalid user admin from 198.51.100.220 port 58278 ssh2
-2026-12-09T01:18:50.761525+00:00 give-web01 sshd[20759]: Connection closed by invalid user admin 198.51.100.220 port 58278 [preauth]
-2026-12-09T01:19:19.769444+00:00 give-web01 sshd[20761]: Invalid user postgres from 198.51.100.220 port 40026
-2026-12-09T01:19:21.777363+00:00 give-web01 sshd[20761]: Failed password for invalid user postgres from 198.51.100.220 port 40026 ssh2
-2026-12-09T01:19:22.785282+00:00 give-web01 sshd[20761]: Connection closed by invalid user postgres 198.51.100.220 port 40026 [preauth]
-2026-12-09T01:19:46.793201+00:00 give-web01 sshd[20762]: Invalid user git from 198.51.100.220 port 49637
-2026-12-09T01:19:48.801120+00:00 give-web01 sshd[20762]: Failed password for invalid user git from 198.51.100.220 port 49637 ssh2
-2026-12-09T01:19:49.809039+00:00 give-web01 sshd[20762]: Connection closed by invalid user git 198.51.100.220 port 49637 [preauth]
-2026-12-09T01:20:07.816958+00:00 give-web01 sshd[20769]: Invalid user admin from 198.51.100.220 port 56978
-2026-12-09T01:20:09.824877+00:00 give-web01 sshd[20769]: Failed password for invalid user admin from 198.51.100.220 port 56978 ssh2
-2026-12-09T01:20:10.832796+00:00 give-web01 sshd[20769]: Connection closed by invalid user admin 198.51.100.220 port 56978 [preauth]
-2026-12-09T01:20:17.840715+00:00 give-web01 sshd[20770]: Invalid user cedarwick from 198.51.100.220 port 37891
-2026-12-09T01:20:19.848634+00:00 give-web01 sshd[20770]: Failed password for invalid user cedarwick from 198.51.100.220 port 37891 ssh2
-2026-12-09T01:20:20.856553+00:00 give-web01 sshd[20770]: Connection closed by invalid user cedarwick 198.51.100.220 port 37891 [preauth]
-2026-12-09T01:20:22.864472+00:00 give-web01 sshd[20771]: Invalid user cedarwick from 198.51.100.220 port 56424
-2026-12-09T01:20:24.872391+00:00 give-web01 sshd[20771]: Failed password for invalid user cedarwick from 198.51.100.220 port 56424 ssh2
-2026-12-09T01:20:25.880310+00:00 give-web01 sshd[20771]: Connection closed by invalid user cedarwick 198.51.100.220 port 56424 [preauth]
-2026-12-09T01:20:45.888229+00:00 give-web01 sshd[20777]: Invalid user user from 198.51.100.220 port 43539
-2026-12-09T01:20:47.896148+00:00 give-web01 sshd[20777]: Failed password for invalid user user from 198.51.100.220 port 43539 ssh2
-2026-12-09T01:20:48.904067+00:00 give-web01 sshd[20777]: Connection closed by invalid user user 198.51.100.220 port 43539 [preauth]
-2026-12-09T01:21:02.911986+00:00 give-web01 sshd[20782]: Invalid user test from 198.51.100.220 port 30372
-2026-12-09T01:21:04.919905+00:00 give-web01 sshd[20782]: Failed password for invalid user test from 198.51.100.220 port 30372 ssh2
-2026-12-09T01:21:05.927824+00:00 give-web01 sshd[20782]: Connection closed by invalid user test 198.51.100.220 port 30372 [preauth]
-2026-12-09T01:21:06.935743+00:00 give-web01 sshd[20787]: Invalid user admin from 198.51.100.220 port 34435
-2026-12-09T01:21:08.943662+00:00 give-web01 sshd[20787]: Failed password for invalid user admin from 198.51.100.220 port 34435 ssh2
-2026-12-09T01:21:09.951581+00:00 give-web01 sshd[20787]: Connection closed by invalid user admin 198.51.100.220 port 34435 [preauth]
-2026-12-09T01:21:12.959500+00:00 give-web01 sshd[20792]: Invalid user test from 198.51.100.220 port 60280
-2026-12-09T01:21:14.967419+00:00 give-web01 sshd[20792]: Failed password for invalid user test from 198.51.100.220 port 60280 ssh2
-2026-12-09T01:21:15.975338+00:00 give-web01 sshd[20792]: Connection closed by invalid user test 198.51.100.220 port 60280 [preauth]
-2026-12-09T01:21:25.983257+00:00 give-web01 sshd[20798]: Invalid user cedarwick from 198.51.100.220 port 60900
-2026-12-09T01:21:27.991176+00:00 give-web01 sshd[20798]: Failed password for invalid user cedarwick from 198.51.100.220 port 60900 ssh2
-2026-12-09T01:21:28.999095+00:00 give-web01 sshd[20798]: Connection closed by invalid user cedarwick 198.51.100.220 port 60900 [preauth]
-2026-12-09T01:22:01.007014+00:00 give-web01 sshd[20801]: Invalid user cedarwick from 198.51.100.220 port 35475
-2026-12-09T01:22:03.014933+00:00 give-web01 sshd[20801]: Failed password for invalid user cedarwick from 198.51.100.220 port 35475 ssh2
-2026-12-09T01:22:04.022852+00:00 give-web01 sshd[20801]: Connection closed by invalid user cedarwick 198.51.100.220 port 35475 [preauth]
-2026-12-09T01:22:32.030771+00:00 give-web01 sshd[20807]: Invalid user test from 198.51.100.220 port 31075
-2026-12-09T01:22:34.038690+00:00 give-web01 sshd[20807]: Failed password for invalid user test from 198.51.100.220 port 31075 ssh2
-2026-12-09T01:22:35.046609+00:00 give-web01 sshd[20807]: Connection closed by invalid user test 198.51.100.220 port 31075 [preauth]
-2026-12-09T01:22:42.054528+00:00 give-web01 sshd[20810]: Invalid user postgres from 198.51.100.220 port 39768
-2026-12-09T01:22:44.062447+00:00 give-web01 sshd[20810]: Failed password for invalid user postgres from 198.51.100.220 port 39768 ssh2
-2026-12-09T01:22:45.070366+00:00 give-web01 sshd[20810]: Connection closed by invalid user postgres 198.51.100.220 port 39768 [preauth]
-2026-12-09T01:22:47.078285+00:00 give-web01 sshd[20818]: Invalid user git from 198.51.100.220 port 51969
-2026-12-09T01:22:49.086204+00:00 give-web01 sshd[20818]: Failed password for invalid user git from 198.51.100.220 port 51969 ssh2
-2026-12-09T01:22:50.094123+00:00 give-web01 sshd[20818]: Connection closed by invalid user git 198.51.100.220 port 51969 [preauth]
-2026-12-09T01:23:06.102042+00:00 give-web01 sshd[20826]: Invalid user admin from 198.51.100.220 port 51019
-2026-12-09T01:23:08.109961+00:00 give-web01 sshd[20826]: Failed password for invalid user admin from 198.51.100.220 port 51019 ssh2
-2026-12-09T01:23:09.117880+00:00 give-web01 sshd[20826]: Connection closed by invalid user admin 198.51.100.220 port 51019 [preauth]
-2026-12-09T01:23:17.125799+00:00 give-web01 sshd[20829]: Failed password for root from 198.51.100.220 port 44724 ssh2
-2026-12-09T01:23:20.133718+00:00 give-web01 sshd[20829]: Connection closed by authenticating user root 198.51.100.220 port 44724 [preauth]
-2026-12-09T01:23:54.141637+00:00 give-web01 sshd[20837]: Invalid user oracle from 198.51.100.220 port 36292
-2026-12-09T01:23:56.149556+00:00 give-web01 sshd[20837]: Failed password for invalid user oracle from 198.51.100.220 port 36292 ssh2
-2026-12-09T01:23:57.157475+00:00 give-web01 sshd[20837]: Connection closed by invalid user oracle 198.51.100.220 port 36292 [preauth]
-2026-12-09T01:24:23.165394+00:00 give-web01 sshd[20842]: Invalid user test from 198.51.100.220 port 41610
-2026-12-09T01:24:25.173313+00:00 give-web01 sshd[20842]: Failed password for invalid user test from 198.51.100.220 port 41610 ssh2
-2026-12-09T01:24:26.181232+00:00 give-web01 sshd[20842]: Connection closed by invalid user test 198.51.100.220 port 41610 [preauth]
-2026-12-09T01:24:30.189151+00:00 give-web01 sshd[20849]: Invalid user admin from 198.51.100.220 port 40074
-2026-12-09T01:24:32.197070+00:00 give-web01 sshd[20849]: Failed password for invalid user admin from 198.51.100.220 port 40074 ssh2
-2026-12-09T01:24:33.204989+00:00 give-web01 sshd[20849]: Connection closed by invalid user admin 198.51.100.220 port 40074 [preauth]
-2026-12-09T01:24:41.212908+00:00 give-web01 sshd[20853]: Invalid user cedarwick from 198.51.100.220 port 54751
-2026-12-09T01:24:43.220827+00:00 give-web01 sshd[20853]: Failed password for invalid user cedarwick from 198.51.100.220 port 54751 ssh2
-2026-12-09T01:24:44.228746+00:00 give-web01 sshd[20853]: Connection closed by invalid user cedarwick 198.51.100.220 port 54751 [preauth]
-2026-12-09T01:24:45.236665+00:00 give-web01 sshd[20857]: Invalid user user from 198.51.100.220 port 64254
-2026-12-09T01:24:47.244584+00:00 give-web01 sshd[20857]: Failed password for invalid user user from 198.51.100.220 port 64254 ssh2
-2026-12-09T01:24:48.252503+00:00 give-web01 sshd[20857]: Connection closed by invalid user user 198.51.100.220 port 64254 [preauth]
-2026-12-09T01:25:03.260422+00:00 give-web01 sshd[20859]: Invalid user oracle from 198.51.100.220 port 55019
-2026-12-09T01:25:05.268341+00:00 give-web01 sshd[20859]: Failed password for invalid user oracle from 198.51.100.220 port 55019 ssh2
-2026-12-09T01:25:06.276260+00:00 give-web01 sshd[20859]: Connection closed by invalid user oracle 198.51.100.220 port 55019 [preauth]
-2026-12-09T01:25:27.284179+00:00 give-web01 sshd[20864]: Invalid user postgres from 198.51.100.220 port 50894
-2026-12-09T01:25:29.292098+00:00 give-web01 sshd[20864]: Failed password for invalid user postgres from 198.51.100.220 port 50894 ssh2
-2026-12-09T01:25:30.300017+00:00 give-web01 sshd[20864]: Connection closed by invalid user postgres 198.51.100.220 port 50894 [preauth]
-2026-12-09T01:25:38.307936+00:00 give-web01 sshd[20865]: Invalid user postgres from 198.51.100.220 port 43835
-2026-12-09T01:25:40.315855+00:00 give-web01 sshd[20865]: Failed password for invalid user postgres from 198.51.100.220 port 43835 ssh2
-2026-12-09T01:25:41.323774+00:00 give-web01 sshd[20865]: Connection closed by invalid user postgres 198.51.100.220 port 43835 [preauth]
-2026-12-09T01:25:52.331693+00:00 give-web01 sshd[20866]: Invalid user admin from 198.51.100.220 port 52708
-2026-12-09T01:25:54.339612+00:00 give-web01 sshd[20866]: Failed password for invalid user admin from 198.51.100.220 port 52708 ssh2
-2026-12-09T01:25:55.347531+00:00 give-web01 sshd[20866]: Connection closed by invalid user admin 198.51.100.220 port 52708 [preauth]
-2026-12-09T01:25:59.355450+00:00 give-web01 sshd[20874]: Invalid user git from 198.51.100.220 port 41092
-2026-12-09T01:26:01.363369+00:00 give-web01 sshd[20874]: Failed password for invalid user git from 198.51.100.220 port 41092 ssh2
-2026-12-09T01:26:02.371288+00:00 give-web01 sshd[20874]: Connection closed by invalid user git 198.51.100.220 port 41092 [preauth]
-2026-12-09T01:26:21.379207+00:00 give-web01 sshd[20876]: Invalid user user from 198.51.100.220 port 53362
-2026-12-09T01:26:23.387126+00:00 give-web01 sshd[20876]: Failed password for invalid user user from 198.51.100.220 port 53362 ssh2
-2026-12-09T01:26:24.395045+00:00 give-web01 sshd[20876]: Connection closed by invalid user user 198.51.100.220 port 53362 [preauth]
-2026-12-09T01:26:31.402964+00:00 give-web01 sshd[20879]: Invalid user admin from 198.51.100.220 port 55568
-2026-12-09T01:26:33.410883+00:00 give-web01 sshd[20879]: Failed password for invalid user admin from 198.51.100.220 port 55568 ssh2
-2026-12-09T01:26:34.418802+00:00 give-web01 sshd[20879]: Connection closed by invalid user admin 198.51.100.220 port 55568 [preauth]
-2026-12-09T01:26:35.426721+00:00 give-web01 sshd[20884]: Failed password for root from 198.51.100.220 port 56064 ssh2
-2026-12-09T01:26:38.434640+00:00 give-web01 sshd[20884]: Connection closed by authenticating user root 198.51.100.220 port 56064 [preauth]
-2026-12-09T01:27:10.442559+00:00 give-web01 sshd[20887]: Invalid user admin from 198.51.100.220 port 30314
-2026-12-09T01:27:12.450478+00:00 give-web01 sshd[20887]: Failed password for invalid user admin from 198.51.100.220 port 30314 ssh2
-2026-12-09T01:27:13.458397+00:00 give-web01 sshd[20887]: Connection closed by invalid user admin 198.51.100.220 port 30314 [preauth]
-2026-12-09T01:27:20.466316+00:00 give-web01 sshd[20891]: Invalid user postgres from 198.51.100.220 port 49974
-2026-12-09T01:27:22.474235+00:00 give-web01 sshd[20891]: Failed password for invalid user postgres from 198.51.100.220 port 49974 ssh2
-2026-12-09T01:27:23.482154+00:00 give-web01 sshd[20891]: Connection closed by invalid user postgres 198.51.100.220 port 49974 [preauth]
-2026-12-09T01:27:54.490073+00:00 give-web01 sshd[20896]: Invalid user user from 198.51.100.220 port 40776
-2026-12-09T01:27:56.497992+00:00 give-web01 sshd[20896]: Failed password for invalid user user from 198.51.100.220 port 40776 ssh2
-2026-12-09T01:27:57.505911+00:00 give-web01 sshd[20896]: Connection closed by invalid user user 198.51.100.220 port 40776 [preauth]
-2026-12-09T01:27:59.513830+00:00 give-web01 sshd[20902]: Invalid user cedarwick from 198.51.100.220 port 42097
-2026-12-09T01:28:01.521749+00:00 give-web01 sshd[20902]: Failed password for invalid user cedarwick from 198.51.100.220 port 42097 ssh2
-2026-12-09T01:28:02.529668+00:00 give-web01 sshd[20902]: Connection closed by invalid user cedarwick 198.51.100.220 port 42097 [preauth]
-2026-12-09T01:28:35.537587+00:00 give-web01 sshd[20908]: Invalid user test from 198.51.100.220 port 51698
-2026-12-09T01:28:37.545506+00:00 give-web01 sshd[20908]: Failed password for invalid user test from 198.51.100.220 port 51698 ssh2
-2026-12-09T01:28:38.553425+00:00 give-web01 sshd[20908]: Connection closed by invalid user test 198.51.100.220 port 51698 [preauth]
-2026-12-09T01:28:51.561344+00:00 give-web01 sshd[20914]: Invalid user ubuntu from 198.51.100.220 port 45143
-2026-12-09T01:28:53.569263+00:00 give-web01 sshd[20914]: Failed password for invalid user ubuntu from 198.51.100.220 port 45143 ssh2
-2026-12-09T01:28:54.577182+00:00 give-web01 sshd[20914]: Connection closed by invalid user ubuntu 198.51.100.220 port 45143 [preauth]
-2026-12-09T01:29:10.585101+00:00 give-web01 sshd[20917]: Failed password for root from 198.51.100.220 port 49655 ssh2
-2026-12-09T01:29:13.593020+00:00 give-web01 sshd[20917]: Connection closed by authenticating user root 198.51.100.220 port 49655 [preauth]
-2026-12-09T01:29:16.600939+00:00 give-web01 sshd[20922]: Failed password for root from 198.51.100.220 port 56141 ssh2
-2026-12-09T01:29:19.608858+00:00 give-web01 sshd[20922]: Connection closed by authenticating user root 198.51.100.220 port 56141 [preauth]
-2026-12-09T01:29:48.616777+00:00 give-web01 sshd[20927]: Invalid user git from 198.51.100.220 port 57036
-2026-12-09T01:29:50.624696+00:00 give-web01 sshd[20927]: Failed password for invalid user git from 198.51.100.220 port 57036 ssh2
-2026-12-09T01:29:51.632615+00:00 give-web01 sshd[20927]: Connection closed by invalid user git 198.51.100.220 port 57036 [preauth]
-2026-12-09T01:30:10.640534+00:00 give-web01 sshd[20933]: Invalid user cedarwick from 198.51.100.220 port 37436
-2026-12-09T01:30:12.648453+00:00 give-web01 sshd[20933]: Failed password for invalid user cedarwick from 198.51.100.220 port 37436 ssh2
-2026-12-09T01:30:13.656372+00:00 give-web01 sshd[20933]: Connection closed by invalid user cedarwick 198.51.100.220 port 37436 [preauth]
-2026-12-09T01:30:33.664291+00:00 give-web01 sshd[20938]: Invalid user oracle from 198.51.100.220 port 64342
-2026-12-09T01:30:35.672210+00:00 give-web01 sshd[20938]: Failed password for invalid user oracle from 198.51.100.220 port 64342 ssh2
-2026-12-09T01:30:36.680129+00:00 give-web01 sshd[20938]: Connection closed by invalid user oracle 198.51.100.220 port 64342 [preauth]
-2026-12-09T11:01:20.688048+00:00 give-web01 sshd[20098]: Failed password for root from 192.0.2.71 port 44539 ssh2
-2026-12-09T11:01:23.695967+00:00 give-web01 sshd[20098]: Connection closed by authenticating user root 192.0.2.71 port 44539 [preauth]
-2026-12-09T11:01:36.703886+00:00 give-web01 sshd[20105]: Invalid user ubuntu from 192.0.2.71 port 41117
-2026-12-09T11:01:38.711805+00:00 give-web01 sshd[20105]: Failed password for invalid user ubuntu from 192.0.2.71 port 41117 ssh2
-2026-12-09T11:01:39.719724+00:00 give-web01 sshd[20105]: Connection closed by invalid user ubuntu 192.0.2.71 port 41117 [preauth]
-2026-12-09T11:02:08.727643+00:00 give-web01 sshd[20107]: Invalid user postgres from 192.0.2.71 port 37134
-2026-12-09T11:02:10.735562+00:00 give-web01 sshd[20107]: Failed password for invalid user postgres from 192.0.2.71 port 37134 ssh2
-2026-12-09T11:02:11.743481+00:00 give-web01 sshd[20107]: Connection closed by invalid user postgres 192.0.2.71 port 37134 [preauth]
-2026-12-09T11:02:17.751400+00:00 give-web01 sshd[20110]: Invalid user oracle from 192.0.2.71 port 32951
-2026-12-09T11:02:19.759319+00:00 give-web01 sshd[20110]: Failed password for invalid user oracle from 192.0.2.71 port 32951 ssh2
-2026-12-09T11:02:20.767238+00:00 give-web01 sshd[20110]: Connection closed by invalid user oracle 192.0.2.71 port 32951 [preauth]
-2026-12-09T11:02:40.775157+00:00 give-web01 sshd[20111]: Invalid user test from 192.0.2.71 port 42727
-2026-12-09T11:02:42.783076+00:00 give-web01 sshd[20111]: Failed password for invalid user test from 192.0.2.71 port 42727 ssh2
-2026-12-09T11:02:43.790995+00:00 give-web01 sshd[20111]: Connection closed by invalid user test 192.0.2.71 port 42727 [preauth]
-2026-12-09T11:02:47.798914+00:00 give-web01 sshd[20117]: Invalid user admin from 192.0.2.71 port 61922
-2026-12-09T11:02:49.806833+00:00 give-web01 sshd[20117]: Failed password for invalid user admin from 192.0.2.71 port 61922 ssh2
-2026-12-09T11:02:50.814752+00:00 give-web01 sshd[20117]: Connection closed by invalid user admin 192.0.2.71 port 61922 [preauth]
-2026-12-09T11:03:19.822671+00:00 give-web01 sshd[20125]: Invalid user user from 192.0.2.71 port 51066
-2026-12-09T11:03:21.830590+00:00 give-web01 sshd[20125]: Failed password for invalid user user from 192.0.2.71 port 51066 ssh2
-2026-12-09T11:03:22.838509+00:00 give-web01 sshd[20125]: Connection closed by invalid user user 192.0.2.71 port 51066 [preauth]
-2026-12-09T11:03:46.846428+00:00 give-web01 sshd[20128]: Invalid user oracle from 192.0.2.71 port 45128
-2026-12-09T11:03:48.854347+00:00 give-web01 sshd[20128]: Failed password for invalid user oracle from 192.0.2.71 port 45128 ssh2
-2026-12-09T11:03:49.862266+00:00 give-web01 sshd[20128]: Connection closed by invalid user oracle 192.0.2.71 port 45128 [preauth]
-2026-12-09T11:03:57.870185+00:00 give-web01 sshd[20133]: Failed password for root from 192.0.2.71 port 32829 ssh2
-2026-12-09T11:04:00.878104+00:00 give-web01 sshd[20133]: Connection closed by authenticating user root 192.0.2.71 port 32829 [preauth]
-2026-12-09T11:04:11.886023+00:00 give-web01 sshd[20134]: Invalid user cedarwick from 192.0.2.71 port 46608
-2026-12-09T11:04:13.893942+00:00 give-web01 sshd[20134]: Failed password for invalid user cedarwick from 192.0.2.71 port 46608 ssh2
-2026-12-09T11:04:14.901861+00:00 give-web01 sshd[20134]: Connection closed by invalid user cedarwick 192.0.2.71 port 46608 [preauth]
-2026-12-09T11:04:23.909780+00:00 give-web01 sshd[20136]: Invalid user postgres from 192.0.2.71 port 32267
-2026-12-09T11:04:25.917699+00:00 give-web01 sshd[20136]: Failed password for invalid user postgres from 192.0.2.71 port 32267 ssh2
-2026-12-09T11:04:26.925618+00:00 give-web01 sshd[20136]: Connection closed by invalid user postgres 192.0.2.71 port 32267 [preauth]
-2026-12-09T11:04:51.933537+00:00 give-web01 sshd[20139]: Invalid user cedarwick from 192.0.2.71 port 44763
-2026-12-09T11:04:53.941456+00:00 give-web01 sshd[20139]: Failed password for invalid user cedarwick from 192.0.2.71 port 44763 ssh2
-2026-12-09T11:04:54.949375+00:00 give-web01 sshd[20139]: Connection closed by invalid user cedarwick 192.0.2.71 port 44763 [preauth]
-2026-12-09T11:05:05.957294+00:00 give-web01 sshd[20140]: Invalid user admin from 192.0.2.71 port 48979
-2026-12-09T11:05:07.965213+00:00 give-web01 sshd[20140]: Failed password for invalid user admin from 192.0.2.71 port 48979 ssh2
-2026-12-09T11:05:08.973132+00:00 give-web01 sshd[20140]: Connection closed by invalid user admin 192.0.2.71 port 48979 [preauth]
-2026-12-09T11:05:33.981051+00:00 give-web01 sshd[20147]: Invalid user oracle from 192.0.2.71 port 33948
-2026-12-09T11:05:35.988970+00:00 give-web01 sshd[20147]: Failed password for invalid user oracle from 192.0.2.71 port 33948 ssh2
-2026-12-09T11:05:36.996889+00:00 give-web01 sshd[20147]: Connection closed by invalid user oracle 192.0.2.71 port 33948 [preauth]
-2026-12-09T11:05:45.004808+00:00 give-web01 sshd[20152]: Invalid user cedarwick from 192.0.2.71 port 48826
-2026-12-09T11:05:47.012727+00:00 give-web01 sshd[20152]: Failed password for invalid user cedarwick from 192.0.2.71 port 48826 ssh2
-2026-12-09T11:05:48.020646+00:00 give-web01 sshd[20152]: Connection closed by invalid user cedarwick 192.0.2.71 port 48826 [preauth]
-2026-12-09T11:05:53.028565+00:00 give-web01 sshd[20158]: Invalid user oracle from 192.0.2.71 port 60485
-2026-12-09T11:05:55.036484+00:00 give-web01 sshd[20158]: Failed password for invalid user oracle from 192.0.2.71 port 60485 ssh2
-2026-12-09T11:05:56.044403+00:00 give-web01 sshd[20158]: Connection closed by invalid user oracle 192.0.2.71 port 60485 [preauth]
-2026-12-09T11:06:01.052322+00:00 give-web01 sshd[20163]: Invalid user postgres from 192.0.2.71 port 40479
-2026-12-09T11:06:03.060241+00:00 give-web01 sshd[20163]: Failed password for invalid user postgres from 192.0.2.71 port 40479 ssh2
-2026-12-09T11:06:04.068160+00:00 give-web01 sshd[20163]: Connection closed by invalid user postgres 192.0.2.71 port 40479 [preauth]
-2026-12-09T11:06:17.076079+00:00 give-web01 sshd[20169]: Invalid user oracle from 192.0.2.71 port 53717
-2026-12-09T11:06:19.083998+00:00 give-web01 sshd[20169]: Failed password for invalid user oracle from 192.0.2.71 port 53717 ssh2
-2026-12-09T11:06:20.091917+00:00 give-web01 sshd[20169]: Connection closed by invalid user oracle 192.0.2.71 port 53717 [preauth]
-2026-12-09T11:06:29.099836+00:00 give-web01 sshd[20175]: Invalid user user from 192.0.2.71 port 41114
-2026-12-09T11:06:31.107755+00:00 give-web01 sshd[20175]: Failed password for invalid user user from 192.0.2.71 port 41114 ssh2
-2026-12-09T11:06:32.115674+00:00 give-web01 sshd[20175]: Connection closed by invalid user user 192.0.2.71 port 41114 [preauth]
-2026-12-09T11:06:41.123593+00:00 give-web01 sshd[20180]: Invalid user postgres from 192.0.2.71 port 54170
-2026-12-09T11:06:43.131512+00:00 give-web01 sshd[20180]: Failed password for invalid user postgres from 192.0.2.71 port 54170 ssh2
-2026-12-09T11:06:44.139431+00:00 give-web01 sshd[20180]: Connection closed by invalid user postgres 192.0.2.71 port 54170 [preauth]
-2026-12-09T11:07:18.147350+00:00 give-web01 sshd[20181]: Invalid user oracle from 192.0.2.71 port 62578
-2026-12-09T11:07:20.155269+00:00 give-web01 sshd[20181]: Failed password for invalid user oracle from 192.0.2.71 port 62578 ssh2
-2026-12-09T11:07:21.163188+00:00 give-web01 sshd[20181]: Connection closed by invalid user oracle 192.0.2.71 port 62578 [preauth]
-2026-12-09T11:07:21.171107+00:00 give-web01 sshd[20184]: Invalid user admin from 192.0.2.71 port 33922
-2026-12-09T11:07:23.179026+00:00 give-web01 sshd[20184]: Failed password for invalid user admin from 192.0.2.71 port 33922 ssh2
-2026-12-09T11:07:24.186945+00:00 give-web01 sshd[20184]: Connection closed by invalid user admin 192.0.2.71 port 33922 [preauth]
-2026-12-09T11:07:32.194864+00:00 give-web01 sshd[20189]: Invalid user test from 192.0.2.71 port 39205
-2026-12-09T11:07:34.202783+00:00 give-web01 sshd[20189]: Failed password for invalid user test from 192.0.2.71 port 39205 ssh2
-2026-12-09T11:07:35.210702+00:00 give-web01 sshd[20189]: Connection closed by invalid user test 192.0.2.71 port 39205 [preauth]
-2026-12-09T11:08:06.218621+00:00 give-web01 sshd[20193]: Invalid user ubuntu from 192.0.2.71 port 54114
-2026-12-09T11:08:08.226540+00:00 give-web01 sshd[20193]: Failed password for invalid user ubuntu from 192.0.2.71 port 54114 ssh2
-2026-12-09T11:08:09.234459+00:00 give-web01 sshd[20193]: Connection closed by invalid user ubuntu 192.0.2.71 port 54114 [preauth]
-2026-12-09T11:08:13.242378+00:00 give-web01 sshd[20201]: Invalid user postgres from 192.0.2.71 port 40940
-2026-12-09T11:08:15.250297+00:00 give-web01 sshd[20201]: Failed password for invalid user postgres from 192.0.2.71 port 40940 ssh2
-2026-12-09T11:08:16.258216+00:00 give-web01 sshd[20201]: Connection closed by invalid user postgres 192.0.2.71 port 40940 [preauth]
-2026-12-09T11:08:50.266135+00:00 give-web01 sshd[20208]: Invalid user oracle from 192.0.2.71 port 31465
-2026-12-09T11:08:52.274054+00:00 give-web01 sshd[20208]: Failed password for invalid user oracle from 192.0.2.71 port 31465 ssh2
-2026-12-09T11:08:53.281973+00:00 give-web01 sshd[20208]: Connection closed by invalid user oracle 192.0.2.71 port 31465 [preauth]
-2026-12-09T11:08:53.289892+00:00 give-web01 sshd[20216]: Invalid user cedarwick from 192.0.2.71 port 43472
-2026-12-09T11:08:55.297811+00:00 give-web01 sshd[20216]: Failed password for invalid user cedarwick from 192.0.2.71 port 43472 ssh2
-2026-12-09T11:08:56.305730+00:00 give-web01 sshd[20216]: Connection closed by invalid user cedarwick 192.0.2.71 port 43472 [preauth]
-2026-12-09T11:09:04.313649+00:00 give-web01 sshd[20224]: Invalid user ubuntu from 192.0.2.71 port 62430
-2026-12-09T11:09:06.321568+00:00 give-web01 sshd[20224]: Failed password for invalid user ubuntu from 192.0.2.71 port 62430 ssh2
-2026-12-09T11:09:07.329487+00:00 give-web01 sshd[20224]: Connection closed by invalid user ubuntu 192.0.2.71 port 62430 [preauth]
-2026-12-09T11:09:35.337406+00:00 give-web01 sshd[20225]: Invalid user git from 192.0.2.71 port 60539
-2026-12-09T11:09:37.345325+00:00 give-web01 sshd[20225]: Failed password for invalid user git from 192.0.2.71 port 60539 ssh2
-2026-12-09T11:09:38.353244+00:00 give-web01 sshd[20225]: Connection closed by invalid user git 192.0.2.71 port 60539 [preauth]
-2026-12-09T12:36:00.361163+00:00 give-web01 sshd[21712]: Accepted publickey for cwadmin from 203.0.113.179 port 52174 ssh2: ED25519 SHA256:qzssY9KZvWpOUl+a35Oiu40ProfTmaMY+ieaCY6ENqM
-2026-12-09T12:36:00.369082+00:00 give-web01 sshd[21712]: pam_unix(sshd:session): session opened for user cwadmin(uid=1000) by cwadmin(uid=0)
-2026-12-09T12:36:00.377001+00:00 give-web01 systemd-logind[612]: New session 43 of user cwadmin.
-2026-12-09T12:36:40.384920+00:00 give-web01 sudo: cwadmin : TTY=pts/0 ; PWD=/home/cwadmin ; USER=root ; COMMAND=/usr/bin/tar czf /root/ir-export.tgz /srv/give/logs
-2026-12-09T12:36:40.392839+00:00 give-web01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by cwadmin(uid=1000)
-2026-12-09T12:36:52.400758+00:00 give-web01 sudo: pam_unix(sudo:session): session closed for user root
-2026-12-09T12:42:40.408677+00:00 give-web01 sshd[21712]: pam_unix(sshd:session): session closed for user cwadmin
-2026-12-09T12:42:40.416596+00:00 give-web01 systemd-logind[612]: Session 43 logged out. Waiting for processes to exit.
+2026-12-06T03:52:33.000000+00:00 give-web01 sshd[23837]: Invalid user cedarwick from 198.51.100.177 port 34275
+2026-12-06T03:52:35.007919+00:00 give-web01 sshd[23837]: Failed password for invalid user cedarwick from 198.51.100.177 port 34275 ssh2
+2026-12-06T03:52:36.015838+00:00 give-web01 sshd[23837]: Connection closed by invalid user cedarwick 198.51.100.177 port 34275 [preauth]
+2026-12-06T03:52:53.023757+00:00 give-web01 sshd[23841]: Invalid user postgres from 198.51.100.177 port 48592
+2026-12-06T03:52:55.031676+00:00 give-web01 sshd[23841]: Failed password for invalid user postgres from 198.51.100.177 port 48592 ssh2
+2026-12-06T03:52:56.039595+00:00 give-web01 sshd[23841]: Connection closed by invalid user postgres 198.51.100.177 port 48592 [preauth]
+2026-12-06T03:53:02.047514+00:00 give-web01 sshd[23843]: Invalid user oracle from 198.51.100.177 port 31649
+2026-12-06T03:53:04.055433+00:00 give-web01 sshd[23843]: Failed password for invalid user oracle from 198.51.100.177 port 31649 ssh2
+2026-12-06T03:53:05.063352+00:00 give-web01 sshd[23843]: Connection closed by invalid user oracle 198.51.100.177 port 31649 [preauth]
+2026-12-06T03:53:09.071271+00:00 give-web01 sshd[23848]: Invalid user test from 198.51.100.177 port 59620
+2026-12-06T03:53:11.079190+00:00 give-web01 sshd[23848]: Failed password for invalid user test from 198.51.100.177 port 59620 ssh2
+2026-12-06T03:53:12.087109+00:00 give-web01 sshd[23848]: Connection closed by invalid user test 198.51.100.177 port 59620 [preauth]
+2026-12-06T03:53:27.095028+00:00 give-web01 sshd[23850]: Invalid user cedarwick from 198.51.100.177 port 47933
+2026-12-06T03:53:29.102947+00:00 give-web01 sshd[23850]: Failed password for invalid user cedarwick from 198.51.100.177 port 47933 ssh2
+2026-12-06T03:53:30.110866+00:00 give-web01 sshd[23850]: Connection closed by invalid user cedarwick 198.51.100.177 port 47933 [preauth]
+2026-12-06T03:53:35.118785+00:00 give-web01 sshd[23854]: Invalid user postgres from 198.51.100.177 port 44049
+2026-12-06T03:53:37.126704+00:00 give-web01 sshd[23854]: Failed password for invalid user postgres from 198.51.100.177 port 44049 ssh2
+2026-12-06T03:53:38.134623+00:00 give-web01 sshd[23854]: Connection closed by invalid user postgres 198.51.100.177 port 44049 [preauth]
+2026-12-06T03:54:06.142542+00:00 give-web01 sshd[23859]: Invalid user git from 198.51.100.177 port 37861
+2026-12-06T03:54:08.150461+00:00 give-web01 sshd[23859]: Failed password for invalid user git from 198.51.100.177 port 37861 ssh2
+2026-12-06T03:54:09.158380+00:00 give-web01 sshd[23859]: Connection closed by invalid user git 198.51.100.177 port 37861 [preauth]
+2026-12-06T03:54:37.166299+00:00 give-web01 sshd[23862]: Invalid user user from 198.51.100.177 port 52239
+2026-12-06T03:54:39.174218+00:00 give-web01 sshd[23862]: Failed password for invalid user user from 198.51.100.177 port 52239 ssh2
+2026-12-06T03:54:40.182137+00:00 give-web01 sshd[23862]: Connection closed by invalid user user 198.51.100.177 port 52239 [preauth]
+2026-12-06T03:54:47.190056+00:00 give-web01 sshd[23863]: Invalid user oracle from 198.51.100.177 port 43591
+2026-12-06T03:54:49.197975+00:00 give-web01 sshd[23863]: Failed password for invalid user oracle from 198.51.100.177 port 43591 ssh2
+2026-12-06T03:54:50.205894+00:00 give-web01 sshd[23863]: Connection closed by invalid user oracle 198.51.100.177 port 43591 [preauth]
+2026-12-06T03:55:22.213813+00:00 give-web01 sshd[23870]: Invalid user test from 198.51.100.177 port 58765
+2026-12-06T03:55:24.221732+00:00 give-web01 sshd[23870]: Failed password for invalid user test from 198.51.100.177 port 58765 ssh2
+2026-12-06T03:55:25.229651+00:00 give-web01 sshd[23870]: Connection closed by invalid user test 198.51.100.177 port 58765 [preauth]
+2026-12-06T03:56:00.237570+00:00 give-web01 sshd[23871]: Invalid user cedarwick from 198.51.100.177 port 51623
+2026-12-06T03:56:02.245489+00:00 give-web01 sshd[23871]: Failed password for invalid user cedarwick from 198.51.100.177 port 51623 ssh2
+2026-12-06T03:56:03.253408+00:00 give-web01 sshd[23871]: Connection closed by invalid user cedarwick 198.51.100.177 port 51623 [preauth]
+2026-12-06T03:56:37.261327+00:00 give-web01 sshd[23876]: Invalid user git from 198.51.100.177 port 48074
+2026-12-06T03:56:39.269246+00:00 give-web01 sshd[23876]: Failed password for invalid user git from 198.51.100.177 port 48074 ssh2
+2026-12-06T03:56:40.277165+00:00 give-web01 sshd[23876]: Connection closed by invalid user git 198.51.100.177 port 48074 [preauth]
+2026-12-06T03:57:02.285084+00:00 give-web01 sshd[23877]: Invalid user postgres from 198.51.100.177 port 54546
+2026-12-06T03:57:04.293003+00:00 give-web01 sshd[23877]: Failed password for invalid user postgres from 198.51.100.177 port 54546 ssh2
+2026-12-06T03:57:05.300922+00:00 give-web01 sshd[23877]: Connection closed by invalid user postgres 198.51.100.177 port 54546 [preauth]
+2026-12-06T03:57:17.308841+00:00 give-web01 sshd[23884]: Invalid user git from 198.51.100.177 port 50716
+2026-12-06T03:57:19.316760+00:00 give-web01 sshd[23884]: Failed password for invalid user git from 198.51.100.177 port 50716 ssh2
+2026-12-06T03:57:20.324679+00:00 give-web01 sshd[23884]: Connection closed by invalid user git 198.51.100.177 port 50716 [preauth]
+2026-12-06T03:57:29.332598+00:00 give-web01 sshd[23889]: Invalid user postgres from 198.51.100.177 port 52081
+2026-12-06T03:57:31.340517+00:00 give-web01 sshd[23889]: Failed password for invalid user postgres from 198.51.100.177 port 52081 ssh2
+2026-12-06T03:57:32.348436+00:00 give-web01 sshd[23889]: Connection closed by invalid user postgres 198.51.100.177 port 52081 [preauth]
+2026-12-06T03:58:05.356355+00:00 give-web01 sshd[23893]: Invalid user oracle from 198.51.100.177 port 37663
+2026-12-06T03:58:07.364274+00:00 give-web01 sshd[23893]: Failed password for invalid user oracle from 198.51.100.177 port 37663 ssh2
+2026-12-06T03:58:08.372193+00:00 give-web01 sshd[23893]: Connection closed by invalid user oracle 198.51.100.177 port 37663 [preauth]
+2026-12-06T03:58:14.380112+00:00 give-web01 sshd[23897]: Failed password for root from 198.51.100.177 port 44763 ssh2
+2026-12-06T03:58:17.388031+00:00 give-web01 sshd[23897]: Connection closed by authenticating user root 198.51.100.177 port 44763 [preauth]
+2026-12-06T03:58:17.395950+00:00 give-web01 sshd[23899]: Invalid user test from 198.51.100.177 port 45410
+2026-12-06T03:58:19.403869+00:00 give-web01 sshd[23899]: Failed password for invalid user test from 198.51.100.177 port 45410 ssh2
+2026-12-06T03:58:20.411788+00:00 give-web01 sshd[23899]: Connection closed by invalid user test 198.51.100.177 port 45410 [preauth]
+2026-12-06T03:58:56.419707+00:00 give-web01 sshd[23907]: Invalid user admin from 198.51.100.177 port 56111
+2026-12-06T03:58:58.427626+00:00 give-web01 sshd[23907]: Failed password for invalid user admin from 198.51.100.177 port 56111 ssh2
+2026-12-06T03:58:59.435545+00:00 give-web01 sshd[23907]: Connection closed by invalid user admin 198.51.100.177 port 56111 [preauth]
+2026-12-06T03:59:32.443464+00:00 give-web01 sshd[23913]: Invalid user postgres from 198.51.100.177 port 62478
+2026-12-06T03:59:34.451383+00:00 give-web01 sshd[23913]: Failed password for invalid user postgres from 198.51.100.177 port 62478 ssh2
+2026-12-06T03:59:35.459302+00:00 give-web01 sshd[23913]: Connection closed by invalid user postgres 198.51.100.177 port 62478 [preauth]
+2026-12-06T04:00:05.467221+00:00 give-web01 sshd[23914]: Failed password for root from 198.51.100.177 port 33983 ssh2
+2026-12-06T04:00:08.475140+00:00 give-web01 sshd[23914]: Connection closed by authenticating user root 198.51.100.177 port 33983 [preauth]
+2026-12-06T04:00:19.483059+00:00 give-web01 sshd[23916]: Invalid user user from 198.51.100.177 port 38770
+2026-12-06T04:00:21.490978+00:00 give-web01 sshd[23916]: Failed password for invalid user user from 198.51.100.177 port 38770 ssh2
+2026-12-06T04:00:22.498897+00:00 give-web01 sshd[23916]: Connection closed by invalid user user 198.51.100.177 port 38770 [preauth]
+2026-12-06T04:00:41.506816+00:00 give-web01 sshd[23920]: Failed password for root from 198.51.100.177 port 46611 ssh2
+2026-12-06T04:00:44.514735+00:00 give-web01 sshd[23920]: Connection closed by authenticating user root 198.51.100.177 port 46611 [preauth]
+2026-12-06T04:00:52.522654+00:00 give-web01 sshd[23925]: Invalid user test from 198.51.100.177 port 60340
+2026-12-06T04:00:54.530573+00:00 give-web01 sshd[23925]: Failed password for invalid user test from 198.51.100.177 port 60340 ssh2
+2026-12-06T04:00:55.538492+00:00 give-web01 sshd[23925]: Connection closed by invalid user test 198.51.100.177 port 60340 [preauth]
+2026-12-06T04:01:03.546411+00:00 give-web01 sshd[23930]: Invalid user test from 198.51.100.177 port 43507
+2026-12-06T04:01:05.554330+00:00 give-web01 sshd[23930]: Failed password for invalid user test from 198.51.100.177 port 43507 ssh2
+2026-12-06T04:01:06.562249+00:00 give-web01 sshd[23930]: Connection closed by invalid user test 198.51.100.177 port 43507 [preauth]
+2026-12-06T04:01:31.570168+00:00 give-web01 sshd[23935]: Failed password for root from 198.51.100.177 port 36969 ssh2
+2026-12-06T04:01:34.578087+00:00 give-web01 sshd[23935]: Connection closed by authenticating user root 198.51.100.177 port 36969 [preauth]
+2026-12-06T07:40:30.586006+00:00 give-web01 sshd[23093]: Invalid user admin from 192.0.2.200 port 58278
+2026-12-06T07:40:32.593925+00:00 give-web01 sshd[23093]: Failed password for invalid user admin from 192.0.2.200 port 58278 ssh2
+2026-12-06T07:40:33.601844+00:00 give-web01 sshd[23093]: Connection closed by invalid user admin 192.0.2.200 port 58278 [preauth]
+2026-12-06T07:41:02.609763+00:00 give-web01 sshd[23095]: Invalid user postgres from 192.0.2.200 port 40026
+2026-12-06T07:41:04.617682+00:00 give-web01 sshd[23095]: Failed password for invalid user postgres from 192.0.2.200 port 40026 ssh2
+2026-12-06T07:41:05.625601+00:00 give-web01 sshd[23095]: Connection closed by invalid user postgres 192.0.2.200 port 40026 [preauth]
+2026-12-06T07:41:29.633520+00:00 give-web01 sshd[23096]: Invalid user git from 192.0.2.200 port 49637
+2026-12-06T07:41:31.641439+00:00 give-web01 sshd[23096]: Failed password for invalid user git from 192.0.2.200 port 49637 ssh2
+2026-12-06T07:41:32.649358+00:00 give-web01 sshd[23096]: Connection closed by invalid user git 192.0.2.200 port 49637 [preauth]
+2026-12-06T07:41:50.657277+00:00 give-web01 sshd[23103]: Invalid user admin from 192.0.2.200 port 56978
+2026-12-06T07:41:52.665196+00:00 give-web01 sshd[23103]: Failed password for invalid user admin from 192.0.2.200 port 56978 ssh2
+2026-12-06T07:41:53.673115+00:00 give-web01 sshd[23103]: Connection closed by invalid user admin 192.0.2.200 port 56978 [preauth]
+2026-12-06T07:42:00.681034+00:00 give-web01 sshd[23104]: Invalid user cedarwick from 192.0.2.200 port 37891
+2026-12-06T07:42:02.688953+00:00 give-web01 sshd[23104]: Failed password for invalid user cedarwick from 192.0.2.200 port 37891 ssh2
+2026-12-06T07:42:03.696872+00:00 give-web01 sshd[23104]: Connection closed by invalid user cedarwick 192.0.2.200 port 37891 [preauth]
+2026-12-06T07:42:05.704791+00:00 give-web01 sshd[23105]: Invalid user cedarwick from 192.0.2.200 port 56424
+2026-12-06T07:42:07.712710+00:00 give-web01 sshd[23105]: Failed password for invalid user cedarwick from 192.0.2.200 port 56424 ssh2
+2026-12-06T07:42:08.720629+00:00 give-web01 sshd[23105]: Connection closed by invalid user cedarwick 192.0.2.200 port 56424 [preauth]
+2026-12-06T07:42:28.728548+00:00 give-web01 sshd[23111]: Invalid user user from 192.0.2.200 port 43539
+2026-12-06T07:42:30.736467+00:00 give-web01 sshd[23111]: Failed password for invalid user user from 192.0.2.200 port 43539 ssh2
+2026-12-06T07:42:31.744386+00:00 give-web01 sshd[23111]: Connection closed by invalid user user 192.0.2.200 port 43539 [preauth]
+2026-12-06T07:42:45.752305+00:00 give-web01 sshd[23116]: Invalid user test from 192.0.2.200 port 30372
+2026-12-06T07:42:47.760224+00:00 give-web01 sshd[23116]: Failed password for invalid user test from 192.0.2.200 port 30372 ssh2
+2026-12-06T07:42:48.768143+00:00 give-web01 sshd[23116]: Connection closed by invalid user test 192.0.2.200 port 30372 [preauth]
+2026-12-06T07:42:49.776062+00:00 give-web01 sshd[23121]: Invalid user admin from 192.0.2.200 port 34435
+2026-12-06T07:42:51.783981+00:00 give-web01 sshd[23121]: Failed password for invalid user admin from 192.0.2.200 port 34435 ssh2
+2026-12-06T07:42:52.791900+00:00 give-web01 sshd[23121]: Connection closed by invalid user admin 192.0.2.200 port 34435 [preauth]
+2026-12-06T07:42:55.799819+00:00 give-web01 sshd[23126]: Invalid user test from 192.0.2.200 port 60280
+2026-12-06T07:42:57.807738+00:00 give-web01 sshd[23126]: Failed password for invalid user test from 192.0.2.200 port 60280 ssh2
+2026-12-06T07:42:58.815657+00:00 give-web01 sshd[23126]: Connection closed by invalid user test 192.0.2.200 port 60280 [preauth]
+2026-12-06T07:43:08.823576+00:00 give-web01 sshd[23132]: Invalid user cedarwick from 192.0.2.200 port 60900
+2026-12-06T07:43:10.831495+00:00 give-web01 sshd[23132]: Failed password for invalid user cedarwick from 192.0.2.200 port 60900 ssh2
+2026-12-06T07:43:11.839414+00:00 give-web01 sshd[23132]: Connection closed by invalid user cedarwick 192.0.2.200 port 60900 [preauth]
+2026-12-06T07:43:44.847333+00:00 give-web01 sshd[23135]: Invalid user cedarwick from 192.0.2.200 port 35475
+2026-12-06T07:43:46.855252+00:00 give-web01 sshd[23135]: Failed password for invalid user cedarwick from 192.0.2.200 port 35475 ssh2
+2026-12-06T07:43:47.863171+00:00 give-web01 sshd[23135]: Connection closed by invalid user cedarwick 192.0.2.200 port 35475 [preauth]
+2026-12-06T07:44:15.871090+00:00 give-web01 sshd[23141]: Invalid user test from 192.0.2.200 port 31075
+2026-12-06T07:44:17.879009+00:00 give-web01 sshd[23141]: Failed password for invalid user test from 192.0.2.200 port 31075 ssh2
+2026-12-06T07:44:18.886928+00:00 give-web01 sshd[23141]: Connection closed by invalid user test 192.0.2.200 port 31075 [preauth]
+2026-12-06T07:44:25.894847+00:00 give-web01 sshd[23144]: Invalid user postgres from 192.0.2.200 port 39768
+2026-12-06T07:44:27.902766+00:00 give-web01 sshd[23144]: Failed password for invalid user postgres from 192.0.2.200 port 39768 ssh2
+2026-12-06T07:44:28.910685+00:00 give-web01 sshd[23144]: Connection closed by invalid user postgres 192.0.2.200 port 39768 [preauth]
+2026-12-06T07:44:30.918604+00:00 give-web01 sshd[23152]: Invalid user git from 192.0.2.200 port 51969
+2026-12-06T07:44:32.926523+00:00 give-web01 sshd[23152]: Failed password for invalid user git from 192.0.2.200 port 51969 ssh2
+2026-12-06T07:44:33.934442+00:00 give-web01 sshd[23152]: Connection closed by invalid user git 192.0.2.200 port 51969 [preauth]
+2026-12-06T07:44:49.942361+00:00 give-web01 sshd[23160]: Invalid user admin from 192.0.2.200 port 51019
+2026-12-06T07:44:51.950280+00:00 give-web01 sshd[23160]: Failed password for invalid user admin from 192.0.2.200 port 51019 ssh2
+2026-12-06T07:44:52.958199+00:00 give-web01 sshd[23160]: Connection closed by invalid user admin 192.0.2.200 port 51019 [preauth]
+2026-12-06T07:45:00.966118+00:00 give-web01 sshd[23163]: Failed password for root from 192.0.2.200 port 44724 ssh2
+2026-12-06T07:45:03.974037+00:00 give-web01 sshd[23163]: Connection closed by authenticating user root 192.0.2.200 port 44724 [preauth]
+2026-12-06T07:45:37.981956+00:00 give-web01 sshd[23171]: Invalid user oracle from 192.0.2.200 port 36292
+2026-12-06T07:45:39.989875+00:00 give-web01 sshd[23171]: Failed password for invalid user oracle from 192.0.2.200 port 36292 ssh2
+2026-12-06T07:45:40.997794+00:00 give-web01 sshd[23171]: Connection closed by invalid user oracle 192.0.2.200 port 36292 [preauth]
+2026-12-06T07:46:06.005713+00:00 give-web01 sshd[23176]: Invalid user test from 192.0.2.200 port 41610
+2026-12-06T07:46:08.013632+00:00 give-web01 sshd[23176]: Failed password for invalid user test from 192.0.2.200 port 41610 ssh2
+2026-12-06T07:46:09.021551+00:00 give-web01 sshd[23176]: Connection closed by invalid user test 192.0.2.200 port 41610 [preauth]
+2026-12-06T07:46:13.029470+00:00 give-web01 sshd[23183]: Invalid user admin from 192.0.2.200 port 40074
+2026-12-06T07:46:15.037389+00:00 give-web01 sshd[23183]: Failed password for invalid user admin from 192.0.2.200 port 40074 ssh2
+2026-12-06T07:46:16.045308+00:00 give-web01 sshd[23183]: Connection closed by invalid user admin 192.0.2.200 port 40074 [preauth]
+2026-12-06T07:46:24.053227+00:00 give-web01 sshd[23187]: Invalid user cedarwick from 192.0.2.200 port 54751
+2026-12-06T07:46:26.061146+00:00 give-web01 sshd[23187]: Failed password for invalid user cedarwick from 192.0.2.200 port 54751 ssh2
+2026-12-06T07:46:27.069065+00:00 give-web01 sshd[23187]: Connection closed by invalid user cedarwick 192.0.2.200 port 54751 [preauth]
+2026-12-06T07:46:28.076984+00:00 give-web01 sshd[23191]: Invalid user user from 192.0.2.200 port 64254
+2026-12-06T07:46:30.084903+00:00 give-web01 sshd[23191]: Failed password for invalid user user from 192.0.2.200 port 64254 ssh2
+2026-12-06T07:46:31.092822+00:00 give-web01 sshd[23191]: Connection closed by invalid user user 192.0.2.200 port 64254 [preauth]
+2026-12-06T07:46:46.100741+00:00 give-web01 sshd[23193]: Invalid user oracle from 192.0.2.200 port 55019
+2026-12-06T07:46:48.108660+00:00 give-web01 sshd[23193]: Failed password for invalid user oracle from 192.0.2.200 port 55019 ssh2
+2026-12-06T07:46:49.116579+00:00 give-web01 sshd[23193]: Connection closed by invalid user oracle 192.0.2.200 port 55019 [preauth]
+2026-12-06T07:47:10.124498+00:00 give-web01 sshd[23198]: Invalid user postgres from 192.0.2.200 port 50894
+2026-12-06T07:47:12.132417+00:00 give-web01 sshd[23198]: Failed password for invalid user postgres from 192.0.2.200 port 50894 ssh2
+2026-12-06T07:47:13.140336+00:00 give-web01 sshd[23198]: Connection closed by invalid user postgres 192.0.2.200 port 50894 [preauth]
+2026-12-06T07:47:21.148255+00:00 give-web01 sshd[23199]: Invalid user postgres from 192.0.2.200 port 43835
+2026-12-06T07:47:23.156174+00:00 give-web01 sshd[23199]: Failed password for invalid user postgres from 192.0.2.200 port 43835 ssh2
+2026-12-06T07:47:24.164093+00:00 give-web01 sshd[23199]: Connection closed by invalid user postgres 192.0.2.200 port 43835 [preauth]
+2026-12-06T07:47:35.172012+00:00 give-web01 sshd[23200]: Invalid user admin from 192.0.2.200 port 52708
+2026-12-06T07:47:37.179931+00:00 give-web01 sshd[23200]: Failed password for invalid user admin from 192.0.2.200 port 52708 ssh2
+2026-12-06T07:47:38.187850+00:00 give-web01 sshd[23200]: Connection closed by invalid user admin 192.0.2.200 port 52708 [preauth]
+2026-12-06T07:47:42.195769+00:00 give-web01 sshd[23208]: Invalid user git from 192.0.2.200 port 41092
+2026-12-06T07:47:44.203688+00:00 give-web01 sshd[23208]: Failed password for invalid user git from 192.0.2.200 port 41092 ssh2
+2026-12-06T07:47:45.211607+00:00 give-web01 sshd[23208]: Connection closed by invalid user git 192.0.2.200 port 41092 [preauth]
+2026-12-06T07:48:04.219526+00:00 give-web01 sshd[23210]: Invalid user user from 192.0.2.200 port 53362
+2026-12-06T07:48:06.227445+00:00 give-web01 sshd[23210]: Failed password for invalid user user from 192.0.2.200 port 53362 ssh2
+2026-12-06T07:48:07.235364+00:00 give-web01 sshd[23210]: Connection closed by invalid user user 192.0.2.200 port 53362 [preauth]
+2026-12-06T07:48:14.243283+00:00 give-web01 sshd[23213]: Invalid user admin from 192.0.2.200 port 55568
+2026-12-06T07:48:16.251202+00:00 give-web01 sshd[23213]: Failed password for invalid user admin from 192.0.2.200 port 55568 ssh2
+2026-12-06T07:48:17.259121+00:00 give-web01 sshd[23213]: Connection closed by invalid user admin 192.0.2.200 port 55568 [preauth]
+2026-12-06T07:48:18.267040+00:00 give-web01 sshd[23218]: Failed password for root from 192.0.2.200 port 56064 ssh2
+2026-12-06T07:48:21.274959+00:00 give-web01 sshd[23218]: Connection closed by authenticating user root 192.0.2.200 port 56064 [preauth]
+2026-12-06T07:48:53.282878+00:00 give-web01 sshd[23221]: Invalid user admin from 192.0.2.200 port 30314
+2026-12-06T07:48:55.290797+00:00 give-web01 sshd[23221]: Failed password for invalid user admin from 192.0.2.200 port 30314 ssh2
+2026-12-06T07:48:56.298716+00:00 give-web01 sshd[23221]: Connection closed by invalid user admin 192.0.2.200 port 30314 [preauth]
+2026-12-06T07:49:03.306635+00:00 give-web01 sshd[23225]: Invalid user postgres from 192.0.2.200 port 49974
+2026-12-06T07:49:05.314554+00:00 give-web01 sshd[23225]: Failed password for invalid user postgres from 192.0.2.200 port 49974 ssh2
+2026-12-06T07:49:06.322473+00:00 give-web01 sshd[23225]: Connection closed by invalid user postgres 192.0.2.200 port 49974 [preauth]
+2026-12-06T07:49:37.330392+00:00 give-web01 sshd[23230]: Invalid user user from 192.0.2.200 port 40776
+2026-12-06T07:49:39.338311+00:00 give-web01 sshd[23230]: Failed password for invalid user user from 192.0.2.200 port 40776 ssh2
+2026-12-06T07:49:40.346230+00:00 give-web01 sshd[23230]: Connection closed by invalid user user 192.0.2.200 port 40776 [preauth]
+2026-12-06T07:49:42.354149+00:00 give-web01 sshd[23236]: Invalid user cedarwick from 192.0.2.200 port 42097
+2026-12-06T07:49:44.362068+00:00 give-web01 sshd[23236]: Failed password for invalid user cedarwick from 192.0.2.200 port 42097 ssh2
+2026-12-06T07:49:45.369987+00:00 give-web01 sshd[23236]: Connection closed by invalid user cedarwick 192.0.2.200 port 42097 [preauth]
+2026-12-06T07:50:18.377906+00:00 give-web01 sshd[23242]: Invalid user test from 192.0.2.200 port 51698
+2026-12-06T07:50:20.385825+00:00 give-web01 sshd[23242]: Failed password for invalid user test from 192.0.2.200 port 51698 ssh2
+2026-12-06T07:50:21.393744+00:00 give-web01 sshd[23242]: Connection closed by invalid user test 192.0.2.200 port 51698 [preauth]
+2026-12-06T07:50:34.401663+00:00 give-web01 sshd[23248]: Invalid user ubuntu from 192.0.2.200 port 45143
+2026-12-06T07:50:36.409582+00:00 give-web01 sshd[23248]: Failed password for invalid user ubuntu from 192.0.2.200 port 45143 ssh2
+2026-12-06T07:50:37.417501+00:00 give-web01 sshd[23248]: Connection closed by invalid user ubuntu 192.0.2.200 port 45143 [preauth]
+2026-12-06T07:50:53.425420+00:00 give-web01 sshd[23251]: Failed password for root from 192.0.2.200 port 49655 ssh2
+2026-12-06T07:50:56.433339+00:00 give-web01 sshd[23251]: Connection closed by authenticating user root 192.0.2.200 port 49655 [preauth]
+2026-12-06T07:50:59.441258+00:00 give-web01 sshd[23256]: Failed password for root from 192.0.2.200 port 56141 ssh2
+2026-12-06T07:51:02.449177+00:00 give-web01 sshd[23256]: Connection closed by authenticating user root 192.0.2.200 port 56141 [preauth]
+2026-12-06T07:51:31.457096+00:00 give-web01 sshd[23261]: Invalid user git from 192.0.2.200 port 57036
+2026-12-06T07:51:33.465015+00:00 give-web01 sshd[23261]: Failed password for invalid user git from 192.0.2.200 port 57036 ssh2
+2026-12-06T07:51:34.472934+00:00 give-web01 sshd[23261]: Connection closed by invalid user git 192.0.2.200 port 57036 [preauth]
+2026-12-06T07:51:53.480853+00:00 give-web01 sshd[23267]: Invalid user cedarwick from 192.0.2.200 port 37436
+2026-12-06T07:51:55.488772+00:00 give-web01 sshd[23267]: Failed password for invalid user cedarwick from 192.0.2.200 port 37436 ssh2
+2026-12-06T07:51:56.496691+00:00 give-web01 sshd[23267]: Connection closed by invalid user cedarwick 192.0.2.200 port 37436 [preauth]
+2026-12-06T07:52:16.504610+00:00 give-web01 sshd[23272]: Invalid user oracle from 192.0.2.200 port 64342
+2026-12-06T07:52:18.512529+00:00 give-web01 sshd[23272]: Failed password for invalid user oracle from 192.0.2.200 port 64342 ssh2
+2026-12-06T07:52:19.520448+00:00 give-web01 sshd[23272]: Connection closed by invalid user oracle 192.0.2.200 port 64342 [preauth]
+2026-12-06T17:43:00.528367+00:00 give-web01 sshd[24444]: Accepted publickey for cwadmin from 192.0.2.138 port 57455 ssh2: ED25519 SHA256:6jLJykTXeZvT5YQ6VcTu51xEyrDJdtpt4sXIpSTrLjA
+2026-12-06T17:43:00.536286+00:00 give-web01 sshd[24444]: pam_unix(sshd:session): session opened for user cwadmin(uid=1000) by cwadmin(uid=0)
+2026-12-06T17:43:00.544205+00:00 give-web01 systemd-logind[612]: New session 36 of user cwadmin.
+2026-12-06T17:43:40.552124+00:00 give-web01 sudo: cwadmin : TTY=pts/0 ; PWD=/home/cwadmin ; USER=root ; COMMAND=/usr/bin/docker compose ps
+2026-12-06T17:43:40.560043+00:00 give-web01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by cwadmin(uid=1000)
+2026-12-06T17:43:52.567962+00:00 give-web01 sudo: pam_unix(sudo:session): session closed for user root
+2026-12-06T17:49:40.575881+00:00 give-web01 sshd[24444]: pam_unix(sshd:session): session closed for user cwadmin
+2026-12-06T17:49:40.583800+00:00 give-web01 systemd-logind[612]: Session 36 logged out. Waiting for processes to exit.
+2026-12-07T23:51:56.591719+00:00 give-web01 sshd[23383]: Invalid user admin from 198.51.100.10 port 57962
+2026-12-07T23:51:58.599638+00:00 give-web01 sshd[23383]: Failed password for invalid user admin from 198.51.100.10 port 57962 ssh2
+2026-12-07T23:51:59.607557+00:00 give-web01 sshd[23383]: Connection closed by invalid user admin 198.51.100.10 port 57962 [preauth]
+2026-12-07T23:52:13.615476+00:00 give-web01 sshd[23390]: Invalid user admin from 198.51.100.10 port 46579
+2026-12-07T23:52:15.623395+00:00 give-web01 sshd[23390]: Failed password for invalid user admin from 198.51.100.10 port 46579 ssh2
+2026-12-07T23:52:16.631314+00:00 give-web01 sshd[23390]: Connection closed by invalid user admin 198.51.100.10 port 46579 [preauth]
+2026-12-07T23:52:37.639233+00:00 give-web01 sshd[23393]: Invalid user git from 198.51.100.10 port 31774
+2026-12-07T23:52:39.647152+00:00 give-web01 sshd[23393]: Failed password for invalid user git from 198.51.100.10 port 31774 ssh2
+2026-12-07T23:52:40.655071+00:00 give-web01 sshd[23393]: Connection closed by invalid user git 198.51.100.10 port 31774 [preauth]
+2026-12-07T23:53:15.662990+00:00 give-web01 sshd[23399]: Invalid user user from 198.51.100.10 port 57325
+2026-12-07T23:53:17.670909+00:00 give-web01 sshd[23399]: Failed password for invalid user user from 198.51.100.10 port 57325 ssh2
+2026-12-07T23:53:18.678828+00:00 give-web01 sshd[23399]: Connection closed by invalid user user 198.51.100.10 port 57325 [preauth]
+2026-12-07T23:53:51.686747+00:00 give-web01 sshd[23401]: Invalid user admin from 198.51.100.10 port 55219
+2026-12-07T23:53:53.694666+00:00 give-web01 sshd[23401]: Failed password for invalid user admin from 198.51.100.10 port 55219 ssh2
+2026-12-07T23:53:54.702585+00:00 give-web01 sshd[23401]: Connection closed by invalid user admin 198.51.100.10 port 55219 [preauth]
+2026-12-07T23:53:54.710504+00:00 give-web01 sshd[23404]: Invalid user test from 198.51.100.10 port 60781
+2026-12-07T23:53:56.718423+00:00 give-web01 sshd[23404]: Failed password for invalid user test from 198.51.100.10 port 60781 ssh2
+2026-12-07T23:53:57.726342+00:00 give-web01 sshd[23404]: Connection closed by invalid user test 198.51.100.10 port 60781 [preauth]
+2026-12-07T23:54:14.734261+00:00 give-web01 sshd[23412]: Invalid user git from 198.51.100.10 port 42211
+2026-12-07T23:54:16.742180+00:00 give-web01 sshd[23412]: Failed password for invalid user git from 198.51.100.10 port 42211 ssh2
+2026-12-07T23:54:17.750099+00:00 give-web01 sshd[23412]: Connection closed by invalid user git 198.51.100.10 port 42211 [preauth]
+2026-12-07T23:54:52.758018+00:00 give-web01 sshd[23417]: Invalid user git from 198.51.100.10 port 53118
+2026-12-07T23:54:54.765937+00:00 give-web01 sshd[23417]: Failed password for invalid user git from 198.51.100.10 port 53118 ssh2
+2026-12-07T23:54:55.773856+00:00 give-web01 sshd[23417]: Connection closed by invalid user git 198.51.100.10 port 53118 [preauth]
+2026-12-07T23:55:13.781775+00:00 give-web01 sshd[23419]: Failed password for root from 198.51.100.10 port 31232 ssh2
+2026-12-07T23:55:16.789694+00:00 give-web01 sshd[23419]: Connection closed by authenticating user root 198.51.100.10 port 31232 [preauth]
+2026-12-07T23:55:26.797613+00:00 give-web01 sshd[23425]: Invalid user ubuntu from 198.51.100.10 port 49105
+2026-12-07T23:55:28.805532+00:00 give-web01 sshd[23425]: Failed password for invalid user ubuntu from 198.51.100.10 port 49105 ssh2
+2026-12-07T23:55:29.813451+00:00 give-web01 sshd[23425]: Connection closed by invalid user ubuntu 198.51.100.10 port 49105 [preauth]
+2026-12-07T23:55:37.821370+00:00 give-web01 sshd[23426]: Invalid user ubuntu from 198.51.100.10 port 59701
+2026-12-07T23:55:39.829289+00:00 give-web01 sshd[23426]: Failed password for invalid user ubuntu from 198.51.100.10 port 59701 ssh2
+2026-12-07T23:55:40.837208+00:00 give-web01 sshd[23426]: Connection closed by invalid user ubuntu 198.51.100.10 port 59701 [preauth]
+2026-12-07T23:56:02.845127+00:00 give-web01 sshd[23433]: Invalid user git from 198.51.100.10 port 31367
+2026-12-07T23:56:04.853046+00:00 give-web01 sshd[23433]: Failed password for invalid user git from 198.51.100.10 port 31367 ssh2
+2026-12-07T23:56:05.860965+00:00 give-web01 sshd[23433]: Connection closed by invalid user git 198.51.100.10 port 31367 [preauth]
+2026-12-07T23:56:24.868884+00:00 give-web01 sshd[23437]: Invalid user test from 198.51.100.10 port 64508
+2026-12-07T23:56:26.876803+00:00 give-web01 sshd[23437]: Failed password for invalid user test from 198.51.100.10 port 64508 ssh2
+2026-12-07T23:56:27.884722+00:00 give-web01 sshd[23437]: Connection closed by invalid user test 198.51.100.10 port 64508 [preauth]
+2026-12-07T23:57:02.892641+00:00 give-web01 sshd[23438]: Invalid user ubuntu from 198.51.100.10 port 31842
+2026-12-07T23:57:04.900560+00:00 give-web01 sshd[23438]: Failed password for invalid user ubuntu from 198.51.100.10 port 31842 ssh2
+2026-12-07T23:57:05.908479+00:00 give-web01 sshd[23438]: Connection closed by invalid user ubuntu 198.51.100.10 port 31842 [preauth]
+2026-12-07T23:57:27.916398+00:00 give-web01 sshd[23445]: Invalid user test from 198.51.100.10 port 51093
+2026-12-07T23:57:29.924317+00:00 give-web01 sshd[23445]: Failed password for invalid user test from 198.51.100.10 port 51093 ssh2
+2026-12-07T23:57:30.932236+00:00 give-web01 sshd[23445]: Connection closed by invalid user test 198.51.100.10 port 51093 [preauth]
+2026-12-07T23:57:39.940155+00:00 give-web01 sshd[23452]: Failed password for root from 198.51.100.10 port 43519 ssh2
+2026-12-07T23:57:42.948074+00:00 give-web01 sshd[23452]: Connection closed by authenticating user root 198.51.100.10 port 43519 [preauth]
+2026-12-07T23:57:52.955993+00:00 give-web01 sshd[23456]: Invalid user ubuntu from 198.51.100.10 port 63458
+2026-12-07T23:57:54.963912+00:00 give-web01 sshd[23456]: Failed password for invalid user ubuntu from 198.51.100.10 port 63458 ssh2
+2026-12-07T23:57:55.971831+00:00 give-web01 sshd[23456]: Connection closed by invalid user ubuntu 198.51.100.10 port 63458 [preauth]
+2026-12-07T23:58:27.979750+00:00 give-web01 sshd[23457]: Invalid user test from 198.51.100.10 port 31573
+2026-12-07T23:58:29.987669+00:00 give-web01 sshd[23457]: Failed password for invalid user test from 198.51.100.10 port 31573 ssh2
+2026-12-07T23:58:30.995588+00:00 give-web01 sshd[23457]: Connection closed by invalid user test 198.51.100.10 port 31573 [preauth]
+2026-12-07T23:58:36.003507+00:00 give-web01 sshd[23461]: Invalid user git from 198.51.100.10 port 50639
+2026-12-07T23:58:38.011426+00:00 give-web01 sshd[23461]: Failed password for invalid user git from 198.51.100.10 port 50639 ssh2
+2026-12-07T23:58:39.019345+00:00 give-web01 sshd[23461]: Connection closed by invalid user git 198.51.100.10 port 50639 [preauth]
+2026-12-07T23:58:52.027264+00:00 give-web01 sshd[23467]: Invalid user postgres from 198.51.100.10 port 54107
+2026-12-07T23:58:54.035183+00:00 give-web01 sshd[23467]: Failed password for invalid user postgres from 198.51.100.10 port 54107 ssh2
+2026-12-07T23:58:55.043102+00:00 give-web01 sshd[23467]: Connection closed by invalid user postgres 198.51.100.10 port 54107 [preauth]
+2026-12-07T23:59:10.051021+00:00 give-web01 sshd[23469]: Failed password for root from 198.51.100.10 port 57728 ssh2
+2026-12-07T23:59:13.058940+00:00 give-web01 sshd[23469]: Connection closed by authenticating user root 198.51.100.10 port 57728 [preauth]
+2026-12-07T23:59:33.066859+00:00 give-web01 sshd[23476]: Invalid user ubuntu from 198.51.100.10 port 35802
+2026-12-07T23:59:35.074778+00:00 give-web01 sshd[23476]: Failed password for invalid user ubuntu from 198.51.100.10 port 35802 ssh2
+2026-12-07T23:59:36.082697+00:00 give-web01 sshd[23476]: Connection closed by invalid user ubuntu 198.51.100.10 port 35802 [preauth]
+2026-12-07T23:59:36.090616+00:00 give-web01 sshd[23479]: Invalid user ubuntu from 198.51.100.10 port 46936
+2026-12-07T23:59:38.098535+00:00 give-web01 sshd[23479]: Failed password for invalid user ubuntu from 198.51.100.10 port 46936 ssh2
+2026-12-07T23:59:39.106454+00:00 give-web01 sshd[23479]: Connection closed by invalid user ubuntu 198.51.100.10 port 46936 [preauth]
+2026-12-07T23:59:56.114373+00:00 give-web01 sshd[23483]: Failed password for root from 198.51.100.10 port 64766 ssh2
+2026-12-07T23:59:59.122292+00:00 give-web01 sshd[23483]: Connection closed by authenticating user root 198.51.100.10 port 64766 [preauth]
+2026-12-08T00:00:10.130211+00:00 give-web01 sshd[23488]: Invalid user ubuntu from 198.51.100.10 port 33215
+2026-12-08T00:00:12.138130+00:00 give-web01 sshd[23488]: Failed password for invalid user ubuntu from 198.51.100.10 port 33215 ssh2
+2026-12-08T00:00:13.146049+00:00 give-web01 sshd[23488]: Connection closed by invalid user ubuntu 198.51.100.10 port 33215 [preauth]
+2026-12-08T00:00:42.153968+00:00 give-web01 sshd[23491]: Invalid user ubuntu from 198.51.100.10 port 43734
+2026-12-08T00:00:44.161887+00:00 give-web01 sshd[23491]: Failed password for invalid user ubuntu from 198.51.100.10 port 43734 ssh2
+2026-12-08T00:00:45.169806+00:00 give-web01 sshd[23491]: Connection closed by invalid user ubuntu 198.51.100.10 port 43734 [preauth]
+2026-12-08T00:01:06.177725+00:00 give-web01 sshd[23498]: Invalid user postgres from 198.51.100.10 port 41470
+2026-12-08T00:01:08.185644+00:00 give-web01 sshd[23498]: Failed password for invalid user postgres from 198.51.100.10 port 41470 ssh2
+2026-12-08T00:01:09.193563+00:00 give-web01 sshd[23498]: Connection closed by invalid user postgres 198.51.100.10 port 41470 [preauth]
+2026-12-08T00:01:18.201482+00:00 give-web01 sshd[23503]: Failed password for root from 198.51.100.10 port 44843 ssh2
+2026-12-08T00:01:21.209401+00:00 give-web01 sshd[23503]: Connection closed by authenticating user root 198.51.100.10 port 44843 [preauth]
+2026-12-08T00:01:21.217320+00:00 give-web01 sshd[23506]: Invalid user user from 198.51.100.10 port 49314
+2026-12-08T00:01:23.225239+00:00 give-web01 sshd[23506]: Failed password for invalid user user from 198.51.100.10 port 49314 ssh2
+2026-12-08T00:01:24.233158+00:00 give-web01 sshd[23506]: Connection closed by invalid user user 198.51.100.10 port 49314 [preauth]
+2026-12-08T00:01:42.241077+00:00 give-web01 sshd[23512]: Invalid user git from 198.51.100.10 port 33940
+2026-12-08T00:01:44.248996+00:00 give-web01 sshd[23512]: Failed password for invalid user git from 198.51.100.10 port 33940 ssh2
+2026-12-08T00:01:45.256915+00:00 give-web01 sshd[23512]: Connection closed by invalid user git 198.51.100.10 port 33940 [preauth]
+2026-12-08T00:01:58.264834+00:00 give-web01 sshd[23519]: Failed password for root from 198.51.100.10 port 55370 ssh2
+2026-12-08T00:02:01.272753+00:00 give-web01 sshd[23519]: Connection closed by authenticating user root 198.51.100.10 port 55370 [preauth]
+2026-12-08T00:02:10.280672+00:00 give-web01 sshd[23523]: Invalid user git from 198.51.100.10 port 39516
+2026-12-08T00:02:12.288591+00:00 give-web01 sshd[23523]: Failed password for invalid user git from 198.51.100.10 port 39516 ssh2
+2026-12-08T00:02:13.296510+00:00 give-web01 sshd[23523]: Connection closed by invalid user git 198.51.100.10 port 39516 [preauth]
+2026-12-08T00:02:30.304429+00:00 give-web01 sshd[23527]: Invalid user postgres from 198.51.100.10 port 33761
+2026-12-08T00:02:32.312348+00:00 give-web01 sshd[23527]: Failed password for invalid user postgres from 198.51.100.10 port 33761 ssh2
+2026-12-08T00:02:33.320267+00:00 give-web01 sshd[23527]: Connection closed by invalid user postgres 198.51.100.10 port 33761 [preauth]
+2026-12-08T00:02:48.328186+00:00 give-web01 sshd[23528]: Invalid user postgres from 198.51.100.10 port 63490
+2026-12-08T00:02:50.336105+00:00 give-web01 sshd[23528]: Failed password for invalid user postgres from 198.51.100.10 port 63490 ssh2
+2026-12-08T00:02:51.344024+00:00 give-web01 sshd[23528]: Connection closed by invalid user postgres 198.51.100.10 port 63490 [preauth]
+2026-12-08T00:03:21.351943+00:00 give-web01 sshd[23533]: Invalid user git from 198.51.100.10 port 47587
+2026-12-08T00:03:23.359862+00:00 give-web01 sshd[23533]: Failed password for invalid user git from 198.51.100.10 port 47587 ssh2
+2026-12-08T00:03:24.367781+00:00 give-web01 sshd[23533]: Connection closed by invalid user git 198.51.100.10 port 47587 [preauth]
+2026-12-08T00:04:00.375700+00:00 give-web01 sshd[23538]: Invalid user test from 198.51.100.10 port 34114
+2026-12-08T00:04:02.383619+00:00 give-web01 sshd[23538]: Failed password for invalid user test from 198.51.100.10 port 34114 ssh2
+2026-12-08T00:04:03.391538+00:00 give-web01 sshd[23538]: Connection closed by invalid user test 198.51.100.10 port 34114 [preauth]
+2026-12-08T00:04:04.399457+00:00 give-web01 sshd[23539]: Invalid user test from 198.51.100.10 port 31633
+2026-12-08T00:04:06.407376+00:00 give-web01 sshd[23539]: Failed password for invalid user test from 198.51.100.10 port 31633 ssh2
+2026-12-08T00:04:07.415295+00:00 give-web01 sshd[23539]: Connection closed by invalid user test 198.51.100.10 port 31633 [preauth]
+2026-12-08T00:04:27.423214+00:00 give-web01 sshd[23541]: Invalid user test from 198.51.100.10 port 64159
+2026-12-08T00:04:29.431133+00:00 give-web01 sshd[23541]: Failed password for invalid user test from 198.51.100.10 port 64159 ssh2
+2026-12-08T00:04:30.439052+00:00 give-web01 sshd[23541]: Connection closed by invalid user test 198.51.100.10 port 64159 [preauth]
+2026-12-08T00:04:33.446971+00:00 give-web01 sshd[23549]: Invalid user oracle from 198.51.100.10 port 31108
+2026-12-08T00:04:35.454890+00:00 give-web01 sshd[23549]: Failed password for invalid user oracle from 198.51.100.10 port 31108 ssh2
+2026-12-08T00:04:36.462809+00:00 give-web01 sshd[23549]: Connection closed by invalid user oracle 198.51.100.10 port 31108 [preauth]
+2026-12-08T00:05:00.470728+00:00 give-web01 sshd[23552]: Invalid user cedarwick from 198.51.100.10 port 49465
+2026-12-08T00:05:02.478647+00:00 give-web01 sshd[23552]: Failed password for invalid user cedarwick from 198.51.100.10 port 49465 ssh2
+2026-12-08T00:05:03.486566+00:00 give-web01 sshd[23552]: Connection closed by invalid user cedarwick 198.51.100.10 port 49465 [preauth]
+2026-12-08T00:05:36.494485+00:00 give-web01 sshd[23556]: Invalid user user from 198.51.100.10 port 63812
+2026-12-08T00:05:38.502404+00:00 give-web01 sshd[23556]: Failed password for invalid user user from 198.51.100.10 port 63812 ssh2
+2026-12-08T00:05:39.510323+00:00 give-web01 sshd[23556]: Connection closed by invalid user user 198.51.100.10 port 63812 [preauth]
+2026-12-08T00:05:47.518242+00:00 give-web01 sshd[23559]: Invalid user git from 198.51.100.10 port 40806
+2026-12-08T00:05:49.526161+00:00 give-web01 sshd[23559]: Failed password for invalid user git from 198.51.100.10 port 40806 ssh2
+2026-12-08T00:05:50.534080+00:00 give-web01 sshd[23559]: Connection closed by invalid user git 198.51.100.10 port 40806 [preauth]
+2026-12-08T00:06:08.541999+00:00 give-web01 sshd[23566]: Invalid user postgres from 198.51.100.10 port 38790
+2026-12-08T00:06:10.549918+00:00 give-web01 sshd[23566]: Failed password for invalid user postgres from 198.51.100.10 port 38790 ssh2
+2026-12-08T00:06:11.557837+00:00 give-web01 sshd[23566]: Connection closed by invalid user postgres 198.51.100.10 port 38790 [preauth]
+2026-12-08T05:57:53.565756+00:00 give-web01 sshd[23279]: Invalid user oracle from 203.0.113.172 port 46549
+2026-12-08T05:57:55.573675+00:00 give-web01 sshd[23279]: Failed password for invalid user oracle from 203.0.113.172 port 46549 ssh2
+2026-12-08T05:57:56.581594+00:00 give-web01 sshd[23279]: Connection closed by invalid user oracle 203.0.113.172 port 46549 [preauth]
+2026-12-08T05:58:01.589513+00:00 give-web01 sshd[23283]: Invalid user user from 203.0.113.172 port 62148
+2026-12-08T05:58:03.597432+00:00 give-web01 sshd[23283]: Failed password for invalid user user from 203.0.113.172 port 62148 ssh2
+2026-12-08T05:58:04.605351+00:00 give-web01 sshd[23283]: Connection closed by invalid user user 203.0.113.172 port 62148 [preauth]
+2026-12-08T05:58:21.613270+00:00 give-web01 sshd[23288]: Invalid user test from 203.0.113.172 port 44913
+2026-12-08T05:58:23.621189+00:00 give-web01 sshd[23288]: Failed password for invalid user test from 203.0.113.172 port 44913 ssh2
+2026-12-08T05:58:24.629108+00:00 give-web01 sshd[23288]: Connection closed by invalid user test 203.0.113.172 port 44913 [preauth]
+2026-12-08T05:58:38.637027+00:00 give-web01 sshd[23292]: Invalid user oracle from 203.0.113.172 port 46997
+2026-12-08T05:58:40.644946+00:00 give-web01 sshd[23292]: Failed password for invalid user oracle from 203.0.113.172 port 46997 ssh2
+2026-12-08T05:58:41.652865+00:00 give-web01 sshd[23292]: Connection closed by invalid user oracle 203.0.113.172 port 46997 [preauth]
+2026-12-08T05:59:14.660784+00:00 give-web01 sshd[23299]: Invalid user oracle from 203.0.113.172 port 49198
+2026-12-08T05:59:16.668703+00:00 give-web01 sshd[23299]: Failed password for invalid user oracle from 203.0.113.172 port 49198 ssh2
+2026-12-08T05:59:17.676622+00:00 give-web01 sshd[23299]: Connection closed by invalid user oracle 203.0.113.172 port 49198 [preauth]
+2026-12-08T05:59:37.684541+00:00 give-web01 sshd[23301]: Invalid user oracle from 203.0.113.172 port 63265
+2026-12-08T05:59:39.692460+00:00 give-web01 sshd[23301]: Failed password for invalid user oracle from 203.0.113.172 port 63265 ssh2
+2026-12-08T05:59:40.700379+00:00 give-web01 sshd[23301]: Connection closed by invalid user oracle 203.0.113.172 port 63265 [preauth]
+2026-12-08T06:00:02.708298+00:00 give-web01 sshd[23304]: Invalid user ubuntu from 203.0.113.172 port 30208
+2026-12-08T06:00:04.716217+00:00 give-web01 sshd[23304]: Failed password for invalid user ubuntu from 203.0.113.172 port 30208 ssh2
+2026-12-08T06:00:05.724136+00:00 give-web01 sshd[23304]: Connection closed by invalid user ubuntu 203.0.113.172 port 30208 [preauth]
+2026-12-08T06:00:38.732055+00:00 give-web01 sshd[23307]: Invalid user ubuntu from 203.0.113.172 port 39754
+2026-12-08T06:00:40.739974+00:00 give-web01 sshd[23307]: Failed password for invalid user ubuntu from 203.0.113.172 port 39754 ssh2
+2026-12-08T06:00:41.747893+00:00 give-web01 sshd[23307]: Connection closed by invalid user ubuntu 203.0.113.172 port 39754 [preauth]
+2026-12-08T06:00:44.755812+00:00 give-web01 sshd[23308]: Invalid user ubuntu from 203.0.113.172 port 45981
+2026-12-08T06:00:46.763731+00:00 give-web01 sshd[23308]: Failed password for invalid user ubuntu from 203.0.113.172 port 45981 ssh2
+2026-12-08T06:00:47.771650+00:00 give-web01 sshd[23308]: Connection closed by invalid user ubuntu 203.0.113.172 port 45981 [preauth]
+2026-12-08T06:00:47.779569+00:00 give-web01 sshd[23309]: Invalid user cedarwick from 203.0.113.172 port 35582
+2026-12-08T06:00:49.787488+00:00 give-web01 sshd[23309]: Failed password for invalid user cedarwick from 203.0.113.172 port 35582 ssh2
+2026-12-08T06:00:50.795407+00:00 give-web01 sshd[23309]: Connection closed by invalid user cedarwick 203.0.113.172 port 35582 [preauth]
+2026-12-08T06:01:14.803326+00:00 give-web01 sshd[23312]: Invalid user test from 203.0.113.172 port 41993
+2026-12-08T06:01:16.811245+00:00 give-web01 sshd[23312]: Failed password for invalid user test from 203.0.113.172 port 41993 ssh2
+2026-12-08T06:01:17.819164+00:00 give-web01 sshd[23312]: Connection closed by invalid user test 203.0.113.172 port 41993 [preauth]
+2026-12-08T06:01:52.827083+00:00 give-web01 sshd[23315]: Invalid user cedarwick from 203.0.113.172 port 64332
+2026-12-08T06:01:54.835002+00:00 give-web01 sshd[23315]: Failed password for invalid user cedarwick from 203.0.113.172 port 64332 ssh2
+2026-12-08T06:01:55.842921+00:00 give-web01 sshd[23315]: Connection closed by invalid user cedarwick 203.0.113.172 port 64332 [preauth]
+2026-12-08T06:01:58.850840+00:00 give-web01 sshd[23321]: Invalid user admin from 203.0.113.172 port 35905
+2026-12-08T06:02:00.858759+00:00 give-web01 sshd[23321]: Failed password for invalid user admin from 203.0.113.172 port 35905 ssh2
+2026-12-08T06:02:01.866678+00:00 give-web01 sshd[23321]: Connection closed by invalid user admin 203.0.113.172 port 35905 [preauth]
+2026-12-08T06:02:03.874597+00:00 give-web01 sshd[23324]: Invalid user git from 203.0.113.172 port 36153
+2026-12-08T06:02:05.882516+00:00 give-web01 sshd[23324]: Failed password for invalid user git from 203.0.113.172 port 36153 ssh2
+2026-12-08T06:02:06.890435+00:00 give-web01 sshd[23324]: Connection closed by invalid user git 203.0.113.172 port 36153 [preauth]
+2026-12-08T06:02:27.898354+00:00 give-web01 sshd[23327]: Invalid user git from 203.0.113.172 port 44863
+2026-12-08T06:02:29.906273+00:00 give-web01 sshd[23327]: Failed password for invalid user git from 203.0.113.172 port 44863 ssh2
+2026-12-08T06:02:30.914192+00:00 give-web01 sshd[23327]: Connection closed by invalid user git 203.0.113.172 port 44863 [preauth]
+2026-12-08T06:02:57.922111+00:00 give-web01 sshd[23328]: Invalid user cedarwick from 203.0.113.172 port 41794
+2026-12-08T06:02:59.930030+00:00 give-web01 sshd[23328]: Failed password for invalid user cedarwick from 203.0.113.172 port 41794 ssh2
+2026-12-08T06:03:00.937949+00:00 give-web01 sshd[23328]: Connection closed by invalid user cedarwick 203.0.113.172 port 41794 [preauth]
+2026-12-08T06:03:20.945868+00:00 give-web01 sshd[23332]: Failed password for root from 203.0.113.172 port 61637 ssh2
+2026-12-08T06:03:23.953787+00:00 give-web01 sshd[23332]: Connection closed by authenticating user root 203.0.113.172 port 61637 [preauth]
+2026-12-08T06:03:34.961706+00:00 give-web01 sshd[23338]: Invalid user admin from 203.0.113.172 port 62904
+2026-12-08T06:03:36.969625+00:00 give-web01 sshd[23338]: Failed password for invalid user admin from 203.0.113.172 port 62904 ssh2
+2026-12-08T06:03:37.977544+00:00 give-web01 sshd[23338]: Connection closed by invalid user admin 203.0.113.172 port 62904 [preauth]
+2026-12-08T06:03:48.985463+00:00 give-web01 sshd[23344]: Invalid user admin from 203.0.113.172 port 59777
+2026-12-08T06:03:50.993382+00:00 give-web01 sshd[23344]: Failed password for invalid user admin from 203.0.113.172 port 59777 ssh2
+2026-12-08T06:03:51.001301+00:00 give-web01 sshd[23344]: Connection closed by invalid user admin 203.0.113.172 port 59777 [preauth]
+2026-12-08T06:04:25.009220+00:00 give-web01 sshd[23345]: Failed password for root from 203.0.113.172 port 37755 ssh2
+2026-12-08T06:04:28.017139+00:00 give-web01 sshd[23345]: Connection closed by authenticating user root 203.0.113.172 port 37755 [preauth]
+2026-12-08T06:04:43.025058+00:00 give-web01 sshd[23348]: Invalid user ubuntu from 203.0.113.172 port 44940
+2026-12-08T06:04:45.032977+00:00 give-web01 sshd[23348]: Failed password for invalid user ubuntu from 203.0.113.172 port 44940 ssh2
+2026-12-08T06:04:46.040896+00:00 give-web01 sshd[23348]: Connection closed by invalid user ubuntu 203.0.113.172 port 44940 [preauth]
+2026-12-08T06:05:20.048815+00:00 give-web01 sshd[23356]: Failed password for root from 203.0.113.172 port 40313 ssh2
+2026-12-08T06:05:23.056734+00:00 give-web01 sshd[23356]: Connection closed by authenticating user root 203.0.113.172 port 40313 [preauth]
+2026-12-08T06:05:53.064653+00:00 give-web01 sshd[23364]: Invalid user postgres from 203.0.113.172 port 63059
+2026-12-08T06:05:55.072572+00:00 give-web01 sshd[23364]: Failed password for invalid user postgres from 203.0.113.172 port 63059 ssh2
+2026-12-08T06:05:56.080491+00:00 give-web01 sshd[23364]: Connection closed by invalid user postgres 203.0.113.172 port 63059 [preauth]
+2026-12-08T06:06:07.088410+00:00 give-web01 sshd[23368]: Invalid user git from 203.0.113.172 port 63010
+2026-12-08T06:06:09.096329+00:00 give-web01 sshd[23368]: Failed password for invalid user git from 203.0.113.172 port 63010 ssh2
+2026-12-08T06:06:10.104248+00:00 give-web01 sshd[23368]: Connection closed by invalid user git 203.0.113.172 port 63010 [preauth]
+2026-12-08T06:06:32.112167+00:00 give-web01 sshd[23369]: Invalid user test from 203.0.113.172 port 62286
+2026-12-08T06:06:34.120086+00:00 give-web01 sshd[23369]: Failed password for invalid user test from 203.0.113.172 port 62286 ssh2
+2026-12-08T06:06:35.128005+00:00 give-web01 sshd[23369]: Connection closed by invalid user test 203.0.113.172 port 62286 [preauth]
+2026-12-08T06:06:47.135924+00:00 give-web01 sshd[23375]: Invalid user user from 203.0.113.172 port 33439
+2026-12-08T06:06:49.143843+00:00 give-web01 sshd[23375]: Failed password for invalid user user from 203.0.113.172 port 33439 ssh2
+2026-12-08T06:06:50.151762+00:00 give-web01 sshd[23375]: Connection closed by invalid user user 203.0.113.172 port 33439 [preauth]
+2026-12-08T06:06:55.159681+00:00 give-web01 sshd[23378]: Invalid user ubuntu from 203.0.113.172 port 56162
+2026-12-08T06:06:57.167600+00:00 give-web01 sshd[23378]: Failed password for invalid user ubuntu from 203.0.113.172 port 56162 ssh2
+2026-12-08T06:06:58.175519+00:00 give-web01 sshd[23378]: Connection closed by invalid user ubuntu 203.0.113.172 port 56162 [preauth]
+2026-12-08T18:06:40.183438+00:00 give-web01 sshd[24612]: Failed password for cwadmin from 192.0.2.138 port 56176 ssh2
+2026-12-08T18:07:00.191357+00:00 give-web01 sshd[24612]: Accepted publickey for cwadmin from 192.0.2.138 port 56176 ssh2: ED25519 SHA256:fjElYMbVvqpBO9bS0HqMde8Gf8a3AecpMohdYLhvAq0
+2026-12-08T18:07:00.199276+00:00 give-web01 sshd[24612]: pam_unix(sshd:session): session opened for user cwadmin(uid=1000) by cwadmin(uid=0)
+2026-12-08T18:07:00.207195+00:00 give-web01 systemd-logind[612]: New session 37 of user cwadmin.
+2026-12-08T18:07:40.215114+00:00 give-web01 sudo: cwadmin : TTY=pts/0 ; PWD=/home/cwadmin ; USER=root ; COMMAND=/usr/bin/docker compose logs --tail 100 app
+2026-12-08T18:07:40.223033+00:00 give-web01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by cwadmin(uid=1000)
+2026-12-08T18:07:52.230952+00:00 give-web01 sudo: pam_unix(sudo:session): session closed for user root
+2026-12-08T18:13:40.238871+00:00 give-web01 sshd[24612]: pam_unix(sshd:session): session closed for user cwadmin
+2026-12-08T18:13:40.246790+00:00 give-web01 systemd-logind[612]: Session 37 logged out. Waiting for processes to exit.
+2026-12-08T21:03:57.254709+00:00 give-web01 sshd[23573]: Invalid user user from 198.51.100.29 port 53854
+2026-12-08T21:03:59.262628+00:00 give-web01 sshd[23573]: Failed password for invalid user user from 198.51.100.29 port 53854 ssh2
+2026-12-08T21:04:00.270547+00:00 give-web01 sshd[23573]: Connection closed by invalid user user 198.51.100.29 port 53854 [preauth]
+2026-12-08T21:04:15.278466+00:00 give-web01 sshd[23576]: Failed password for root from 198.51.100.29 port 42267 ssh2
+2026-12-08T21:04:18.286385+00:00 give-web01 sshd[23576]: Connection closed by authenticating user root 198.51.100.29 port 42267 [preauth]
+2026-12-08T21:04:42.294304+00:00 give-web01 sshd[23584]: Invalid user user from 198.51.100.29 port 58018
+2026-12-08T21:04:44.302223+00:00 give-web01 sshd[23584]: Failed password for invalid user user from 198.51.100.29 port 58018 ssh2
+2026-12-08T21:04:45.310142+00:00 give-web01 sshd[23584]: Connection closed by invalid user user 198.51.100.29 port 58018 [preauth]
+2026-12-08T21:05:12.318061+00:00 give-web01 sshd[23592]: Invalid user postgres from 198.51.100.29 port 63203
+2026-12-08T21:05:14.325980+00:00 give-web01 sshd[23592]: Failed password for invalid user postgres from 198.51.100.29 port 63203 ssh2
+2026-12-08T21:05:15.333899+00:00 give-web01 sshd[23592]: Connection closed by invalid user postgres 198.51.100.29 port 63203 [preauth]
+2026-12-08T21:05:19.341818+00:00 give-web01 sshd[23598]: Invalid user git from 198.51.100.29 port 42238
+2026-12-08T21:05:21.349737+00:00 give-web01 sshd[23598]: Failed password for invalid user git from 198.51.100.29 port 42238 ssh2
+2026-12-08T21:05:22.357656+00:00 give-web01 sshd[23598]: Connection closed by invalid user git 198.51.100.29 port 42238 [preauth]
+2026-12-08T21:05:46.365575+00:00 give-web01 sshd[23604]: Invalid user ubuntu from 198.51.100.29 port 33114
+2026-12-08T21:05:48.373494+00:00 give-web01 sshd[23604]: Failed password for invalid user ubuntu from 198.51.100.29 port 33114 ssh2
+2026-12-08T21:05:49.381413+00:00 give-web01 sshd[23604]: Connection closed by invalid user ubuntu 198.51.100.29 port 33114 [preauth]
+2026-12-08T21:05:58.389332+00:00 give-web01 sshd[23612]: Invalid user cedarwick from 198.51.100.29 port 62182
+2026-12-08T21:06:00.397251+00:00 give-web01 sshd[23612]: Failed password for invalid user cedarwick from 198.51.100.29 port 62182 ssh2
+2026-12-08T21:06:01.405170+00:00 give-web01 sshd[23612]: Connection closed by invalid user cedarwick 198.51.100.29 port 62182 [preauth]
+2026-12-08T21:06:24.413089+00:00 give-web01 sshd[23616]: Invalid user git from 198.51.100.29 port 57337
+2026-12-08T21:06:26.421008+00:00 give-web01 sshd[23616]: Failed password for invalid user git from 198.51.100.29 port 57337 ssh2
+2026-12-08T21:06:27.428927+00:00 give-web01 sshd[23616]: Connection closed by invalid user git 198.51.100.29 port 57337 [preauth]
+2026-12-08T21:06:38.436846+00:00 give-web01 sshd[23618]: Invalid user test from 198.51.100.29 port 50100
+2026-12-08T21:06:40.444765+00:00 give-web01 sshd[23618]: Failed password for invalid user test from 198.51.100.29 port 50100 ssh2
+2026-12-08T21:06:41.452684+00:00 give-web01 sshd[23618]: Connection closed by invalid user test 198.51.100.29 port 50100 [preauth]
+2026-12-08T21:07:02.460603+00:00 give-web01 sshd[23625]: Invalid user git from 198.51.100.29 port 43745
+2026-12-08T21:07:04.468522+00:00 give-web01 sshd[23625]: Failed password for invalid user git from 198.51.100.29 port 43745 ssh2
+2026-12-08T21:07:05.476441+00:00 give-web01 sshd[23625]: Connection closed by invalid user git 198.51.100.29 port 43745 [preauth]
+2026-12-08T21:07:10.484360+00:00 give-web01 sshd[23626]: Failed password for root from 198.51.100.29 port 37103 ssh2
+2026-12-08T21:07:13.492279+00:00 give-web01 sshd[23626]: Connection closed by authenticating user root 198.51.100.29 port 37103 [preauth]
+2026-12-08T21:07:33.500198+00:00 give-web01 sshd[23634]: Invalid user user from 198.51.100.29 port 60182
+2026-12-08T21:07:35.508117+00:00 give-web01 sshd[23634]: Failed password for invalid user user from 198.51.100.29 port 60182 ssh2
+2026-12-08T21:07:36.516036+00:00 give-web01 sshd[23634]: Connection closed by invalid user user 198.51.100.29 port 60182 [preauth]
+2026-12-08T21:07:42.523955+00:00 give-web01 sshd[23635]: Invalid user admin from 198.51.100.29 port 64375
+2026-12-08T21:07:44.531874+00:00 give-web01 sshd[23635]: Failed password for invalid user admin from 198.51.100.29 port 64375 ssh2
+2026-12-08T21:07:45.539793+00:00 give-web01 sshd[23635]: Connection closed by invalid user admin 198.51.100.29 port 64375 [preauth]
+2026-12-08T21:08:04.547712+00:00 give-web01 sshd[23636]: Failed password for root from 198.51.100.29 port 41434 ssh2
+2026-12-08T21:08:07.555631+00:00 give-web01 sshd[23636]: Connection closed by authenticating user root 198.51.100.29 port 41434 [preauth]
+2026-12-08T21:08:07.563550+00:00 give-web01 sshd[23643]: Invalid user oracle from 198.51.100.29 port 55378
+2026-12-08T21:08:09.571469+00:00 give-web01 sshd[23643]: Failed password for invalid user oracle from 198.51.100.29 port 55378 ssh2
+2026-12-08T21:08:10.579388+00:00 give-web01 sshd[23643]: Connection closed by invalid user oracle 198.51.100.29 port 55378 [preauth]
+2026-12-08T21:08:23.587307+00:00 give-web01 sshd[23645]: Invalid user git from 198.51.100.29 port 35361
+2026-12-08T21:08:25.595226+00:00 give-web01 sshd[23645]: Failed password for invalid user git from 198.51.100.29 port 35361 ssh2
+2026-12-08T21:08:26.603145+00:00 give-web01 sshd[23645]: Connection closed by invalid user git 198.51.100.29 port 35361 [preauth]
+2026-12-08T21:08:32.611064+00:00 give-web01 sshd[23652]: Invalid user test from 198.51.100.29 port 46221
+2026-12-08T21:08:34.618983+00:00 give-web01 sshd[23652]: Failed password for invalid user test from 198.51.100.29 port 46221 ssh2
+2026-12-08T21:08:35.626902+00:00 give-web01 sshd[23652]: Connection closed by invalid user test 198.51.100.29 port 46221 [preauth]
+2026-12-08T21:08:40.634821+00:00 give-web01 sshd[23654]: Invalid user oracle from 198.51.100.29 port 46064
+2026-12-08T21:08:42.642740+00:00 give-web01 sshd[23654]: Failed password for invalid user oracle from 198.51.100.29 port 46064 ssh2
+2026-12-08T21:08:43.650659+00:00 give-web01 sshd[23654]: Connection closed by invalid user oracle 198.51.100.29 port 46064 [preauth]
+2026-12-08T21:08:58.658578+00:00 give-web01 sshd[23657]: Invalid user ubuntu from 198.51.100.29 port 30795
+2026-12-08T21:09:00.666497+00:00 give-web01 sshd[23657]: Failed password for invalid user ubuntu from 198.51.100.29 port 30795 ssh2
+2026-12-08T21:09:01.674416+00:00 give-web01 sshd[23657]: Connection closed by invalid user ubuntu 198.51.100.29 port 30795 [preauth]
+2026-12-08T21:09:35.682335+00:00 give-web01 sshd[23663]: Invalid user admin from 198.51.100.29 port 56992
+2026-12-08T21:09:37.690254+00:00 give-web01 sshd[23663]: Failed password for invalid user admin from 198.51.100.29 port 56992 ssh2
+2026-12-08T21:09:38.698173+00:00 give-web01 sshd[23663]: Connection closed by invalid user admin 198.51.100.29 port 56992 [preauth]
+2026-12-08T21:10:03.706092+00:00 give-web01 sshd[23665]: Failed password for root from 198.51.100.29 port 61541 ssh2
+2026-12-08T21:10:06.714011+00:00 give-web01 sshd[23665]: Connection closed by authenticating user root 198.51.100.29 port 61541 [preauth]
+2026-12-08T21:10:14.721930+00:00 give-web01 sshd[23670]: Invalid user cedarwick from 198.51.100.29 port 37391
+2026-12-08T21:10:16.729849+00:00 give-web01 sshd[23670]: Failed password for invalid user cedarwick from 198.51.100.29 port 37391 ssh2
+2026-12-08T21:10:17.737768+00:00 give-web01 sshd[23670]: Connection closed by invalid user cedarwick 198.51.100.29 port 37391 [preauth]
+2026-12-08T21:10:28.745687+00:00 give-web01 sshd[23672]: Invalid user test from 198.51.100.29 port 32271
+2026-12-08T21:10:30.753606+00:00 give-web01 sshd[23672]: Failed password for invalid user test from 198.51.100.29 port 32271 ssh2
+2026-12-08T21:10:31.761525+00:00 give-web01 sshd[23672]: Connection closed by invalid user test 198.51.100.29 port 32271 [preauth]
+2026-12-08T21:10:43.769444+00:00 give-web01 sshd[23679]: Invalid user git from 198.51.100.29 port 48113
+2026-12-08T21:10:45.777363+00:00 give-web01 sshd[23679]: Failed password for invalid user git from 198.51.100.29 port 48113 ssh2
+2026-12-08T21:10:46.785282+00:00 give-web01 sshd[23679]: Connection closed by invalid user git 198.51.100.29 port 48113 [preauth]
+2026-12-08T21:11:05.793201+00:00 give-web01 sshd[23684]: Invalid user oracle from 198.51.100.29 port 45526
+2026-12-08T21:11:07.801120+00:00 give-web01 sshd[23684]: Failed password for invalid user oracle from 198.51.100.29 port 45526 ssh2
+2026-12-08T21:11:08.809039+00:00 give-web01 sshd[23684]: Connection closed by invalid user oracle 198.51.100.29 port 45526 [preauth]
+2026-12-08T21:11:20.816958+00:00 give-web01 sshd[23687]: Failed password for root from 198.51.100.29 port 60814 ssh2
+2026-12-08T21:11:23.824877+00:00 give-web01 sshd[23687]: Connection closed by authenticating user root 198.51.100.29 port 60814 [preauth]
+2026-12-08T21:11:59.832796+00:00 give-web01 sshd[23695]: Invalid user git from 198.51.100.29 port 63294
+2026-12-08T21:12:01.840715+00:00 give-web01 sshd[23695]: Failed password for invalid user git from 198.51.100.29 port 63294 ssh2
+2026-12-08T21:12:02.848634+00:00 give-web01 sshd[23695]: Connection closed by invalid user git 198.51.100.29 port 63294 [preauth]
+2026-12-08T21:12:27.856553+00:00 give-web01 sshd[23697]: Invalid user test from 198.51.100.29 port 40381
+2026-12-08T21:12:29.864472+00:00 give-web01 sshd[23697]: Failed password for invalid user test from 198.51.100.29 port 40381 ssh2
+2026-12-08T21:12:30.872391+00:00 give-web01 sshd[23697]: Connection closed by invalid user test 198.51.100.29 port 40381 [preauth]
+2026-12-08T21:12:32.880310+00:00 give-web01 sshd[23704]: Invalid user admin from 198.51.100.29 port 34998
+2026-12-08T21:12:34.888229+00:00 give-web01 sshd[23704]: Failed password for invalid user admin from 198.51.100.29 port 34998 ssh2
+2026-12-08T21:12:35.896148+00:00 give-web01 sshd[23704]: Connection closed by invalid user admin 198.51.100.29 port 34998 [preauth]
+2026-12-08T21:12:50.904067+00:00 give-web01 sshd[23705]: Invalid user user from 198.51.100.29 port 52150
+2026-12-08T21:12:52.911986+00:00 give-web01 sshd[23705]: Failed password for invalid user user from 198.51.100.29 port 52150 ssh2
+2026-12-08T21:12:53.919905+00:00 give-web01 sshd[23705]: Connection closed by invalid user user 198.51.100.29 port 52150 [preauth]
+2026-12-08T21:13:20.927824+00:00 give-web01 sshd[23711]: Failed password for root from 198.51.100.29 port 39860 ssh2
+2026-12-08T21:13:23.935743+00:00 give-web01 sshd[23711]: Connection closed by authenticating user root 198.51.100.29 port 39860 [preauth]
+2026-12-08T21:13:33.943662+00:00 give-web01 sshd[23716]: Invalid user postgres from 198.51.100.29 port 57723
+2026-12-08T21:13:35.951581+00:00 give-web01 sshd[23716]: Failed password for invalid user postgres from 198.51.100.29 port 57723 ssh2
+2026-12-08T21:13:36.959500+00:00 give-web01 sshd[23716]: Connection closed by invalid user postgres 198.51.100.29 port 57723 [preauth]
+2026-12-08T21:13:38.967419+00:00 give-web01 sshd[23720]: Invalid user ubuntu from 198.51.100.29 port 33765
+2026-12-08T21:13:40.975338+00:00 give-web01 sshd[23720]: Failed password for invalid user ubuntu from 198.51.100.29 port 33765 ssh2
+2026-12-08T21:13:41.983257+00:00 give-web01 sshd[23720]: Connection closed by invalid user ubuntu 198.51.100.29 port 33765 [preauth]
+2026-12-08T21:14:05.991176+00:00 give-web01 sshd[23725]: Failed password for root from 198.51.100.29 port 35004 ssh2
+2026-12-08T21:14:08.999095+00:00 give-web01 sshd[23725]: Connection closed by authenticating user root 198.51.100.29 port 35004 [preauth]
+2026-12-08T21:14:40.007014+00:00 give-web01 sshd[23727]: Invalid user test from 198.51.100.29 port 60332
+2026-12-08T21:14:42.014933+00:00 give-web01 sshd[23727]: Failed password for invalid user test from 198.51.100.29 port 60332 ssh2
+2026-12-08T21:14:43.022852+00:00 give-web01 sshd[23727]: Connection closed by invalid user test 198.51.100.29 port 60332 [preauth]
+2026-12-08T21:15:12.030771+00:00 give-web01 sshd[23729]: Failed password for root from 198.51.100.29 port 47049 ssh2
+2026-12-08T21:15:15.038690+00:00 give-web01 sshd[23729]: Connection closed by authenticating user root 198.51.100.29 port 47049 [preauth]
+2026-12-08T21:15:46.046609+00:00 give-web01 sshd[23730]: Invalid user test from 198.51.100.29 port 44371
+2026-12-08T21:15:48.054528+00:00 give-web01 sshd[23730]: Failed password for invalid user test from 198.51.100.29 port 44371 ssh2
+2026-12-08T21:15:49.062447+00:00 give-web01 sshd[23730]: Connection closed by invalid user test 198.51.100.29 port 44371 [preauth]
+2026-12-08T21:16:13.070366+00:00 give-web01 sshd[23734]: Invalid user admin from 198.51.100.29 port 38971
+2026-12-08T21:16:15.078285+00:00 give-web01 sshd[23734]: Failed password for invalid user admin from 198.51.100.29 port 38971 ssh2
+2026-12-08T21:16:16.086204+00:00 give-web01 sshd[23734]: Connection closed by invalid user admin 198.51.100.29 port 38971 [preauth]
+2026-12-08T21:16:23.094123+00:00 give-web01 sshd[23737]: Invalid user oracle from 198.51.100.29 port 56201
+2026-12-08T21:16:25.102042+00:00 give-web01 sshd[23737]: Failed password for invalid user oracle from 198.51.100.29 port 56201 ssh2
+2026-12-08T21:16:26.109961+00:00 give-web01 sshd[23737]: Connection closed by invalid user oracle 198.51.100.29 port 56201 [preauth]
+2026-12-08T21:16:50.117880+00:00 give-web01 sshd[23741]: Invalid user admin from 198.51.100.29 port 42902
+2026-12-08T21:16:52.125799+00:00 give-web01 sshd[23741]: Failed password for invalid user admin from 198.51.100.29 port 42902 ssh2
+2026-12-08T21:16:53.133718+00:00 give-web01 sshd[23741]: Connection closed by invalid user admin 198.51.100.29 port 42902 [preauth]
+2026-12-08T21:16:59.141637+00:00 give-web01 sshd[23744]: Invalid user postgres from 198.51.100.29 port 53570
+2026-12-08T21:17:01.149556+00:00 give-web01 sshd[23744]: Failed password for invalid user postgres from 198.51.100.29 port 53570 ssh2
+2026-12-08T21:17:02.157475+00:00 give-web01 sshd[23744]: Connection closed by invalid user postgres 198.51.100.29 port 53570 [preauth]
+2026-12-08T21:17:34.165394+00:00 give-web01 sshd[23750]: Invalid user admin from 198.51.100.29 port 35206
+2026-12-08T21:17:36.173313+00:00 give-web01 sshd[23750]: Failed password for invalid user admin from 198.51.100.29 port 35206 ssh2
+2026-12-08T21:17:37.181232+00:00 give-web01 sshd[23750]: Connection closed by invalid user admin 198.51.100.29 port 35206 [preauth]
+2026-12-08T21:18:12.189151+00:00 give-web01 sshd[23757]: Invalid user user from 198.51.100.29 port 41428
+2026-12-08T21:18:14.197070+00:00 give-web01 sshd[23757]: Failed password for invalid user user from 198.51.100.29 port 41428 ssh2
+2026-12-08T21:18:15.204989+00:00 give-web01 sshd[23757]: Connection closed by invalid user user 198.51.100.29 port 41428 [preauth]
+2026-12-08T21:18:42.212908+00:00 give-web01 sshd[23765]: Invalid user test from 198.51.100.29 port 44440
+2026-12-08T21:18:44.220827+00:00 give-web01 sshd[23765]: Failed password for invalid user test from 198.51.100.29 port 44440 ssh2
+2026-12-08T21:18:45.228746+00:00 give-web01 sshd[23765]: Connection closed by invalid user test 198.51.100.29 port 44440 [preauth]
+2026-12-08T21:19:01.236665+00:00 give-web01 sshd[23772]: Invalid user ubuntu from 198.51.100.29 port 62343
+2026-12-08T21:19:03.244584+00:00 give-web01 sshd[23772]: Failed password for invalid user ubuntu from 198.51.100.29 port 62343 ssh2
+2026-12-08T21:19:04.252503+00:00 give-web01 sshd[23772]: Connection closed by invalid user ubuntu 198.51.100.29 port 62343 [preauth]
+2026-12-08T21:19:40.260422+00:00 give-web01 sshd[23774]: Invalid user user from 198.51.100.29 port 57428
+2026-12-08T21:19:42.268341+00:00 give-web01 sshd[23774]: Failed password for invalid user user from 198.51.100.29 port 57428 ssh2
+2026-12-08T21:19:43.276260+00:00 give-web01 sshd[23774]: Connection closed by invalid user user 198.51.100.29 port 57428 [preauth]
+2026-12-08T21:19:48.284179+00:00 give-web01 sshd[23777]: Invalid user oracle from 198.51.100.29 port 44541
+2026-12-08T21:19:50.292098+00:00 give-web01 sshd[23777]: Failed password for invalid user oracle from 198.51.100.29 port 44541 ssh2
+2026-12-08T21:19:51.300017+00:00 give-web01 sshd[23777]: Connection closed by invalid user oracle 198.51.100.29 port 44541 [preauth]
+2026-12-08T21:19:52.307936+00:00 give-web01 sshd[23783]: Invalid user user from 198.51.100.29 port 58694
+2026-12-08T21:19:54.315855+00:00 give-web01 sshd[23783]: Failed password for invalid user user from 198.51.100.29 port 58694 ssh2
+2026-12-08T21:19:55.323774+00:00 give-web01 sshd[23783]: Connection closed by invalid user user 198.51.100.29 port 58694 [preauth]
+2026-12-08T21:20:07.331693+00:00 give-web01 sshd[23787]: Invalid user postgres from 198.51.100.29 port 56542
+2026-12-08T21:20:09.339612+00:00 give-web01 sshd[23787]: Failed password for invalid user postgres from 198.51.100.29 port 56542 ssh2
+2026-12-08T21:20:10.347531+00:00 give-web01 sshd[23787]: Connection closed by invalid user postgres 198.51.100.29 port 56542 [preauth]
+2026-12-08T21:20:15.355450+00:00 give-web01 sshd[23790]: Invalid user oracle from 198.51.100.29 port 41158
+2026-12-08T21:20:17.363369+00:00 give-web01 sshd[23790]: Failed password for invalid user oracle from 198.51.100.29 port 41158 ssh2
+2026-12-08T21:20:18.371288+00:00 give-web01 sshd[23790]: Connection closed by invalid user oracle 198.51.100.29 port 41158 [preauth]
+2026-12-08T21:20:25.379207+00:00 give-web01 sshd[23791]: Invalid user cedarwick from 198.51.100.29 port 59239
+2026-12-08T21:20:27.387126+00:00 give-web01 sshd[23791]: Failed password for invalid user cedarwick from 198.51.100.29 port 59239 ssh2
+2026-12-08T21:20:28.395045+00:00 give-web01 sshd[23791]: Connection closed by invalid user cedarwick 198.51.100.29 port 59239 [preauth]
+2026-12-08T21:20:50.402964+00:00 give-web01 sshd[23792]: Invalid user postgres from 198.51.100.29 port 55585
+2026-12-08T21:20:52.410883+00:00 give-web01 sshd[23792]: Failed password for invalid user postgres from 198.51.100.29 port 55585 ssh2
+2026-12-08T21:20:53.418802+00:00 give-web01 sshd[23792]: Connection closed by invalid user postgres 198.51.100.29 port 55585 [preauth]
+2026-12-08T21:21:20.426721+00:00 give-web01 sshd[23796]: Invalid user postgres from 198.51.100.29 port 36251
+2026-12-08T21:21:22.434640+00:00 give-web01 sshd[23796]: Failed password for invalid user postgres from 198.51.100.29 port 36251 ssh2
+2026-12-08T21:21:23.442559+00:00 give-web01 sshd[23796]: Connection closed by invalid user postgres 198.51.100.29 port 36251 [preauth]
+2026-12-08T21:21:44.450478+00:00 give-web01 sshd[23804]: Invalid user user from 198.51.100.29 port 43473
+2026-12-08T21:21:46.458397+00:00 give-web01 sshd[23804]: Failed password for invalid user user from 198.51.100.29 port 43473 ssh2
+2026-12-08T21:21:47.466316+00:00 give-web01 sshd[23804]: Connection closed by invalid user user 198.51.100.29 port 43473 [preauth]
+2026-12-08T21:22:14.474235+00:00 give-web01 sshd[23810]: Invalid user test from 198.51.100.29 port 58891
+2026-12-08T21:22:16.482154+00:00 give-web01 sshd[23810]: Failed password for invalid user test from 198.51.100.29 port 58891 ssh2
+2026-12-08T21:22:17.490073+00:00 give-web01 sshd[23810]: Connection closed by invalid user test 198.51.100.29 port 58891 [preauth]
+2026-12-08T21:22:45.497992+00:00 give-web01 sshd[23814]: Invalid user test from 198.51.100.29 port 53467
+2026-12-08T21:22:47.505911+00:00 give-web01 sshd[23814]: Failed password for invalid user test from 198.51.100.29 port 53467 ssh2
+2026-12-08T21:22:48.513830+00:00 give-web01 sshd[23814]: Connection closed by invalid user test 198.51.100.29 port 53467 [preauth]
+2026-12-08T21:22:53.521749+00:00 give-web01 sshd[23817]: Invalid user cedarwick from 198.51.100.29 port 59485
+2026-12-08T21:22:55.529668+00:00 give-web01 sshd[23817]: Failed password for invalid user cedarwick from 198.51.100.29 port 59485 ssh2
+2026-12-08T21:22:56.537587+00:00 give-web01 sshd[23817]: Connection closed by invalid user cedarwick 198.51.100.29 port 59485 [preauth]
+2026-12-08T21:23:03.545506+00:00 give-web01 sshd[23825]: Invalid user test from 198.51.100.29 port 31857
+2026-12-08T21:23:05.553425+00:00 give-web01 sshd[23825]: Failed password for invalid user test from 198.51.100.29 port 31857 ssh2
+2026-12-08T21:23:06.561344+00:00 give-web01 sshd[23825]: Connection closed by invalid user test 198.51.100.29 port 31857 [preauth]
+2026-12-08T21:23:06.569263+00:00 give-web01 sshd[23828]: Invalid user test from 198.51.100.29 port 59934
+2026-12-08T21:23:08.577182+00:00 give-web01 sshd[23828]: Failed password for invalid user test from 198.51.100.29 port 59934 ssh2
+2026-12-08T21:23:09.585101+00:00 give-web01 sshd[23828]: Connection closed by invalid user test 198.51.100.29 port 59934 [preauth]
+2026-12-08T21:23:44.593020+00:00 give-web01 sshd[23830]: Invalid user user from 198.51.100.29 port 52912
+2026-12-08T21:23:46.600939+00:00 give-web01 sshd[23830]: Failed password for invalid user user from 198.51.100.29 port 52912 ssh2
+2026-12-08T21:23:47.608858+00:00 give-web01 sshd[23830]: Connection closed by invalid user user 198.51.100.29 port 52912 [preauth]
+2026-12-08T21:24:22.616777+00:00 give-web01 sshd[23832]: Failed password for root from 198.51.100.29 port 35079 ssh2
+2026-12-08T21:24:25.624696+00:00 give-web01 sshd[23832]: Connection closed by authenticating user root 198.51.100.29 port 35079 [preauth]
+2026-12-08T21:24:50.632615+00:00 give-web01 sshd[23833]: Invalid user ubuntu from 198.51.100.29 port 53898
+2026-12-08T21:24:52.640534+00:00 give-web01 sshd[23833]: Failed password for invalid user ubuntu from 198.51.100.29 port 53898 ssh2
+2026-12-08T21:24:53.648453+00:00 give-web01 sshd[23833]: Connection closed by invalid user ubuntu 198.51.100.29 port 53898 [preauth]
+2026-12-09T03:39:24.656372+00:00 give-web01 sshd[23940]: Invalid user admin from 198.51.100.120 port 42692
+2026-12-09T03:39:26.664291+00:00 give-web01 sshd[23940]: Failed password for invalid user admin from 198.51.100.120 port 42692 ssh2
+2026-12-09T03:39:27.672210+00:00 give-web01 sshd[23940]: Connection closed by invalid user admin 198.51.100.120 port 42692 [preauth]
+2026-12-09T03:39:35.680129+00:00 give-web01 sshd[23946]: Failed password for root from 198.51.100.120 port 49562 ssh2
+2026-12-09T03:39:38.688048+00:00 give-web01 sshd[23946]: Connection closed by authenticating user root 198.51.100.120 port 49562 [preauth]
+2026-12-09T03:39:41.695967+00:00 give-web01 sshd[23949]: Invalid user user from 198.51.100.120 port 37303
+2026-12-09T03:39:43.703886+00:00 give-web01 sshd[23949]: Failed password for invalid user user from 198.51.100.120 port 37303 ssh2
+2026-12-09T03:39:44.711805+00:00 give-web01 sshd[23949]: Connection closed by invalid user user 198.51.100.120 port 37303 [preauth]
+2026-12-09T03:40:09.719724+00:00 give-web01 sshd[23955]: Failed password for root from 198.51.100.120 port 31184 ssh2
+2026-12-09T03:40:12.727643+00:00 give-web01 sshd[23955]: Connection closed by authenticating user root 198.51.100.120 port 31184 [preauth]
+2026-12-09T03:40:23.735562+00:00 give-web01 sshd[23957]: Invalid user postgres from 198.51.100.120 port 50352
+2026-12-09T03:40:25.743481+00:00 give-web01 sshd[23957]: Failed password for invalid user postgres from 198.51.100.120 port 50352 ssh2
+2026-12-09T03:40:26.751400+00:00 give-web01 sshd[23957]: Connection closed by invalid user postgres 198.51.100.120 port 50352 [preauth]
+2026-12-09T03:40:47.759319+00:00 give-web01 sshd[23963]: Invalid user admin from 198.51.100.120 port 45693
+2026-12-09T03:40:49.767238+00:00 give-web01 sshd[23963]: Failed password for invalid user admin from 198.51.100.120 port 45693 ssh2
+2026-12-09T03:40:50.775157+00:00 give-web01 sshd[23963]: Connection closed by invalid user admin 198.51.100.120 port 45693 [preauth]
+2026-12-09T03:40:57.783076+00:00 give-web01 sshd[23966]: Invalid user oracle from 198.51.100.120 port 56376
+2026-12-09T03:40:59.790995+00:00 give-web01 sshd[23966]: Failed password for invalid user oracle from 198.51.100.120 port 56376 ssh2
+2026-12-09T03:41:00.798914+00:00 give-web01 sshd[23966]: Connection closed by invalid user oracle 198.51.100.120 port 56376 [preauth]
+2026-12-09T03:41:11.806833+00:00 give-web01 sshd[23974]: Invalid user user from 198.51.100.120 port 58142
+2026-12-09T03:41:13.814752+00:00 give-web01 sshd[23974]: Failed password for invalid user user from 198.51.100.120 port 58142 ssh2
+2026-12-09T03:41:14.822671+00:00 give-web01 sshd[23974]: Connection closed by invalid user user 198.51.100.120 port 58142 [preauth]
+2026-12-09T03:41:24.830590+00:00 give-web01 sshd[23982]: Invalid user admin from 198.51.100.120 port 34705
+2026-12-09T03:41:26.838509+00:00 give-web01 sshd[23982]: Failed password for invalid user admin from 198.51.100.120 port 34705 ssh2
+2026-12-09T03:41:27.846428+00:00 give-web01 sshd[23982]: Connection closed by invalid user admin 198.51.100.120 port 34705 [preauth]
+2026-12-09T03:41:39.854347+00:00 give-web01 sshd[23989]: Invalid user test from 198.51.100.120 port 31063
+2026-12-09T03:41:41.862266+00:00 give-web01 sshd[23989]: Failed password for invalid user test from 198.51.100.120 port 31063 ssh2
+2026-12-09T03:41:42.870185+00:00 give-web01 sshd[23989]: Connection closed by invalid user test 198.51.100.120 port 31063 [preauth]
+2026-12-09T03:42:12.878104+00:00 give-web01 sshd[23993]: Invalid user user from 198.51.100.120 port 36450
+2026-12-09T03:42:14.886023+00:00 give-web01 sshd[23993]: Failed password for invalid user user from 198.51.100.120 port 36450 ssh2
+2026-12-09T03:42:15.893942+00:00 give-web01 sshd[23993]: Connection closed by invalid user user 198.51.100.120 port 36450 [preauth]
+2026-12-09T03:42:30.901861+00:00 give-web01 sshd[23997]: Invalid user git from 198.51.100.120 port 55625
+2026-12-09T03:42:32.909780+00:00 give-web01 sshd[23997]: Failed password for invalid user git from 198.51.100.120 port 55625 ssh2
+2026-12-09T03:42:33.917699+00:00 give-web01 sshd[23997]: Connection closed by invalid user git 198.51.100.120 port 55625 [preauth]
+2026-12-09T03:42:58.925618+00:00 give-web01 sshd[24003]: Failed password for root from 198.51.100.120 port 46587 ssh2
+2026-12-09T03:43:01.933537+00:00 give-web01 sshd[24003]: Connection closed by authenticating user root 198.51.100.120 port 46587 [preauth]
+2026-12-09T03:43:32.941456+00:00 give-web01 sshd[24005]: Invalid user user from 198.51.100.120 port 64673
+2026-12-09T03:43:34.949375+00:00 give-web01 sshd[24005]: Failed password for invalid user user from 198.51.100.120 port 64673 ssh2
+2026-12-09T03:43:35.957294+00:00 give-web01 sshd[24005]: Connection closed by invalid user user 198.51.100.120 port 64673 [preauth]
+2026-12-09T03:43:54.965213+00:00 give-web01 sshd[24010]: Invalid user test from 198.51.100.120 port 48485
+2026-12-09T03:43:56.973132+00:00 give-web01 sshd[24010]: Failed password for invalid user test from 198.51.100.120 port 48485 ssh2
+2026-12-09T03:43:57.981051+00:00 give-web01 sshd[24010]: Connection closed by invalid user test 198.51.100.120 port 48485 [preauth]
+2026-12-09T03:43:58.988970+00:00 give-web01 sshd[24016]: Invalid user test from 198.51.100.120 port 56319
+2026-12-09T03:44:00.996889+00:00 give-web01 sshd[24016]: Failed password for invalid user test from 198.51.100.120 port 56319 ssh2
+2026-12-09T03:44:01.004808+00:00 give-web01 sshd[24016]: Connection closed by invalid user test 198.51.100.120 port 56319 [preauth]
+2026-12-09T03:44:34.012727+00:00 give-web01 sshd[24024]: Invalid user postgres from 198.51.100.120 port 56160
+2026-12-09T03:44:36.020646+00:00 give-web01 sshd[24024]: Failed password for invalid user postgres from 198.51.100.120 port 56160 ssh2
+2026-12-09T03:44:37.028565+00:00 give-web01 sshd[24024]: Connection closed by invalid user postgres 198.51.100.120 port 56160 [preauth]
+2026-12-09T03:45:00.036484+00:00 give-web01 sshd[24025]: Invalid user oracle from 198.51.100.120 port 57220
+2026-12-09T03:45:02.044403+00:00 give-web01 sshd[24025]: Failed password for invalid user oracle from 198.51.100.120 port 57220 ssh2
+2026-12-09T03:45:03.052322+00:00 give-web01 sshd[24025]: Connection closed by invalid user oracle 198.51.100.120 port 57220 [preauth]
+2026-12-09T03:45:26.060241+00:00 give-web01 sshd[24029]: Invalid user user from 198.51.100.120 port 36495
+2026-12-09T03:45:28.068160+00:00 give-web01 sshd[24029]: Failed password for invalid user user from 198.51.100.120 port 36495 ssh2
+2026-12-09T03:45:29.076079+00:00 give-web01 sshd[24029]: Connection closed by invalid user user 198.51.100.120 port 36495 [preauth]
+2026-12-09T03:45:55.083998+00:00 give-web01 sshd[24031]: Invalid user cedarwick from 198.51.100.120 port 43407
+2026-12-09T03:45:57.091917+00:00 give-web01 sshd[24031]: Failed password for invalid user cedarwick from 198.51.100.120 port 43407 ssh2
+2026-12-09T03:45:58.099836+00:00 give-web01 sshd[24031]: Connection closed by invalid user cedarwick 198.51.100.120 port 43407 [preauth]
+2026-12-09T03:46:17.107755+00:00 give-web01 sshd[24037]: Invalid user oracle from 198.51.100.120 port 61957
+2026-12-09T03:46:19.115674+00:00 give-web01 sshd[24037]: Failed password for invalid user oracle from 198.51.100.120 port 61957 ssh2
+2026-12-09T03:46:20.123593+00:00 give-web01 sshd[24037]: Connection closed by invalid user oracle 198.51.100.120 port 61957 [preauth]
+2026-12-09T03:46:33.131512+00:00 give-web01 sshd[24043]: Invalid user admin from 198.51.100.120 port 63176
+2026-12-09T03:46:35.139431+00:00 give-web01 sshd[24043]: Failed password for invalid user admin from 198.51.100.120 port 63176 ssh2
+2026-12-09T03:46:36.147350+00:00 give-web01 sshd[24043]: Connection closed by invalid user admin 198.51.100.120 port 63176 [preauth]
+2026-12-09T03:46:50.155269+00:00 give-web01 sshd[24051]: Invalid user user from 198.51.100.120 port 35899
+2026-12-09T03:46:52.163188+00:00 give-web01 sshd[24051]: Failed password for invalid user user from 198.51.100.120 port 35899 ssh2
+2026-12-09T03:46:53.171107+00:00 give-web01 sshd[24051]: Connection closed by invalid user user 198.51.100.120 port 35899 [preauth]
+2026-12-09T03:46:55.179026+00:00 give-web01 sshd[24058]: Invalid user oracle from 198.51.100.120 port 47066
+2026-12-09T03:46:57.186945+00:00 give-web01 sshd[24058]: Failed password for invalid user oracle from 198.51.100.120 port 47066 ssh2
+2026-12-09T03:46:58.194864+00:00 give-web01 sshd[24058]: Connection closed by invalid user oracle 198.51.100.120 port 47066 [preauth]
+2026-12-09T03:47:29.202783+00:00 give-web01 sshd[24061]: Failed password for root from 198.51.100.120 port 35838 ssh2
+2026-12-09T03:47:32.210702+00:00 give-web01 sshd[24061]: Connection closed by authenticating user root 198.51.100.120 port 35838 [preauth]
+2026-12-09T03:47:34.218621+00:00 give-web01 sshd[24069]: Invalid user postgres from 198.51.100.120 port 37182
+2026-12-09T03:47:36.226540+00:00 give-web01 sshd[24069]: Failed password for invalid user postgres from 198.51.100.120 port 37182 ssh2
+2026-12-09T03:47:37.234459+00:00 give-web01 sshd[24069]: Connection closed by invalid user postgres 198.51.100.120 port 37182 [preauth]
+2026-12-09T03:47:42.242378+00:00 give-web01 sshd[24076]: Invalid user user from 198.51.100.120 port 63154
+2026-12-09T03:47:44.250297+00:00 give-web01 sshd[24076]: Failed password for invalid user user from 198.51.100.120 port 63154 ssh2
+2026-12-09T03:47:45.258216+00:00 give-web01 sshd[24076]: Connection closed by invalid user user 198.51.100.120 port 63154 [preauth]
+2026-12-09T03:48:10.266135+00:00 give-web01 sshd[24077]: Invalid user ubuntu from 198.51.100.120 port 34789
+2026-12-09T03:48:12.274054+00:00 give-web01 sshd[24077]: Failed password for invalid user ubuntu from 198.51.100.120 port 34789 ssh2
+2026-12-09T03:48:13.281973+00:00 give-web01 sshd[24077]: Connection closed by invalid user ubuntu 198.51.100.120 port 34789 [preauth]
+2026-12-09T03:48:26.289892+00:00 give-web01 sshd[24085]: Invalid user git from 198.51.100.120 port 37740
+2026-12-09T03:48:28.297811+00:00 give-web01 sshd[24085]: Failed password for invalid user git from 198.51.100.120 port 37740 ssh2
+2026-12-09T03:48:29.305730+00:00 give-web01 sshd[24085]: Connection closed by invalid user git 198.51.100.120 port 37740 [preauth]
+2026-12-09T03:48:35.313649+00:00 give-web01 sshd[24090]: Invalid user test from 198.51.100.120 port 33450
+2026-12-09T03:48:37.321568+00:00 give-web01 sshd[24090]: Failed password for invalid user test from 198.51.100.120 port 33450 ssh2
+2026-12-09T03:48:38.329487+00:00 give-web01 sshd[24090]: Connection closed by invalid user test 198.51.100.120 port 33450 [preauth]
+2026-12-09T03:48:44.337406+00:00 give-web01 sshd[24091]: Invalid user admin from 198.51.100.120 port 42228
+2026-12-09T03:48:46.345325+00:00 give-web01 sshd[24091]: Failed password for invalid user admin from 198.51.100.120 port 42228 ssh2
+2026-12-09T03:48:47.353244+00:00 give-web01 sshd[24091]: Connection closed by invalid user admin 198.51.100.120 port 42228 [preauth]
+2026-12-09T03:48:57.361163+00:00 give-web01 sshd[24094]: Failed password for root from 198.51.100.120 port 42849 ssh2
+2026-12-09T03:49:00.369082+00:00 give-web01 sshd[24094]: Connection closed by authenticating user root 198.51.100.120 port 42849 [preauth]
+2026-12-09T03:49:19.377001+00:00 give-web01 sshd[24095]: Invalid user admin from 198.51.100.120 port 42201
+2026-12-09T03:49:21.384920+00:00 give-web01 sshd[24095]: Failed password for invalid user admin from 198.51.100.120 port 42201 ssh2
+2026-12-09T03:49:22.392839+00:00 give-web01 sshd[24095]: Connection closed by invalid user admin 198.51.100.120 port 42201 [preauth]
+2026-12-09T03:49:49.400758+00:00 give-web01 sshd[24099]: Invalid user admin from 198.51.100.120 port 59076
+2026-12-09T03:49:51.408677+00:00 give-web01 sshd[24099]: Failed password for invalid user admin from 198.51.100.120 port 59076 ssh2
+2026-12-09T03:49:52.416596+00:00 give-web01 sshd[24099]: Connection closed by invalid user admin 198.51.100.120 port 59076 [preauth]
+2026-12-09T03:49:53.424515+00:00 give-web01 sshd[24106]: Invalid user ubuntu from 198.51.100.120 port 31186
+2026-12-09T03:49:55.432434+00:00 give-web01 sshd[24106]: Failed password for invalid user ubuntu from 198.51.100.120 port 31186 ssh2
+2026-12-09T03:49:56.440353+00:00 give-web01 sshd[24106]: Connection closed by invalid user ubuntu 198.51.100.120 port 31186 [preauth]
+2026-12-09T03:50:30.448272+00:00 give-web01 sshd[24108]: Invalid user oracle from 198.51.100.120 port 54548
+2026-12-09T03:50:32.456191+00:00 give-web01 sshd[24108]: Failed password for invalid user oracle from 198.51.100.120 port 54548 ssh2
+2026-12-09T03:50:33.464110+00:00 give-web01 sshd[24108]: Connection closed by invalid user oracle 198.51.100.120 port 54548 [preauth]
+2026-12-09T03:51:03.472029+00:00 give-web01 sshd[24112]: Invalid user oracle from 198.51.100.120 port 40382
+2026-12-09T03:51:05.479948+00:00 give-web01 sshd[24112]: Failed password for invalid user oracle from 198.51.100.120 port 40382 ssh2
+2026-12-09T03:51:06.487867+00:00 give-web01 sshd[24112]: Connection closed by invalid user oracle 198.51.100.120 port 40382 [preauth]
+2026-12-09T03:51:22.495786+00:00 give-web01 sshd[24119]: Invalid user ubuntu from 198.51.100.120 port 37707
+2026-12-09T03:51:24.503705+00:00 give-web01 sshd[24119]: Failed password for invalid user ubuntu from 198.51.100.120 port 37707 ssh2
+2026-12-09T03:51:25.511624+00:00 give-web01 sshd[24119]: Connection closed by invalid user ubuntu 198.51.100.120 port 37707 [preauth]
+2026-12-09T03:51:40.519543+00:00 give-web01 sshd[24121]: Invalid user git from 198.51.100.120 port 43608
+2026-12-09T03:51:42.527462+00:00 give-web01 sshd[24121]: Failed password for invalid user git from 198.51.100.120 port 43608 ssh2
+2026-12-09T03:51:43.535381+00:00 give-web01 sshd[24121]: Connection closed by invalid user git 198.51.100.120 port 43608 [preauth]
+2026-12-09T03:51:53.543300+00:00 give-web01 sshd[24127]: Invalid user user from 198.51.100.120 port 54366
+2026-12-09T03:51:55.551219+00:00 give-web01 sshd[24127]: Failed password for invalid user user from 198.51.100.120 port 54366 ssh2
+2026-12-09T03:51:56.559138+00:00 give-web01 sshd[24127]: Connection closed by invalid user user 198.51.100.120 port 54366 [preauth]
+2026-12-09T03:51:57.567057+00:00 give-web01 sshd[24129]: Invalid user test from 198.51.100.120 port 32056
+2026-12-09T03:51:59.574976+00:00 give-web01 sshd[24129]: Failed password for invalid user test from 198.51.100.120 port 32056 ssh2
+2026-12-09T03:52:00.582895+00:00 give-web01 sshd[24129]: Connection closed by invalid user test 198.51.100.120 port 32056 [preauth]
+2026-12-09T03:52:02.590814+00:00 give-web01 sshd[24130]: Invalid user postgres from 198.51.100.120 port 31027
+2026-12-09T03:52:04.598733+00:00 give-web01 sshd[24130]: Failed password for invalid user postgres from 198.51.100.120 port 31027 ssh2
+2026-12-09T03:52:05.606652+00:00 give-web01 sshd[24130]: Connection closed by invalid user postgres 198.51.100.120 port 31027 [preauth]
+2026-12-09T03:52:17.614571+00:00 give-web01 sshd[24137]: Failed password for root from 198.51.100.120 port 58116 ssh2
+2026-12-09T03:52:20.622490+00:00 give-web01 sshd[24137]: Connection closed by authenticating user root 198.51.100.120 port 58116 [preauth]
+2026-12-09T03:52:47.630409+00:00 give-web01 sshd[24141]: Invalid user test from 198.51.100.120 port 61825
+2026-12-09T03:52:49.638328+00:00 give-web01 sshd[24141]: Failed password for invalid user test from 198.51.100.120 port 61825 ssh2
+2026-12-09T03:52:50.646247+00:00 give-web01 sshd[24141]: Connection closed by invalid user test 198.51.100.120 port 61825 [preauth]
+2026-12-09T03:53:24.654166+00:00 give-web01 sshd[24145]: Invalid user cedarwick from 198.51.100.120 port 41679
+2026-12-09T03:53:26.662085+00:00 give-web01 sshd[24145]: Failed password for invalid user cedarwick from 198.51.100.120 port 41679 ssh2
+2026-12-09T03:53:27.670004+00:00 give-web01 sshd[24145]: Connection closed by invalid user cedarwick 198.51.100.120 port 41679 [preauth]
+2026-12-09T03:53:38.677923+00:00 give-web01 sshd[24147]: Invalid user admin from 198.51.100.120 port 61386
+2026-12-09T03:53:40.685842+00:00 give-web01 sshd[24147]: Failed password for invalid user admin from 198.51.100.120 port 61386 ssh2
+2026-12-09T03:53:41.693761+00:00 give-web01 sshd[24147]: Connection closed by invalid user admin 198.51.100.120 port 61386 [preauth]
+2026-12-09T03:53:46.701680+00:00 give-web01 sshd[24149]: Invalid user admin from 198.51.100.120 port 57794
+2026-12-09T03:53:48.709599+00:00 give-web01 sshd[24149]: Failed password for invalid user admin from 198.51.100.120 port 57794 ssh2
+2026-12-09T03:53:49.717518+00:00 give-web01 sshd[24149]: Connection closed by invalid user admin 198.51.100.120 port 57794 [preauth]
+2026-12-09T03:54:09.725437+00:00 give-web01 sshd[24152]: Invalid user user from 198.51.100.120 port 64346
+2026-12-09T03:54:11.733356+00:00 give-web01 sshd[24152]: Failed password for invalid user user from 198.51.100.120 port 64346 ssh2
+2026-12-09T03:54:12.741275+00:00 give-web01 sshd[24152]: Connection closed by invalid user user 198.51.100.120 port 64346 [preauth]
+2026-12-09T03:54:29.749194+00:00 give-web01 sshd[24157]: Failed password for root from 198.51.100.120 port 39033 ssh2
+2026-12-09T03:54:32.757113+00:00 give-web01 sshd[24157]: Connection closed by authenticating user root 198.51.100.120 port 39033 [preauth]
+2026-12-09T03:55:01.765032+00:00 give-web01 sshd[24160]: Invalid user oracle from 198.51.100.120 port 55810
+2026-12-09T03:55:03.772951+00:00 give-web01 sshd[24160]: Failed password for invalid user oracle from 198.51.100.120 port 55810 ssh2
+2026-12-09T03:55:04.780870+00:00 give-web01 sshd[24160]: Connection closed by invalid user oracle 198.51.100.120 port 55810 [preauth]
+2026-12-09T03:55:30.788789+00:00 give-web01 sshd[24168]: Invalid user test from 198.51.100.120 port 38791
+2026-12-09T03:55:32.796708+00:00 give-web01 sshd[24168]: Failed password for invalid user test from 198.51.100.120 port 38791 ssh2
+2026-12-09T03:55:33.804627+00:00 give-web01 sshd[24168]: Connection closed by invalid user test 198.51.100.120 port 38791 [preauth]
+2026-12-09T03:55:41.812546+00:00 give-web01 sshd[24174]: Invalid user user from 198.51.100.120 port 45312
+2026-12-09T03:55:43.820465+00:00 give-web01 sshd[24174]: Failed password for invalid user user from 198.51.100.120 port 45312 ssh2
+2026-12-09T03:55:44.828384+00:00 give-web01 sshd[24174]: Connection closed by invalid user user 198.51.100.120 port 45312 [preauth]
+2026-12-09T03:56:07.836303+00:00 give-web01 sshd[24177]: Invalid user git from 198.51.100.120 port 32636
+2026-12-09T03:56:09.844222+00:00 give-web01 sshd[24177]: Failed password for invalid user git from 198.51.100.120 port 32636 ssh2
+2026-12-09T03:56:10.852141+00:00 give-web01 sshd[24177]: Connection closed by invalid user git 198.51.100.120 port 32636 [preauth]
+2026-12-09T03:56:37.860060+00:00 give-web01 sshd[24182]: Invalid user test from 198.51.100.120 port 50165
+2026-12-09T03:56:39.867979+00:00 give-web01 sshd[24182]: Failed password for invalid user test from 198.51.100.120 port 50165 ssh2
+2026-12-09T03:56:40.875898+00:00 give-web01 sshd[24182]: Connection closed by invalid user test 198.51.100.120 port 50165 [preauth]
+2026-12-09T03:56:41.883817+00:00 give-web01 sshd[24187]: Invalid user ubuntu from 198.51.100.120 port 48590
+2026-12-09T03:56:43.891736+00:00 give-web01 sshd[24187]: Failed password for invalid user ubuntu from 198.51.100.120 port 48590 ssh2
+2026-12-09T03:56:44.899655+00:00 give-web01 sshd[24187]: Connection closed by invalid user ubuntu 198.51.100.120 port 48590 [preauth]
+2026-12-09T03:56:45.907574+00:00 give-web01 sshd[24194]: Invalid user test from 198.51.100.120 port 41435
+2026-12-09T03:56:47.915493+00:00 give-web01 sshd[24194]: Failed password for invalid user test from 198.51.100.120 port 41435 ssh2
+2026-12-09T03:56:48.923412+00:00 give-web01 sshd[24194]: Connection closed by invalid user test 198.51.100.120 port 41435 [preauth]
+2026-12-09T03:57:02.931331+00:00 give-web01 sshd[24200]: Invalid user test from 198.51.100.120 port 50403
+2026-12-09T03:57:04.939250+00:00 give-web01 sshd[24200]: Failed password for invalid user test from 198.51.100.120 port 50403 ssh2
+2026-12-09T03:57:05.947169+00:00 give-web01 sshd[24200]: Connection closed by invalid user test 198.51.100.120 port 50403 [preauth]
+2026-12-09T03:57:32.955088+00:00 give-web01 sshd[24206]: Invalid user admin from 198.51.100.120 port 51433
+2026-12-09T03:57:34.963007+00:00 give-web01 sshd[24206]: Failed password for invalid user admin from 198.51.100.120 port 51433 ssh2
+2026-12-09T03:57:35.970926+00:00 give-web01 sshd[24206]: Connection closed by invalid user admin 198.51.100.120 port 51433 [preauth]
+2026-12-09T03:58:04.978845+00:00 give-web01 sshd[24207]: Invalid user postgres from 198.51.100.120 port 33229
+2026-12-09T03:58:06.986764+00:00 give-web01 sshd[24207]: Failed password for invalid user postgres from 198.51.100.120 port 33229 ssh2
+2026-12-09T03:58:07.994683+00:00 give-web01 sshd[24207]: Connection closed by invalid user postgres 198.51.100.120 port 33229 [preauth]
+2026-12-09T03:58:22.002602+00:00 give-web01 sshd[24215]: Invalid user user from 198.51.100.120 port 47918
+2026-12-09T03:58:24.010521+00:00 give-web01 sshd[24215]: Failed password for invalid user user from 198.51.100.120 port 47918 ssh2
+2026-12-09T03:58:25.018440+00:00 give-web01 sshd[24215]: Connection closed by invalid user user 198.51.100.120 port 47918 [preauth]
+2026-12-09T03:58:28.026359+00:00 give-web01 sshd[24223]: Invalid user user from 198.51.100.120 port 37843
+2026-12-09T03:58:30.034278+00:00 give-web01 sshd[24223]: Failed password for invalid user user from 198.51.100.120 port 37843 ssh2
+2026-12-09T03:58:31.042197+00:00 give-web01 sshd[24223]: Connection closed by invalid user user 198.51.100.120 port 37843 [preauth]
+2026-12-09T03:59:01.050116+00:00 give-web01 sshd[24227]: Invalid user user from 198.51.100.120 port 37073
+2026-12-09T03:59:03.058035+00:00 give-web01 sshd[24227]: Failed password for invalid user user from 198.51.100.120 port 37073 ssh2
+2026-12-09T03:59:04.065954+00:00 give-web01 sshd[24227]: Connection closed by invalid user user 198.51.100.120 port 37073 [preauth]
+2026-12-09T13:11:00.073873+00:00 give-web01 sshd[24701]: Accepted publickey for cwadmin from 192.0.2.138 port 40246 ssh2: ED25519 SHA256:vgp58HAsLbflXcjSSo2kQty0EJtKa6xroYSqqY8IkcY
+2026-12-09T13:11:00.081792+00:00 give-web01 sshd[24701]: pam_unix(sshd:session): session opened for user cwadmin(uid=1000) by cwadmin(uid=0)
+2026-12-09T13:11:00.089711+00:00 give-web01 systemd-logind[612]: New session 38 of user cwadmin.
+2026-12-09T13:11:40.097630+00:00 give-web01 sudo: cwadmin : TTY=pts/0 ; PWD=/home/cwadmin ; USER=root ; COMMAND=/usr/bin/tar czf /root/ir-export.tgz /srv/give/logs
+2026-12-09T13:11:40.105549+00:00 give-web01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by cwadmin(uid=1000)
+2026-12-09T13:11:52.113468+00:00 give-web01 sudo: pam_unix(sudo:session): session closed for user root
+2026-12-09T13:17:40.121387+00:00 give-web01 sshd[24701]: pam_unix(sshd:session): session closed for user cwadmin
+2026-12-09T13:17:40.129306+00:00 give-web01 systemd-logind[612]: Session 38 logged out. Waiting for processes to exit.
