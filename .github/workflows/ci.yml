@@ -120,11 +120,19 @@ jobs:
           done
       - name: Lab 3 integration test
         run: labs/lab3-webapp-assessment/tests/integration.sh
+      - name: Build ir-workstation image (Lab 4; build checks tshark, TSK, ewf tools, sqlite3, mactime)
+        run: |
+          docker build -f platform/images/ir-workstation/Dockerfile \
+            --build-arg BASE_IMAGE=local/cyberlab-base:ci \
+            --build-arg CYBERLAB_VERSION=ci-${GITHUB_SHA::7} \
+            -t local/cyberlab-ir-workstation:ci platform
+      - name: Lab 4 integration test
+        run: labs/lab4-incident-response/tests/integration.sh
       - name: Image sizes (AC-P-02 target for net-analysis <= 350 MB compressed)
         run: |
           { echo '### Image sizes (uncompressed)'; echo '```';
             docker image ls 'local/cyberlab-*' --format '{{.Repository}}:{{.Tag}} {{.Size}}';
-            for img in net-analysis fs-forensics webapp postgres gateway web-workstation; do
+            for img in net-analysis fs-forensics webapp postgres gateway web-workstation ir-workstation; do
               echo -n "$img compressed (gzip of docker save): ";
               docker save "local/cyberlab-$img:ci" | gzip -1 | wc -c | awk '{printf "%.0f MB\n", $1/1048576}';
             done;
