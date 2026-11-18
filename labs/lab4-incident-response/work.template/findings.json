@@ -1,0 +1,22 @@
+{
+  "schema": "cyberlab-findings/1",
+  "lab": "lab4-incident-response",
+  "variant": "REPLACE-WITH-YOUR-PSEUDONYM-OR-demo",
+  "items": {
+    "phished_staff_username": null,
+    "phishing_domain": null,
+    "persistence_path": null,
+    "new_c2_domain": null,
+    "implant_user_agent": null,
+    "cookie_exfil_utc": null,
+    "stolen_session_n": null,
+    "attacker_ip": null,
+    "attacker_first_request_utc": null,
+    "donor_records_exposed": null,
+    "receipts_enumerated": null,
+    "attacker_donor_email": null,
+    "authorised_test_ip": null,
+    "legit_export_username": null,
+    "ssh_compromised": null
+  }
+}

@@ -1,0 +1,55 @@
+CASE BRIEF - Lab 4: Incident Response and Multi-Source Digital Forensics
+Variant: demo
+
+Client:   Cedarwick Neighborhood Aid (fictional nonprofit)
+Ticket:   IR-2026-B7B6  opened 2026-12-09 11:02 UTC  priority HIGH
+
+Background
+  You investigated Cedarwick's workstation compromise in Labs 1 and 2 and assessed the
+  donation website (https://give.cedarwick.test) in Lab 3. The board relaunched the site on
+  2026-11-28 with ONE fix from your assessment (the donor search now uses a parameterised
+  query). The other recommendations were scheduled "for the next sprint".
+
+What happened
+  2026-12-09: donor Tariq Petrov forwarded an e-mail from "Cedarwick Giving"
+  that quoted their receipt number (100050) and the exact amount of their gift
+  ($132.00) and asked them to "re-confirm" their card. Cedarwick never sent it.
+  The board wants to know: how did the attacker get donor data, what exactly was exposed,
+  is the attacker still in, and what must Cedarwick do now?
+
+Staff interview notes (summarised by the Executive Director; unverified)
+  - The Finance Manager says she exported the full donor list from home "one evening that
+    week" for the year-end appeal.
+  - The Volunteer Coordinator says her laptop "acted strangely" after she opened a receipt
+    dispute link from an e-mail. She did not report it. Her laptop was collected and
+    triage-imaged on 2026-12-09 09:06 EST.
+  - Staff with site accounts (usernames are in the database):
+  Executive Director     Luis Rossi
+  Finance Manager        Zoe Chen
+  Communications Lead    Rosa Abbott
+  Volunteer Coordinator  Hiro Silva
+
+Scheduled activity (approved in advance)
+  - Re-test of the relaunched site by the Lab 3 assessment team, 2026-12-07 18:00-19:30 UTC,
+    using the donor test account assessor85@cyberlab-team.test. Source address not recorded.
+  - Server maintenance by the IT contractor (account cwadmin) from the office.
+
+Networks and systems
+  Office public address (NAT):  203.0.113.179    staff LAN 10.20.30.0/24 (as in Lab 1)
+  Donation site:                198.51.100.221  (give.cedarwick.test; nginx gateway -> app -> PostgreSQL)
+  Web server host:              give-web01 (SSH for administration)
+
+Evidence (all times UTC unless a file says otherwise)
+  web/gateway.jsonl, web/app.jsonl, web/postgres.log   site logs, 2026-12-06 00:00 to 2026-12-09 13:06
+  network/office-edge.pcapng   90 minutes from the office firewall's rolling capture
+  hosts/coordinator-laptop.E01 triage image of the Volunteer Coordinator's laptop (ext4)
+  server/auth.log              give-web01 SSH and sudo log
+  db/snapshot.sql              donors, staff and donations dumped at response time
+  MANIFEST.sha256
+
+Deliver: findings.json, an incident report with a master timeline and a stated confidence
+and alternative explanation for each key conclusion, a containment and recovery plan, a
+donor notification draft, and (graduate) a detection rule tested against these logs.
+
+Everything here is SYNTHETIC. Names, domains (.test, .example) and addresses (documentation
+ranges) are fictional. Do not look any of them up on the internet.

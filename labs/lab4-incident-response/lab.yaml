@@ -1,0 +1,44 @@
+# Lab 4 metadata and verify checks (read by cyberlab-verify inside the container).
+id: lab4-incident-response
+title: "Lab 4 — Incident Response and Multi-Source Digital Forensics"
+version: 0.5.0-dev
+pattern: A
+level: "early graduate (upper undergraduate with support)"
+estimated_minutes: 180
+evidence_dir: /evidence
+work_dir: /work
+report: /work/lab4-check.json
+
+checks:
+  tools: [bash, tshark, capinfos, fls, istat, icat, ils, blkls, fsstat, ewfinfo, ewfverify, ewfexport, mactime, sqlite3, jq, python3, xxd, sha256sum, file, strings, base64]
+  manifest: MANIFEST.sha256
+  readonly: [/evidence]
+  writable: [/work]
+  network: none
+  hardening: true
+  min_memory_mb: {fail: 2048, warn: 3500}
+  min_free_disk_mb: {fail: 500, warn: 2000}    # one 64 MB raw working copy goes to /work
+
+# Objectives (Bloom-tagged; EDU-02: Lab 4 emphasises Evaluate/Create).
+objectives:
+  - id: L4-1
+    bloom: Apply
+    text: Triage a multi-source evidence bundle, verify its integrity and plan the investigation from the case brief.
+  - id: L4-2
+    bloom: Analyze
+    text: Reconstruct the initial compromise from a network capture, a disk image and browser databases.
+  - id: L4-3
+    bloom: Analyze
+    text: Trace a stolen session through gateway, application and database logs and separate attacker activity from authorised and legitimate look-alikes.
+  - id: L4-4
+    bloom: Evaluate
+    text: Determine the scope of the data exposure and state the confidence and an alternative explanation for each key conclusion (EDU-05).
+  - id: L4-5
+    bloom: Evaluate
+    text: Build a master timeline that correlates events across sources and explain any gaps or conflicts.
+  - id: L4-6
+    bloom: Create
+    text: Write a containment and recovery plan and a donor notification that match the evidence.
+  - id: L4-7
+    bloom: Create
+    text: (Graduate) Write a log-based detection rule for the attack and test it against the evidence, reporting hits and false positives.

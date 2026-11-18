@@ -1,0 +1,48 @@
+# Lab 4 — Incident Response and Multi-Source Digital Forensics
+#
+#   docker compose run --rm verify        # check environment + evidence integrity (do this first)
+#   docker compose run --rm workstation   # analyst shell: tshark, Sleuth Kit, ewf tools, jq, sqlite3
+#   docker compose run --rm reset         # restore work/ from the template (backs up first)
+#   docker compose down --remove-orphans  # clean up
+#
+# Pattern A (ADR-0006): one offline workstation, no network, read-only evidence, non-root,
+# all capabilities dropped. The breached site is NOT running: you investigate its logs,
+# the office capture, a laptop image, the server's auth log and a database snapshot.
+# Your instructor gives you your own evidence folder; evidence/ holds the public `demo` variant.
+#
+# Status: UNTESTED with Docker (written 2026-11-18).
+
+name: cyberlab-lab4
+
+x-lab4: &lab4
+  extends:
+    file: ../../platform/compose/security-baseline.yaml
+    service: offline-analyst
+  image: ${CYBERLAB_REGISTRY:-ghcr.io/kernalguard}/cyberlab-ir-workstation:${CYBERLAB_VERSION:-0.5.0}
+  user: "${CYBERLAB_UID:-1000}:${CYBERLAB_GID:-1000}"
+  environment:
+    CYBERLAB_LAB: lab4
+  mem_limit: 1g
+  volumes:
+    - ${CYBERLAB_EVIDENCE:-./evidence}:/evidence:ro
+    - ./work:/work
+    - ./lab.yaml:/lab/lab.yaml:ro
+    - ./work.template:/lab/work.template:ro
+
+services:
+  workstation:
+    <<: *lab4
+    # Only one service builds (parallel builds of a shared image collide; found on macOS 2026-10-09).
+    build:
+      context: ../../platform
+      dockerfile: images/ir-workstation/Dockerfile
+    stdin_open: true
+    tty: true
+
+  verify:
+    <<: *lab4
+    command: ["cyberlab-verify", "--config", "/lab/lab.yaml"]
+
+  reset:
+    <<: *lab4
+    command: ["cyberlab-reset", "--template", "/lab/work.template", "--work", "/work"]
