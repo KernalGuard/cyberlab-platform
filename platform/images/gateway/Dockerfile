@@ -4,7 +4,7 @@
 #
 # Status: UNTESTED as a container build (written 2026-11-17).
 
-ARG BASE_IMAGE=ghcr.io/kernalguard/cyberlab-base:0.3.0
+ARG BASE_IMAGE=ghcr.io/kernalguard/cyberlab-base:0.4.0
 # The tag lives in the ARG default above; hadolint cannot see through ARGs.
 # hadolint ignore=DL3006
 FROM ${BASE_IMAGE}
@@ -22,7 +22,8 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/* \
  && install -d -o 1000 -g 1000 -m 0775 /logs
 COPY images/gateway/nginx.conf /etc/cyberlab/nginx.conf
-RUN nginx -t -c /etc/cyberlab/nginx.conf \
+RUN chmod 0755 /etc/cyberlab && chmod 0644 /etc/cyberlab/nginx.conf \
+ && nginx -t -c /etc/cyberlab/nginx.conf \
  && rm -f /logs/gateway.jsonl /tmp/nginx.pid
 
 ENV CYBERLAB_IMAGE_VERSION=${CYBERLAB_VERSION}

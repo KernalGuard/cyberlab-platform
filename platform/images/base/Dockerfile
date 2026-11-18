@@ -62,8 +62,11 @@ COPY lib/cyberlab_common/ /opt/cyberlab/lib/cyberlab_common/
 COPY images/base/bin/ /usr/local/bin/
 COPY images/base/analyst.bashrc /home/analyst/.bashrc
 RUN chmod 0755 /usr/local/bin/cyberlab-* \
+ && chmod -R a+rX /opt/cyberlab/lib \
+ && chmod 0644 /home/analyst/.bashrc \
  && chown analyst:analyst /home/analyst/.bashrc \
- && python3 -c "import cyberlab_common, yaml; print('cyberlab_common', cyberlab_common.__version__)"
+ && python3 -c "import cyberlab_common, yaml; print('cyberlab_common', cyberlab_common.__version__)" \
+ && setpriv --reuid=1000 --regid=1000 --clear-groups python3 -c "import cyberlab_common.verify, cyberlab_common.findings, cyberlab_common.reset"
 
 WORKDIR /work
 USER 1000:1000

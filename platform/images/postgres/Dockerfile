@@ -8,7 +8,7 @@
 #
 # Status: UNTESTED as a container build (written 2026-11-17).
 
-ARG BASE_IMAGE=ghcr.io/kernalguard/cyberlab-base:0.3.0
+ARG BASE_IMAGE=ghcr.io/kernalguard/cyberlab-base:0.4.0
 # The tag lives in the ARG default above; hadolint cannot see through ARGs.
 # hadolint ignore=DL3006
 FROM ${BASE_IMAGE}
