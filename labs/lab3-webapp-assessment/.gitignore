@@ -1,0 +1,3 @@
+# Student work is never committed
+work/*
+!work/.gitkeep

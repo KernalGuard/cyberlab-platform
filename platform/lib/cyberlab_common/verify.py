@@ -192,6 +192,64 @@ def check_network(mode: str, sys_class_net: Path = Path("/sys/class/net"),
     return Check("network-isolation", PASS, f"network not restricted by design ({mode})")
 
 
+def check_http(targets: list[dict], timeout: float = 3.0) -> list[Check]:
+    """Each target {name, url, expect}: the URL must answer with the expected HTTP status."""
+    import urllib.error
+    import urllib.request
+    out = []
+    for t in targets:
+        name = f"http:{t.get('name', t['url'])}"
+        want = int(t.get("expect", 200))
+        if not str(t["url"]).startswith(("http://", "https://")):
+            out.append(Check(name, FAIL, f"{t['url']}: only http(s) URLs are allowed"))
+            continue
+        try:
+            with urllib.request.urlopen(t["url"], timeout=timeout) as resp:  # noqa: S310 (scheme checked above)
+                got = resp.status
+        except urllib.error.HTTPError as exc:
+            got = exc.code
+        except (urllib.error.URLError, OSError) as exc:
+            out.append(Check(name, FAIL, f"{t['url']} unreachable ({getattr(exc, 'reason', exc)})",
+                             "Start the lab first: docker compose up -d, then wait ~20 s and retry."))
+            continue
+        out.append(Check(name, PASS if got == want else FAIL, f"{t['url']} -> HTTP {got} (expected {want})",
+                         "" if got == want else "The service answered unexpectedly; see docker compose logs."))
+    return out
+
+
+def check_no_egress(targets: list[str], timeout: float = 2.0) -> Check:
+    """Every host:port must be unreachable (internal-only network)."""
+    import socket
+    reached = []
+    for target in targets:
+        host, _, port = target.rpartition(":")
+        try:
+            with socket.create_connection((host, int(port)), timeout=timeout):
+                reached.append(target)
+        except OSError:
+            pass
+    if reached:
+        return Check("egress-blocked", FAIL, f"reachable from inside the lab: {', '.join(reached)}",
+                     "Lab containers must not reach the internet. Use the lab's compose.yaml unmodified.")
+    return Check("egress-blocked", PASS, f"no route out ({len(targets)} external targets unreachable)")
+
+
+def check_authorization(path: Path, phrase: str) -> Check:
+    """SEC-11: the student has read and signed the authorized-use agreement."""
+    try:
+        text = path.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return Check("authorized-use", FAIL, f"{path} not found",
+                     "Read work/authorized-use.md, then add your name and the line "
+                     f"'{phrase}' (see the student guide, Setup step 4).")
+    signed = [ln for ln in text.splitlines() if ln.strip().upper().startswith(phrase.upper())]
+    named = any(ln.lower().startswith("name:") and ln.split(":", 1)[1].strip() for ln in text.splitlines())
+    if signed and named:
+        return Check("authorized-use", PASS, "agreement signed")
+    return Check("authorized-use", FAIL, "agreement not signed",
+                 f"Add 'Name: <your name>' and a line starting with '{phrase}' to {path}.")
+
+
 def _status_fields(proc_self_status: Path) -> dict[str, str]:
     fields = {}
     try:
@@ -296,6 +354,13 @@ def run_checks(config: dict) -> list[Check]:
         results.append(check_writable(Path(path)))
     if "network" in checks_cfg:
         results.append(check_network(checks_cfg["network"]))
+    if "no_egress" in checks_cfg:
+        results.append(check_no_egress(list(checks_cfg["no_egress"])))
+    if "http" in checks_cfg:
+        results.extend(check_http(list(checks_cfg["http"])))
+    if "authorization" in checks_cfg:
+        auth = checks_cfg["authorization"]
+        results.append(check_authorization(Path(auth["file"]), auth.get("phrase", "I AGREE")))
     if checks_cfg.get("hardening"):
         results.extend(check_hardening())
     if "min_memory_mb" in checks_cfg:

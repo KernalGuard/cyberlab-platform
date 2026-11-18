@@ -158,3 +158,56 @@ def test_bad_config_returns_2(tmp_path):
     config = tmp_path / "lab.yaml"
     config.write_text("- just\n- a list\n")
     assert verify.main(["--config", str(config)]) == 2
+
+
+# --- Pattern B checks (Lab 3) ------------------------------------------------
+import http.server  # noqa: E402
+import threading  # noqa: E402
+
+from cyberlab_common.verify import check_authorization, check_http, check_no_egress  # noqa: E402
+
+
+def _serve(status):
+    class H(http.server.BaseHTTPRequestHandler):
+        def do_GET(self):  # noqa: N802
+            self.send_response(status)
+            self.end_headers()
+
+        def log_message(self, *a):
+            pass
+    srv = http.server.HTTPServer(("127.0.0.1", 0), H)
+    threading.Thread(target=srv.serve_forever, daemon=True).start()
+    return srv
+
+
+def test_http_check_pass_and_wrong_status():
+    srv = _serve(200)
+    url = f"http://127.0.0.1:{srv.server_port}/healthz"
+    assert check_http([{"name": "site", "url": url}])[0].status == "PASS"
+    assert check_http([{"name": "site", "url": url, "expect": 404}])[0].status == "FAIL"
+    srv.shutdown()
+
+
+def test_http_check_unreachable():
+    res = check_http([{"url": "http://127.0.0.1:9/"}], timeout=0.5)[0]
+    assert res.status == "FAIL" and "unreachable" in res.detail
+
+
+def test_no_egress_pass_when_closed_and_fail_when_open():
+    assert check_no_egress(["127.0.0.1:9"], timeout=0.5).status == "PASS"
+    srv = _serve(200)
+    assert check_no_egress([f"127.0.0.1:{srv.server_port}"]).status == "FAIL"
+    srv.shutdown()
+
+
+def test_authorization(tmp_path):
+    f = tmp_path / "authorized-use.md"
+    assert check_authorization(f, "I AGREE").status == "FAIL"
+    f.write_text("Name:\nI agree\n")
+    assert check_authorization(f, "I AGREE").status == "FAIL"           # no name
+    f.write_text("Name: Sam Student\nI AGREE to the terms above\n")
+    assert check_authorization(f, "I AGREE").status == "PASS"
+
+
+def test_http_check_rejects_non_http_scheme():
+    assert check_http([{"url": "file:///etc/passwd"}])[0].status == "FAIL"

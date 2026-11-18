@@ -1,0 +1,48 @@
+# Lab 3 metadata and verify checks (read by cyberlab-verify in the workstation container).
+id: lab3-webapp-assessment
+title: "Lab 3 — Web Application Security Assessment"
+version: 0.4.0-dev
+pattern: B
+level: "upper undergraduate (graduate extension: log analysis and remediation design)"
+estimated_minutes: 150
+evidence_dir: /evidence
+work_dir: /work
+report: /work/lab3-check.json
+
+checks:
+  tools: [bash, curl, http, python3, jq, sha256sum, base64]
+  manifest: MANIFEST.sha256
+  readonly: [/evidence, /logs]
+  writable: [/work]
+  network: internal
+  no_egress: ["1.1.1.1:443", "8.8.8.8:53", "9.9.9.9:443"]
+  http:
+    - {name: site, url: "http://gateway:8080/healthz", expect: 200}
+  authorization: {file: /work/authorized-use.md, phrase: "I AGREE"}
+  hardening: true
+  min_memory_mb: {fail: 3000, warn: 3800}
+  min_free_disk_mb: {fail: 1000, warn: 3000}
+
+# DRAFT objectives (Bloom-tagged); finalised with the student guide.
+objectives:
+  - id: L3-1
+    bloom: Understand
+    text: Explain the scope and rules of an authorised assessment and work strictly within them.
+  - id: L3-2
+    bloom: Apply
+    text: Map a web application's pages, parameters, cookies and roles with a browser and curl.
+  - id: L3-3
+    bloom: Analyze
+    text: Identify and validate SQL injection, broken access control, broken session handling, information leakage and weak authentication.
+  - id: L3-4
+    bloom: Analyze
+    text: Use gateway, application and database logs to reconstruct what a tester or attacker did.
+  - id: L3-5
+    bloom: Evaluate
+    text: Rate each finding's risk and justify it with evidence and business impact.
+  - id: L3-6
+    bloom: Create
+    text: Fix a vulnerability in the source code, re-test it, and show the fix did not break the feature.
+  - id: L3-7
+    bloom: Create
+    text: Write a findings file and an assessment report with reproducible steps and prioritised remediation.

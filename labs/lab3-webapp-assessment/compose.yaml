@@ -1,0 +1,116 @@
+# Lab 3 — Web Application Security Assessment (Cedarwick donation site)
+#
+#   docker compose run --rm reset           # put fresh templates in work/ (do this first)
+#   (sign work/authorized-use.md)
+#   docker compose up -d                    # start the site: http://127.0.0.1:8080
+#   docker compose run --rm verify          # check environment, isolation and authorisation
+#   docker compose run --rm workstation     # assessment shell (curl, http, python3 requests)
+#   docker compose restart app              # after editing app/app.py (remediation exercise)
+#   docker compose down -v                  # stop and DELETE the site's data (fresh start)
+#
+# Pattern B (ADR-0006): the gateway is the only container you can reach, and only from your
+# own computer (127.0.0.1). The app and database sit on an internal network with no route
+# to the internet. The site is INTENTIONALLY VULNERABLE: never expose it beyond 127.0.0.1.
+#
+# Status: UNTESTED with Docker (written 2026-11-17).
+
+name: cyberlab-lab3
+
+x-service: &service
+  extends:
+    file: ../../platform/compose/security-baseline.yaml
+    service: networked-service
+
+x-tools: &tools
+  <<: *service
+  image: ${CYBERLAB_REGISTRY:-ghcr.io/kernalguard}/cyberlab-web-workstation:${CYBERLAB_VERSION:-0.4.0}
+  user: "${CYBERLAB_UID:-1000}:${CYBERLAB_GID:-1000}"
+  profiles: [tools]
+  networks: [edge]
+  mem_limit: 256m
+  environment:
+    CYBERLAB_LAB: lab3
+    SITE: http://gateway:8080
+  volumes:
+    - ${CYBERLAB_EVIDENCE:-./evidence}:/evidence:ro
+    - ./work:/work
+    - ./lab.yaml:/lab/lab.yaml:ro
+    - ./work.template:/lab/work.template:ro
+    - logs:/logs:ro
+
+services:
+  db:
+    <<: *service
+    image: ${CYBERLAB_REGISTRY:-ghcr.io/kernalguard}/cyberlab-postgres:${CYBERLAB_VERSION:-0.4.0}
+    build:
+      context: ../../platform
+      dockerfile: images/postgres/Dockerfile
+    environment:
+      POSTGRES_USER: cedarwick
+      POSTGRES_PASSWORD: cedarwick-lab-only
+    volumes:
+      - dbdata:/var/lib/cyberlab/pgdata
+      - logs:/logs
+      - ${CYBERLAB_EVIDENCE:-./evidence}:/seed:ro
+      - ./db/schema.sql:/schema/schema.sql:ro
+    networks: [labnet]
+    mem_limit: 512m
+
+  app:
+    <<: *service
+    image: ${CYBERLAB_REGISTRY:-ghcr.io/kernalguard}/cyberlab-webapp:${CYBERLAB_VERSION:-0.4.0}
+    build:
+      context: ../../platform
+      dockerfile: images/webapp/Dockerfile
+    environment:
+      DATABASE_URL: postgresql://cedarwick:cedarwick-lab-only@db:5432/donations
+    volumes:
+      - ./app:/app:ro
+      - logs:/logs
+    networks: [labnet]
+    mem_limit: 384m
+    depends_on:
+      db: {condition: service_healthy}
+
+  gateway:
+    <<: *service
+    image: ${CYBERLAB_REGISTRY:-ghcr.io/kernalguard}/cyberlab-gateway:${CYBERLAB_VERSION:-0.4.0}
+    build:
+      context: ../../platform
+      dockerfile: images/gateway/Dockerfile
+    ports:
+      - "127.0.0.1:8080:8080"        # loopback only (SEC-05); never change this
+    volumes:
+      - logs:/logs
+    networks: [frontend, edge, labnet]
+    mem_limit: 128m
+    depends_on:
+      app: {condition: service_healthy}
+
+  workstation:
+    <<: *tools
+    # Only one tools service builds (parallel builds of a shared image collide).
+    build:
+      context: ../../platform
+      dockerfile: images/web-workstation/Dockerfile
+    stdin_open: true
+    tty: true
+
+  verify:
+    <<: *tools
+    command: ["cyberlab-verify", "--config", "/lab/lab.yaml"]
+
+  reset:
+    <<: *tools
+    command: ["cyberlab-reset", "--template", "/lab/work.template", "--work", "/work"]
+
+networks:
+  frontend: {}                       # only the gateway; needed to publish 127.0.0.1:8080
+  edge:
+    internal: true                   # workstation <-> gateway, no route out
+  labnet:
+    internal: true                   # gateway <-> app <-> db, no route out
+
+volumes:
+  dbdata: {}
+  logs: {}

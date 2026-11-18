@@ -1,0 +1,32 @@
+#!/bin/sh
+# Initialise (first start only) and run PostgreSQL as an unprivileged user.
+set -eu
+PGBIN=$(ls -d /usr/lib/postgresql/*/bin | sort -V | tail -1)
+: "${PGDATA:?}" "${POSTGRES_USER:?}" "${POSTGRES_PASSWORD:?}" "${POSTGRES_DB:?}"
+LOGDIR=${LOGDIR:-/logs}
+
+if [ ! -s "$PGDATA/PG_VERSION" ]; then
+  echo "cyberlab-pg-start: initialising database (first start)"
+  pwfile=$(mktemp)
+  printf '%s\n' "$POSTGRES_PASSWORD" > "$pwfile"
+  "$PGBIN/initdb" -D "$PGDATA" -U "$POSTGRES_USER" --pwfile="$pwfile" -E UTF8 --locale=C.UTF-8 \
+      --auth-local=trust --auth-host=scram-sha-256 >/dev/null
+  rm -f "$pwfile"
+  echo "host all all all scram-sha-256" >> "$PGDATA/pg_hba.conf"
+  "$PGBIN/pg_ctl" -D "$PGDATA" -w -o "-c listen_addresses='' -c unix_socket_directories=/tmp" start >/dev/null
+  "$PGBIN/createdb" -h /tmp -U "$POSTGRES_USER" -E UTF8 -T template0 "$POSTGRES_DB"
+  for f in "${SCHEMA_SQL:-}" "${SEED_SQL:-}"; do
+    [ -n "$f" ] || continue
+    if [ ! -r "$f" ]; then echo "cyberlab-pg-start: missing $f" >&2; exit 1; fi
+    "$PGBIN/psql" -q -v ON_ERROR_STOP=1 -h /tmp -U "$POSTGRES_USER" -d "$POSTGRES_DB" -f "$f" >/dev/null
+    echo "cyberlab-pg-start: loaded $f"
+  done
+  "$PGBIN/pg_ctl" -D "$PGDATA" -w stop >/dev/null
+fi
+
+exec "$PGBIN/postgres" -D "$PGDATA" \
+  -c listen_addresses='*' -c unix_socket_directories=/tmp \
+  -c logging_collector=on -c log_directory="$LOGDIR" -c log_filename=postgres.log \
+  -c log_file_mode=0644 -c log_statement=all -c log_connections=on \
+  -c "log_line_prefix=%m [%p] %u@%d %r " -c log_timezone=UTC -c timezone=UTC \
+  -c shared_buffers=32MB -c max_connections=30
