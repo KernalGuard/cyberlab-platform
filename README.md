@@ -2,7 +2,7 @@
 
 A reusable, security-hardened platform of hands-on laboratories for undergraduate and early-graduate cybersecurity and digital forensics courses. It is built on Docker and Docker Compose, with seeded synthetic evidence and reproducible grading.
 
-> **Project status: v0.3.0, pilot preview. Labs 0, 1 and 2 are released.**
+> **Project status: v0.5.0, pilot preview. All five labs (0–4) are released.**
 > All three labs pass their container integration tests in CI on linux/amd64 and linux/arm64 and run on macOS Apple Silicon (Docker Desktop). Windows has not been tested yet. Nothing has been classroom-tested.
 
 | Lab | Topic | Audience | Status |
