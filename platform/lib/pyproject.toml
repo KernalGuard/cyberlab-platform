@@ -34,6 +34,8 @@ ignore = ["S101", "S603", "S607", "S311"]  # asserts in tests; subprocess in tes
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S108"]
+# Lab 3's training site is intentionally insecure; security lint rules do not apply to it.
+"**/labs/lab3-webapp-assessment/app/*" = ["S"]
 
 [tool.ruff.lint.isort]
 known-first-party = ["cyberlab_common"]
