@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% block title %}Staff{% endblock %}
+{% block content %}
+<h1>Staff dashboard</h1>
+<p>Signed in as {{ g.user.name }} ({{ g.user.role }}).</p>
+<p class="big">{{ stats[0] }} gifts · ${{ "{:,.2f}".format(stats[1] / 100) }}</p>
+{% if notice %}<div class="notice"><strong>Staff notice:</strong> {{ notice }}</div>{% endif %}
+<p><a href="/staff/donors">Search donors</a></p>
+{% endblock %}

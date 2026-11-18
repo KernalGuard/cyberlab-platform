@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}Give to Cedarwick{% endblock %} · Cedarwick Neighborhood Aid</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="lab-banner">CyberLab training site · fictional organisation · intentionally vulnerable · lab network only</div>
+<header>
+  <a class="brand" href="/">Cedarwick <span>Neighborhood Aid</span></a>
+  <nav>
+    {% if g.user and g.user.kind == 'donor' %}
+      <a href="/donate">Donate</a><a href="/account">My gifts</a><a href="/logout">Log out ({{ g.user.name }})</a>
+    {% elif g.user and g.user.kind == 'staff' %}
+      <a href="/staff">Staff</a><a href="/staff/donors">Donors</a><a href="/logout">Log out ({{ g.user.username }})</a>
+    {% else %}
+      <a href="/register">Create account</a><a href="/login">Log in</a><a class="muted" href="/staff/login">Staff</a>
+    {% endif %}
+  </nav>
+</header>
+<main>{% block content %}{% endblock %}</main>
+<footer>Cedarwick Neighborhood Aid is a fictional nonprofit used for cybersecurity education. No real payments are processed.</footer>
+</body>
+</html>

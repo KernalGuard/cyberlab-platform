@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <h1>Keep Cedarwick's pantry shelves full this winter</h1>
+  <p>Your gift buys groceries, covers emergency rent and keeps neighbours warm.</p>
+  <p class="big">${{ "{:,.2f}".format(total) }} raised from {{ gifts }} gifts</p>
+  <a class="button" href="/donate">Donate now</a>
+</section>
+<section class="cards">
+  {% for f in funds %}<div class="card"><h3>{{ f }}</h3></div>{% endfor %}
+</section>
+{% endblock %}

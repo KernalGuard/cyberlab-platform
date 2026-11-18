@@ -1,0 +1,12 @@
+{% extends "base.html" %}{% block title %}Donate{% endblock %}
+{% block content %}
+<h1>Make a donation</h1>
+<p class="muted">Training site: use any 12+ digit number. Nothing is charged.</p>
+{% if error %}<p class="error">{{ error }}</p>{% endif %}
+<form method="post">
+  <label>Amount (USD) <input name="amount" value="25"></label>
+  <label>Fund <select name="fund">{% for f in funds %}<option>{{ f }}</option>{% endfor %}</select></label>
+  <label>Card number <input name="card" value="4000 0000 0000 0002"></label>
+  <button>Give</button>
+</form>
+{% endblock %}

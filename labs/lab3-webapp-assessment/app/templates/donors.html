@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block title %}Donors{% endblock %}
+{% block content %}
+<h1>Donor search</h1>
+<form method="get"><label>Name or e-mail contains <input name="q" value="{{ q }}"></label><button>Search</button></form>
+{% if q %}<p>{{ rows|length }} result(s)</p>
+<table><tr><th>ID</th><th>Name</th><th>E-mail</th><th>Since</th></tr>
+{% for r in rows %}<tr><td>{{ r[0] }}</td><td>{{ r[1] }}</td><td>{{ r[2] }}</td><td>{{ r[3] }}</td></tr>{% endfor %}
+</table>{% endif %}
+{% endblock %}

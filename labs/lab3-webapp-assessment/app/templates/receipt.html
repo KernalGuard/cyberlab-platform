@@ -1,0 +1,12 @@
+{% extends "base.html" %}{% block title %}Receipt #{{ r[0] }}{% endblock %}
+{% block content %}
+<h1>Donation receipt #{{ r[0] }}</h1>
+<dl class="receipt">
+  <dt>Donor</dt><dd>{{ r[5] }} &lt;{{ r[6] }}&gt;</dd>
+  <dt>Date</dt><dd>{{ r[4].strftime('%Y-%m-%d %H:%M UTC') }}</dd>
+  <dt>Fund</dt><dd>{{ r[2] }}</dd>
+  <dt>Amount</dt><dd>${{ "{:,.2f}".format(r[1] / 100) }}</dd>
+  <dt>Card</dt><dd>•••• {{ r[3] }}</dd>
+</dl>
+<p class="muted">Cedarwick Neighborhood Aid (fictional) · keep this receipt for your records.</p>
+{% endblock %}

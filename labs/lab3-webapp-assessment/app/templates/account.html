@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block title %}My gifts{% endblock %}
+{% block content %}
+<h1>Thank you, {{ g.user.name }}</h1>
+{% if donations %}
+<table><tr><th>Receipt</th><th>Date</th><th>Fund</th><th>Amount</th></tr>
+{% for r in donations %}<tr><td><a href="/receipts/{{ r[0] }}">#{{ r[0] }}</a></td><td>{{ r[3].strftime('%Y-%m-%d') }}</td><td>{{ r[2] }}</td><td>${{ "{:,.2f}".format(r[1] / 100) }}</td></tr>{% endfor %}
+</table>
+{% else %}<p>No gifts yet. <a href="/donate">Make your first donation.</a></p>{% endif %}
+{% endblock %}
